@@ -71,3 +71,7 @@ Route::resource('staff', 'StaffController');
 Route::resource('cases', 'CaseController');
 
 Route::resource('courthouses', 'CourthouseController');
+
+Route::resource('courtdates', 'CourtdateController');
+
+Route::resource('timelines', 'TimelineController');

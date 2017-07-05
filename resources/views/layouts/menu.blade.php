@@ -54,3 +54,19 @@
     </ul>
 </li>
 
+<li class="{{ Request::is('courtdates*') ? 'active' : '' }}">
+    <a href="#"> <i class="fa fa-file-text"></i> <span>Courtdates</span> </a>
+    <ul>
+    	<li> <a href="{!! route('courtdates.index') !!}"> <i class="fa fa-file-text"></i> <span>Courtdates</span> </a> </li>
+    	<li> <a href="{!! route('courtdates.create') !!}"> <i class="fa fa-file-text"></i> <span>Create Courtdate</span> </a> </li>
+    </ul>
+</li>
+
+<li class="{{ Request::is('timelines*') ? 'active' : '' }}">
+    <a href="#"> <i class="fa fa-file-text"></i> <span>Timelines</span> </a>
+    <ul>
+    	<li> <a href="{!! route('timelines.index') !!}"> <i class="fa fa-file-text"></i> <span>Timelines</span> </a> </li>
+    	<li> <a href="{!! route('timelines.create') !!}"> <i class="fa fa-file-text"></i> <span>Create Timeline</span> </a> </li>
+    </ul>
+</li>
+
