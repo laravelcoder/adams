@@ -22,3 +22,11 @@
     </ul>
 </li>
 
+<li class="{{ Request::is('attorneys*') ? 'active' : '' }}">
+    <a href="#"> <i class="fa fa-file-text"></i> <span>Attorneys</span> </a>
+    <ul>
+    	<li> <a href="{!! route('attorneys.index') !!}"> <i class="fa fa-file-text"></i> <span>Attorneys</span> </a> </li>
+    	<li> <a href="{!! route('attorneys.create') !!}"> <i class="fa fa-file-text"></i> <span>Create Attorney</span> </a> </li>
+    </ul>
+</li>
+

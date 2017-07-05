@@ -63,3 +63,5 @@ Route::resource('services', 'ServiceController');
 Route::resource('services', 'ServiceController');
 
 Route::resource('pages', 'PageController');
+
+Route::resource('attorneys', 'AttorneyController');
