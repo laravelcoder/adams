@@ -46,3 +46,11 @@
     </ul>
 </li>
 
+<li class="{{ Request::is('courthouses*') ? 'active' : '' }}">
+    <a href="#"> <i class="fa fa-file-text"></i> <span>Courthouses</span> </a>
+    <ul>
+    	<li> <a href="{!! route('courthouses.index') !!}"> <i class="fa fa-file-text"></i> <span>Courthouses</span> </a> </li>
+    	<li> <a href="{!! route('courthouses.create') !!}"> <i class="fa fa-file-text"></i> <span>Create Courthouse</span> </a> </li>
+    </ul>
+</li>
+
