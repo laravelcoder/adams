@@ -65,3 +65,7 @@ Route::resource('services', 'ServiceController');
 Route::resource('pages', 'PageController');
 
 Route::resource('attorneys', 'AttorneyController');
+
+Route::resource('staff', 'StaffController');
+
+Route::resource('cases', 'CaseController');
