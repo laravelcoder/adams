@@ -53,3 +53,13 @@ Route::get('/home', 'HomeController@index');
 Route::resource('posts', 'PostController');
 
 Route::resource('posts', 'PostController');
+
+Route::resource('services', 'ServiceController');
+
+Route::resource('services', 'ServiceController');
+
+Route::resource('services', 'ServiceController');
+
+Route::resource('services', 'ServiceController');
+
+Route::resource('pages', 'PageController');

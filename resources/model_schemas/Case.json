@@ -19,6 +19,9 @@
     "inForm": true,
     "inIndex": true
 }, {
+    "type": "relation",
+    "relation": "1tm,Comment,post_id"
+}, {
     "name": "created_at",
     "dbType": "datetime",
     "htmlType": "date",

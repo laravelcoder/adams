@@ -6,3 +6,19 @@
     </ul>
 </li>
 
+<li class="{{ Request::is('services*') ? 'active' : '' }}">
+    <a href="#"> <i class="fa fa-file-text"></i> <span>Services</span> </a>
+    <ul>
+    	<li> <a href="{!! route('services.index') !!}"> <i class="fa fa-file-text"></i> <span>Services</span> </a> </li>
+    	<li> <a href="{!! route('services.create') !!}"> <i class="fa fa-file-text"></i> <span>New</span> </a> </li>
+    </ul>
+</li>
+
+<li class="{{ Request::is('pages*') ? 'active' : '' }}">
+    <a href="#"> <i class="fa fa-file-text"></i> <span>Pages</span> </a>
+    <ul>
+    	<li> <a href="{!! route('pages.index') !!}"> <i class="fa fa-file-text"></i> <span>Pages</span> </a> </li>
+    	<li> <a href="{!! route('pages.create') !!}"> <i class="fa fa-file-text"></i> <span>Create Page</span> </a> </li>
+    </ul>
+</li>
+
