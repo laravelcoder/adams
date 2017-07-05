@@ -7,9 +7,9 @@
     "fillable": false,
     "primary": true,
     "inForm": false,
-    "inIndex": true
+    "inIndex": false
 }, {
-    "name": "service",
+    "name": "courthouse",
     "dbType": "string",
     "htmlType": "text",
     "validations": "required",
@@ -18,9 +18,9 @@
     "primary": false,
     "inForm": true,
     "inIndex": true
-}, {
-    "name": "meta_description",
-    "dbType": "text",
+},{
+    "name": "street",
+    "dbType": "string",
     "htmlType": "textarea",
     "validations": null,
     "searchable": true,
@@ -29,7 +29,57 @@
     "inForm": true,
     "inIndex": false
 }, {
-    "name": "content",
+    "name": "street2",
+    "dbType": "string",
+    "htmlType": "text",
+    "validations": null,
+    "searchable": true,
+    "fillable": true,
+    "primary": false,
+    "inForm": true,
+    "inIndex": false
+}, {
+    "name": "city",
+    "dbType": "string",
+    "htmlType": "text",
+    "validations": null,
+    "searchable": true,
+    "fillable": true,
+    "primary": false,
+    "inForm": true,
+    "inIndex": false
+}, {
+    "name": "state",
+    "dbType": "string",
+    "htmlType": "texta",
+    "validations": null,
+    "searchable": true,
+    "fillable": true,
+    "primary": false,
+    "inForm": true,
+    "inIndex": false
+},{
+    "name": "zip",
+    "dbType": "string",
+    "htmlType": "text",
+    "validations": null,
+    "searchable": true,
+    "fillable": true,
+    "primary": false,
+    "inForm": true,
+    "inIndex": false
+},{
+    "name": "country",
+    "dbType": "string",
+    "htmlType": "text",
+    "validations": null,
+    "searchable": true,
+    "fillable": true,
+    "primary": false,
+    "inForm": true,
+    "inIndex": false
+},  {
+    "name": "notes",
     "dbType": "text",
     "htmlType": "textarea",
     "validations": null,
@@ -38,47 +88,7 @@
     "primary": false,
     "inForm": true,
     "inIndex": false
-}, {
-    "name": "banner",
-    "dbType": "string",
-    "htmlType": "file",
-    "validations": null,
-    "searchable": true,
-    "fillable": true,
-    "primary": false,
-    "inForm": true,
-    "inIndex": false
-}, {
-    "name": "slug",
-    "dbType": "string",
-    "htmlType": "text",
-    "validations": null,
-    "searchable": true,
-    "fillable": true,
-    "primary": false,
-    "inForm": true,
-    "inIndex": false
-}, {
-    "name": "lang",
-    "dbType": "string,20",
-    "htmlType": "text",
-    "validations": null,
-    "searchable": true,
-    "fillable": true,
-    "primary": false,
-    "inForm": true,
-    "inIndex": false
-}, {
-    "name": "icon-class",
-    "dbType": "string",
-    "htmlType": "text",
-    "validations": null,
-    "searchable": true,
-    "fillable": true,
-    "primary": false,
-    "inForm": true,
-    "inIndex": false
-}, {
+},  {
     "name": "created_at",
     "dbType": "datetime",
     "htmlType": "date",

@@ -18,7 +18,7 @@
     "primary": false,
     "inForm": true,
     "inIndex": true
-},  {
+}, {
     "name": "meta_description",
     "dbType": "text",
     "htmlType": "textarea",
@@ -28,8 +28,7 @@
     "primary": false,
     "inForm": true,
     "inIndex": false
-},
-{
+}, {
     "name": "content",
     "dbType": "text",
     "htmlType": "textarea",
@@ -39,7 +38,7 @@
     "primary": false,
     "inForm": true,
     "inIndex": false
-},{
+}, {
     "name": "bio",
     "dbType": "text",
     "htmlType": "textarea",
@@ -49,8 +48,7 @@
     "primary": false,
     "inForm": true,
     "inIndex": false
-},
-{
+}, {
     "name": "banner",
     "dbType": "string",
     "htmlType": "file",
@@ -69,7 +67,7 @@
     "fillable": true,
     "primary": false,
     "inForm": true,
-    "inIndex": true
+    "inIndex": false
 }, {
     "name": "lang",
     "dbType": "string,20",
@@ -79,12 +77,11 @@
     "fillable": true,
     "primary": false,
     "inForm": true,
-    "inIndex": true
-},{
+    "inIndex": false
+}, {
     "name": "created_at",
     "dbType": "datetime",
     "htmlType": "date",
-
     "validations": null,
     "searchable": false,
     "fillable": false,
