@@ -1,0 +1,65 @@
+	/*
+  	Flaticon icon font: Flaticon
+  	Creation date: 04/07/2017 00:51
+  	*/
+
+@font-face {
+  font-family: "Flaticon";
+  src: url("./Flaticon.eot");
+  src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon.woff") format("woff"),
+       url("./Flaticon.ttf") format("truetype"),
+       url("./Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+  font-family: Flaticon;
+        font-size: 20px;
+font-style: normal;
+margin-left: 20px;
+}
+
+.flaticon-brain:before { content: "\f100"; }
+.flaticon-brain-inside-human-head:before { content: "\f101"; }
+.flaticon-fire:before { content: "\f102"; }
+.flaticon-people-2:before { content: "\f103"; }
+.flaticon-people-1:before { content: "\f104"; }
+.flaticon-medical-1:before { content: "\f105"; }
+.flaticon-people:before { content: "\f106"; }
+.flaticon-medical:before { content: "\f107"; }
+.flaticon-brain-in-head:before { content: "\f108"; }
+.flaticon-accident-10:before { content: "\f109"; }
+.flaticon-hospitalization:before { content: "\f10a"; }
+.flaticon-accident-9:before { content: "\f10b"; }
+.flaticon-accident-8:before { content: "\f10c"; }
+.flaticon-accident-7:before { content: "\f10d"; }
+.flaticon-accident-6:before { content: "\f10e"; }
+.flaticon-accident-5:before { content: "\f10f"; }
+.flaticon-accident-4:before { content: "\f110"; }
+.flaticon-accident-3:before { content: "\f111"; }
+.flaticon-accident-2:before { content: "\f112"; }
+.flaticon-bite-1:before { content: "\f113"; }
+.flaticon-bite:before { content: "\f114"; }
+.flaticon-car-collision:before { content: "\f115"; }
+.flaticon-accident-1:before { content: "\f116"; }
+.flaticon-medical-doctor-specialist:before { content: "\f117"; }
+.flaticon-handicap:before { content: "\f118"; }
+.flaticon-slap:before { content: "\f119"; }
+.flaticon-fight:before { content: "\f11a"; }
+.flaticon-school:before { content: "\f11b"; }
+.flaticon-transport-1:before { content: "\f11c"; }
+.flaticon-transport:before { content: "\f11d"; }
+.flaticon-slide:before { content: "\f11e"; }
+.flaticon-accident:before { content: "\f11f"; }
+.flaticon-scales-of-justice:before { content: "\f120"; }
+.flaticon-tool:before { content: "\f121"; }
