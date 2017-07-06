@@ -38,9 +38,9 @@
 |
 */
 
+/* admin areas  */
 
 
-Route::get('/', function () {return view('layouts.site'); });
 Route::get('tasks' , ['as' => 'tasks', 'uses' => 'TasksController@index']);
 Route::get('tasks/{task}', ['as' => 'tasks.show', 'uses' => 'TasksController@show']);
 
@@ -51,14 +51,6 @@ Route::get('/home', 'HomeController@index');
 
 
 Route::resource('posts', 'PostController');
-
-Route::resource('posts', 'PostController');
-
-Route::resource('services', 'ServiceController');
-
-Route::resource('services', 'ServiceController');
-
-Route::resource('services', 'ServiceController');
 
 Route::resource('services', 'ServiceController');
 
@@ -75,3 +67,11 @@ Route::resource('courthouses', 'CourthouseController');
 Route::resource('courtdates', 'CourtdateController');
 
 Route::resource('timelines', 'TimelineController');
+
+
+
+/* live site areas  */
+
+
+
+Route::get('/', [ 'as' => 'homepage', 'uses' => 'SiteController@index']);
