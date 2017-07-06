@@ -32,8 +32,7 @@ class PostController extends AppBaseController
         $this->postRepository->pushCriteria(new RequestCriteria($request));
         $posts = $this->postRepository->all();
 
-        return view('posts.index')
-            ->with('posts', $posts);
+        return view('posts.index')->with('posts', $posts);
     }
 
     /**

@@ -1,6 +1,5 @@
 @extends('layouts.site')
 
-
 @section('content')
 			<section id="about" class="ls ms section_padding_0 columns_padding_0 section_about">
 				<div class="container-fluid">
@@ -222,8 +221,6 @@
 				</div>
 			</section>
 
-
-
 			<section id="team" class="ls ms section_padding_top_50 section_padding_bottom_100">
 				<div class="container">
 					<div class="row">
@@ -378,7 +375,6 @@
 
 				</div>
 			</section>
-
 
 			<section class="cs section_padding_100 section_action parallax">
 				<div class="container">
@@ -861,7 +857,4 @@
 					</div>
 				</div>
 			</section>
-
 @endsection
-
-

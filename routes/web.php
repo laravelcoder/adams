@@ -75,3 +75,4 @@ Route::resource('timelines', 'TimelineController');
 
 
 Route::get('/', [ 'as' => 'homepage', 'uses' => 'SiteController@index']);
+Route::get('services/{service}', [ 'as' => 'homepage', 'uses' => 'ServiceController@show']);

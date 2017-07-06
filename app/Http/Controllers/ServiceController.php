@@ -75,14 +75,20 @@ class ServiceController extends AppBaseController
     {
         $service = $this->serviceRepository->findWithoutFail($id);
 
-        if (empty($service)) {
-            Flash::error('Service not found');
+        // if (empty($service)) {
+        //     Flash::error('Service not found');
 
-            return redirect(route('services.index'));
-        }
+        //     return redirect(route('services.index'));
+        // }
 
-        return view('services.show')->with('service', $service);
+        return view('services.service')->with('service', $service);
     }
+
+    // public function service(Service $service)
+    // {
+
+    //     return view('services.service', compact('service'));
+    // }
 
     /**
      * Show the form for editing the specified Service.

@@ -7,7 +7,7 @@
 <!--<![endif]-->
 
 <head>
-	<title>Adams Davic P.C.</title>
+	<title>@yield('title')</title>
 	<meta charset="utf-8">
 	<!--[if IE]>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -75,21 +75,17 @@
 	<div id="canvas">
 		<div id="box_wrapper">
 
-
 			<!-- template sections -->
 
-@include('layouts.frontpage.slider')
-
-			<!--	{{-- https://youtu.be/7Hcp0BvMdPc --}}  -->
-			<header class="page_header header_darkgrey header_transparent table_section table_section_md toggler_right">
+			<header class="page_header header_darkgrey table_section table_section_md toggler_right">
 				<div class="container">
 					<div class="row">
 						<div class="col-md-4">
-							<a href="{!! url('/') !!}" class="logo top_logo">
+							<a href="./" class="logo small">
 								<img src="{!! asset('images/logo.png') !!}" alt="">
 								<span class="logo_text">
-									<span class="playfair title">Adams Davis</span>
-									<span class="highlight">ACCIDENT TRIAL ATTORNEYS</span>
+									<span class="playfair title">The Justice</span>
+									<span class="highlight">Premium HTML template</span>
 								</span>
 							</a>
 							<!-- header toggler -->
@@ -637,11 +633,25 @@
 				</div>
 			</header>
 
+			<section class="page_breadcrumbs cs parallax section_padding_top_40 section_padding_bottom_40">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12 text-center">
+							<h2>{!! $service->service !!}</h2>
+							<ol class="breadcrumb">
+								<li> <a href="{!! url('/') !!}"> Home </a> </li>
+								<li> <a href="#">Blog</a> </li>
+								<li class="active">Service</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</section>
+
 @yield('content')
 
 @include('layouts.partials.footer')
 @include('layouts.partials.copy')
-
 
 
 		</div>
