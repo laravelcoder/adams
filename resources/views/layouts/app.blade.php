@@ -180,12 +180,12 @@
         <!-- eof #box_wrapper -->
     </div>
     <!-- eof #canvas -->
-     <script src="{!! asset('ckeditor/ckeditor.js') !!}"></script>
-<script>
-    CKEDITOR.replace( 'upper_content');
-    CKEDITOR.replace( 'lower_content');
-    CKEDITOR.replace( 'content');
-</script>
+    <script src="{!! asset('ckeditor/ckeditor.js') !!}"></script>
+    <script>
+        CKEDITOR.replace( 'upper_content');
+        CKEDITOR.replace( 'lower_content');
+        CKEDITOR.replace( 'content');
+    </script>
     <script src="{!! asset('js/compressed.js') !!}"></script>
     <script src="{!! asset('js/vendor/Chart.bundle.min.js') !!}"></script>
     <script src="{!! asset('js/main.js') !!}"></script>
