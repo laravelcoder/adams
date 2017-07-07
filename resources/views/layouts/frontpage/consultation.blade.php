@@ -53,9 +53,16 @@
 														<div class="input-group">
 															<select aria-required="true" id="month" name="mounth" class="choice empty form-control">
 																<option value="" disabled selected data-default>Practice Area</option>
-																<option value="january">January</option>
-																<option value="february">February</option>
-																<option value="march">March</option>
+																	<option value="Personal Injury">Personal Injury</option>
+																	<option value="Wrongful Death">Wrongful Death</option>
+																	<option value="Vehicle Accidents">Vehicle Accidents</option>
+																	<option value="Catastrophic Injuries">Catastrophic Injuries</option>
+																	<option value="Dog Bite Injuries">Dog Bite Injuries</option>
+																	<option value="Construction Accidents">Construction Accidents</option>
+																	<option value="Premises Accidents">Premises Accidents</option>
+																	<option value="Brain Injuries">Brain Injuries</option>
+																	<option value="FELA Claims">FELA Claims</option>
+																	<option value="Other">Other</option>
 															</select>
 															<i class="fa fa-angle-down" aria-hidden="true"></i>
 														</div>
@@ -69,8 +76,7 @@
 												</div>
 											</div>
 											<p class="form-submit">
-												<button type="submit" id="submit" name="submit" class="theme_button color1">Send request
-												</button>
+												<button type="submit" id="submit" name="submit" class="theme_button color1">Send request</button>
 											</p>
 										</form>
 
