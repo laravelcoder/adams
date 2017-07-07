@@ -10,6 +10,9 @@ use Illuminate\Http\Request;
 use Flash;
 use Prettus\Repository\Criteria\RequestCriteria;
 use Response;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Str;
 
 class ServiceController extends AppBaseController
 {
@@ -32,8 +35,7 @@ class ServiceController extends AppBaseController
         $this->serviceRepository->pushCriteria(new RequestCriteria($request));
         $services = $this->serviceRepository->paginate(20);
 
-        return view('services.index')
-            ->with('services', $services);
+        return view('services.index')->with('services', $services);
     }
 
     /**
@@ -43,6 +45,7 @@ class ServiceController extends AppBaseController
      */
     public function create()
     {
+
         return view('services.create');
     }
 
@@ -55,9 +58,21 @@ class ServiceController extends AppBaseController
      */
     public function store(CreateServiceRequest $request)
     {
+
+
         $input = $request->all();
 
+       // $service->slug = Str::slug($request->service);
+       // $service->addMediaFromRequest($request->file('image'))->toMediaCollection('images');
+
+        // dd( request()->all());
+
+
         $service = $this->serviceRepository->create($input);
+
+
+        // dd($service);
+
 
         Flash::success('Service saved successfully.');
 
@@ -71,24 +86,19 @@ class ServiceController extends AppBaseController
      *
      * @return Response
      */
-    public function show($id)
+    public function show($id, $slug)
     {
         $service = $this->serviceRepository->findWithoutFail($id);
+        $service = Service::where('slug', $slug)->firstOrFail();
 
-        // if (empty($service)) {
-        //     Flash::error('Service not found');
+        if (empty($service)) {
+            Flash::error('Service not found');
 
-        //     return redirect(route('services.index'));
-        // }
+            return redirect(route('services.index'));
+        }
 
-        return view('services.service')->with('service', $service);
+        return view('services.show')->with('service', $service);
     }
-
-    // public function service(Service $service)
-    // {
-
-    //     return view('services.service', compact('service'));
-    // }
 
     /**
      * Show the form for editing the specified Service.
@@ -122,13 +132,19 @@ class ServiceController extends AppBaseController
     {
         $service = $this->serviceRepository->findWithoutFail($id);
 
+
+
         if (empty($service)) {
             Flash::error('Service not found');
 
             return redirect(route('services.index'));
         }
 
+
         $service = $this->serviceRepository->update($request->all(), $id);
+
+        $service->update(['slug' => Str::slug($service->service)]);
+
 
         Flash::success('Service updated successfully.');
 

@@ -12,8 +12,9 @@ class AttorneyRepository extends BaseRepository
      */
     protected $fieldSearchable = [
         'name',
+        'upper_content',
+        'lower_content',
         'meta_description',
-        'content',
         'bio',
         'banner',
         'slug',

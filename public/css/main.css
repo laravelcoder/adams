@@ -55,10 +55,10 @@
   - template parallax sections
   - footer styles
   - copyrights styles
-  - google map 
+  - google map
   - intro slider inside content
 * Intro Section Styles
-* Main Menu 
+* Main Menu
   - Desktop menu
   - Mobile menu
   - Mobile menu toggler
@@ -90,7 +90,7 @@
   - teasers
   - testimonials
   - thumbnail
-  - price tables 
+  - price tables
   - contact forms
   - partners_carousel
 * Shop
@@ -118,12 +118,12 @@ Background color for dark muted section (.ds.ms): #1a1a1a
 Border colors for elements in light section (and .with_border elements): #e1e1e1, rgba(0, 0, 0, 0.1)
 Background color for elements in light section (.with_background): #f5f5f5
 
-Dark section (.ds) colors: 
+Dark section (.ds) colors:
 Text color in dark section: #7e7d82
 Border colors for elements in dark section: #454545
 Background color for elements in dark section (.with_background): rgba(255, 255, 255, 0.06)
 
-Color section (.cs) colors: 
+Color section (.cs) colors:
 Border colors for elements in color section: rgba(255, 255, 255, 0.15)
 
 */
@@ -1706,8 +1706,8 @@ ul.list2 {
 	padding-top: 0;
 }
 
-/* 
-** Buttons 
+/*
+** Buttons
 */
 .theme_buttons a,
 .theme_button,
@@ -2983,8 +2983,8 @@ div.ppt {
 	margin-top: 0;
 }
 
-/* 
-** Time Table 
+/*
+** Time Table
 */
 #timetable span {
 	display: block;
@@ -3021,7 +3021,7 @@ div.ppt {
 	color: #ffffff;
 }
 
-/* 
+/*
 ** toTop
 */
 #toTop {
@@ -3962,8 +3962,8 @@ body.boxed {
 /*
 **utilites
 */
-/* 
-**Helper Utilites 
+/*
+**Helper Utilites
 */
 /* layout */
 .clear, .clearfix {
@@ -6025,7 +6025,7 @@ body.boxed {
 }
 
 /*
-** Color Section - .cs 
+** Color Section - .cs
 */
 .cs.main_color2 {
 	background-color: #00bac6;
@@ -6256,8 +6256,8 @@ section .cs .theme_button:hover {
 	background-color: transparent;
 }
 
-/* 
-** Header 
+/*
+** Header
 */
 .header_white {
 	color: #7e7d82;
@@ -7563,7 +7563,7 @@ body.active-side-header.slide-right .page_header_side {
 	z-index: 1;
 }
 
-/* 
+/*
 ** Intro Section Styles
 */
 .intro_section {
@@ -10542,8 +10542,8 @@ aside .widget_tag_cloud a:hover {
 	background-color: rgba(43, 39, 44, 0.85);
 }
 
-/* 
-** Testimonials 
+/*
+** Testimonials
 */
 /* big testimonials slider */
 .blockquote-big {
@@ -13874,3 +13874,25 @@ tr.item-editable .media-left img {
 	margin-right: -40px;
 	padding: 20px 40px;
 }
+
+
+.intro_section > img, .intro_section .slides > li > img {
+    opacity: 0.3!important;
+    width: 100%;
+}
+
+.with_background {
+    background-color: #f5f5f5;
+    border-radius: 2px;
+    min-height: 617px;
+}
+
+div.user-menu-info h4 {
+    text-transform: capitalize;
+}
+
+.header_darkgrey .sf-menu > li {
+    color: #ffffff;
+}
+
+

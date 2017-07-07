@@ -29,8 +29,8 @@
     "inForm": true,
     "inIndex": false
 }, {
-    "name": "upper-content",
-    "dbType": "text",
+    "name": "upper_content",
+    "dbType": "text:nullable",
     "htmlType": "textarea",
     "validations": null,
     "searchable": true,
@@ -39,8 +39,8 @@
     "inForm": true,
     "inIndex": false
 },{
-    "name": "lower-content",
-    "dbType": "text",
+    "name": "lower_content",
+    "dbType": "text:nullable",
     "htmlType": "textarea",
     "validations": null,
     "searchable": true,
@@ -50,7 +50,7 @@
     "inIndex": false
 }, {
     "name": "meta_description",
-    "dbType": "text",
+    "dbType": "text:nullable",
     "htmlType": "textarea",
     "validations": null,
     "searchable": true,
@@ -89,7 +89,7 @@
     "inForm": true,
     "inIndex": false
 }, {
-    "name": "icon-class",
+    "name": "icon_class",
     "dbType": "string:nullable",
     "htmlType": "text",
     "validations": null,

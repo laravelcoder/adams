@@ -14,16 +14,16 @@
 							</a>
 
 							<p>
-								Ut bacon filet mignon frankfurter venison shank sed quis short ribs lorem. Shank and incididunt ea bacon. doner boudin short loin excepteur pork. belly qui ribeye salami
+								As personal injury lawyers we’ve secured millions and dollars, on behalf of our clients, in verdicts and settlements. No one will work harder for you and your case, than we will.
 							</p>
 
-							<p>
+						{{-- 	<p>
 								<a href="#" class="social-icon theme-color-icon soc-twitter"></a>
 								<a href="#" class="social-icon theme-color-icon soc-facebook"></a>
 								<a href="#" class="social-icon theme-color-icon soc-google"></a>
 								<a href="#" class="social-icon theme-color-icon soc-linkedin"></a>
 								<a href="#" class="social-icon theme-color-icon soc-pinterest"></a>
-							</p>
+							</p> --}}
 
 						</div>
 

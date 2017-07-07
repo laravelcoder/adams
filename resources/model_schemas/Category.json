@@ -20,7 +20,7 @@
     "inIndex": true
 }, {
     "name": "meta_description",
-    "dbType": "text",
+    "dbType": "text:nullable",
     "htmlType": "textarea",
     "validations": null,
     "searchable": true,
@@ -30,7 +30,7 @@
     "inIndex": false
 }, {
     "name": "banner",
-    "dbType": "string",
+    "dbType": "string:nullable",
     "htmlType": "file",
     "validations": null,
     "searchable": true,
@@ -40,7 +40,7 @@
     "inIndex": false
 }, {
     "name": "slug",
-    "dbType": "string",
+    "dbType": "string:nullable",
     "htmlType": "text",
     "validations": null,
     "searchable": true,
@@ -50,7 +50,7 @@
     "inIndex": true
 }, {
     "name": "lang",
-    "dbType": "string,20",
+    "dbType": "string,20:default,'en'",
     "htmlType": "text",
     "validations": null,
     "searchable": true,

@@ -16,10 +16,16 @@
     <p>{!! $service->intro !!}</p>
 </div>
 
-<!-- Content Field -->
+<!-- Upper Content Field -->
 <div class="form-group">
-    {!! Form::label('content', 'Content:') !!}
-    <p>{!! $service->content !!}</p>
+    {!! Form::label('upper_content', 'Upper Content:') !!}
+    <p>{!! $service->upper_content !!}</p>
+</div>
+
+<!-- Lower Content Field -->
+<div class="form-group">
+    {!! Form::label('lower_content', 'Lower Content:') !!}
+    <p>{!! $service->lower_content !!}</p>
 </div>
 
 <!-- Meta Description Field -->
@@ -46,10 +52,10 @@
     <p>{!! $service->lang !!}</p>
 </div>
 
-<!-- Icon-Class Field -->
+<!-- Icon Class Field -->
 <div class="form-group">
-    {!! Form::label('icon-class', 'Icon-Class:') !!}
-    <p>{!! $service->icon-class !!}</p>
+    {!! Form::label('icon_class', 'Icon Class:') !!}
+    <p>{!! $service->icon_class !!}</p>
 </div>
 
 <!-- Created At Field -->

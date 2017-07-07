@@ -10,16 +10,22 @@
     <p>{!! $staff->name !!}</p>
 </div>
 
+<!-- Upper Content Field -->
+<div class="form-group">
+    {!! Form::label('upper_content', 'Upper Content:') !!}
+    <p>{!! $staff->upper_content !!}</p>
+</div>
+
+<!-- Lower Content Field -->
+<div class="form-group">
+    {!! Form::label('lower_content', 'Lower Content:') !!}
+    <p>{!! $staff->lower_content !!}</p>
+</div>
+
 <!-- Meta Description Field -->
 <div class="form-group">
     {!! Form::label('meta_description', 'Meta Description:') !!}
     <p>{!! $staff->meta_description !!}</p>
-</div>
-
-<!-- Content Field -->
-<div class="form-group">
-    {!! Form::label('content', 'Content:') !!}
-    <p>{!! $staff->content !!}</p>
 </div>
 
 <!-- Bio Field -->

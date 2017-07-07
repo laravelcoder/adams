@@ -4,18 +4,21 @@ namespace App\Models;
 
 use Eloquent as Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Spatie\MediaLibrary\HasMedia\HasMediaTrait;
+use Spatie\MediaLibrary\HasMedia\Interfaces\HasMediaConversions;
 
 /**
  * Class Service
  * @package App\Models
- * @version July 5, 2017, 7:18 pm UTC
+ * @version July 6, 2017, 8:53 pm UTC
  */
 class Service extends Model
 {
     use SoftDeletes;
+     use HasMediaTrait;
 
     public $table = 'services';
-    
+
 
     protected $dates = ['deleted_at'];
 
@@ -23,12 +26,13 @@ class Service extends Model
     public $fillable = [
         'service',
         'intro',
-        'content',
+        'upper_content',
+        'lower_content',
         'meta_description',
         'banner',
         'slug',
         'lang',
-        'icon-class'
+        'icon_class'
     ];
 
     /**
@@ -39,12 +43,13 @@ class Service extends Model
     protected $casts = [
         'service' => 'string',
         'intro' => 'string',
-        'content' => 'string',
+        'upper_content' => 'string',
+        'lower_content' => 'string',
         'meta_description' => 'string',
         'banner' => 'string',
         'slug' => 'string',
         'lang' => 'string',
-        'icon-class' => 'string'
+        'icon_class' => 'string'
     ];
 
     /**
@@ -57,5 +62,5 @@ class Service extends Model
         'intro' => 'required'
     ];
 
-    
+
 }

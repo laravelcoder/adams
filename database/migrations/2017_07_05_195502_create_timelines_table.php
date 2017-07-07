@@ -16,10 +16,11 @@ class CreateTimelinesTable extends Migration
         Schema::create('timelines', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title', 150);
-            $table->text('notes');
-            $table->datetime('dated_at');
-            $table->integer('case_id')->unsigned();
-            $table->timestamps();
+            $table->text('notes')->nullable();
+            $table->datetime('dated_at')->nullable();
+            $table->integer('case_id')->unsigned()->nullable();
+            $table->timestamp('updated_at')->useCurrent();
+            $table->timestamp('created_at')->useCurrent();
             $table->softDeletes();
             $table->foreign('case_id')->references('id')->on('cases');
         });

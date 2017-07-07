@@ -4,16 +4,22 @@
     {!! Form::text('name', null, ['class' => 'form-control']) !!}
 </div>
 
+<!-- Upper Content Field -->
+<div class="form-group col-sm-12 col-lg-12">
+    {!! Form::label('upper_content', 'Upper Content:') !!}
+    {!! Form::textarea('upper_content', null, ['class' => 'form-control']) !!}
+</div>
+
+<!-- Lower Content Field -->
+<div class="form-group col-sm-12 col-lg-12">
+    {!! Form::label('lower_content', 'Lower Content:') !!}
+    {!! Form::textarea('lower_content', null, ['class' => 'form-control']) !!}
+</div>
+
 <!-- Meta Description Field -->
 <div class="form-group col-sm-12 col-lg-12">
     {!! Form::label('meta_description', 'Meta Description:') !!}
     {!! Form::textarea('meta_description', null, ['class' => 'form-control']) !!}
-</div>
-
-<!-- Content Field -->
-<div class="form-group col-sm-12 col-lg-12">
-    {!! Form::label('content', 'Content:') !!}
-    {!! Form::textarea('content', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Bio Field -->

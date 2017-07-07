@@ -4,6 +4,12 @@
     {!! Form::text('title', null, ['class' => 'form-control']) !!}
 </div>
 
+<!-- Status Field -->
+<div class="form-group col-sm-6">
+    {!! Form::label('status', 'Status:') !!}
+    {!! Form::select('status', ['Draft' => 'Draft', 'Published' => 'Published', 'Off' => 'Off'], null, ['class' => 'form-control']) !!}
+</div>
+
 <!-- Subtitle Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('subtitle', 'Subtitle:') !!}
@@ -21,6 +27,13 @@
     {!! Form::label('notes', 'Notes:') !!}
     {!! Form::textarea('notes', null, ['class' => 'form-control']) !!}
 </div>
+
+<!-- Image Field -->
+<div class="form-group col-sm-6">
+    {!! Form::label('image', 'Image:') !!}
+    {!! Form::file('image') !!}
+</div>
+<div class="clearfix"></div>
 
 <!-- Slug Field -->
 <div class="form-group col-sm-6">

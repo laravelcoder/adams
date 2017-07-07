@@ -1,54 +1,48 @@
 @extends('layouts.site')
 
 @section('content')
-			<section id="about" class="ls ms section_padding_0 columns_padding_0 section_about">
-				<div class="container-fluid">
+
+@include('layouts.frontpage.about')
+
+@if(!count($services))
+			<section id="services" class="ds section_padding_50 section_services parallax">
+				<div class="container">
 					<div class="row">
+						<div class="col-sm-12 text-center">
+							<div class="section_number with_divider grey">
+								<span>02</span>
+							</div>
+							<h2 class="section_header">Practice Areas</h2>
+							<p>When it comes to righting wrongs for victims of accidents, negligence, or any other area we work in, our attorneys at Adams Davis fight aggressively for your rights. When we take on your case, you become a critical part of our legal team and we work with you every step of the way. </p>
+						</div>
+					</div>
+					<div class="row columns_padding_25 columns_margin_bottom_60 topmargin_30">
+					@foreach($services as $service)
+						<div class="col-md-4 col-sm-6">
 
-						<div class="col-md-6 section_padding_top_60 section_padding_bottom_65">
+							<div class="teaser media">
+								<div class="media-left">
+									<div class="teaser_icon highlight size_normal">
+										<i class="{!! $service->icon_class !!}"></i>
 
-							<div class="container-left-half">
-								<div class="row">
-									<div class="col-xs-12">
-
-										<div class="section_number with_divider grey">
-											<span>01</span>
-										</div>
-										<h2 class="section_header highlight">Welcome to The Adams Davis</h2>
-										<p>At Adams Davis our philosophy is “We’re in this together.”</p>
-										<p>
-											We are a law firm of real trial attorneys who will fight aggressively for your rights. Everything we do begins and ends with the client. We understand that each situation is unique and during this stressful time you need someone you can trust. The Personal Injury Law Firm of Adams Davis P.C. will become your partner in the legal process.
-										</p>
-										<div class="topmargin_60 content-justify vertical-center">
-											<div>
-												<p class="small-text grey margin_0">derren davis</p>
-												<p class="highlight">Accedent Trial Attorney</p>
-											</div>
-											{{-- <img src="images/signature.png" alt=""> --}}
-										</div>
-
+										{{-- <i class="flaticon-accident-9"></i> --}}
 									</div>
 								</div>
-							</div>
-							<!-- .container-left-half -->
-
-						</div>
-						<!-- .col-* -->
-						<div class="col-md-6 hidden-sm hidden-xs">
-							<div class="container-right-half">
-								<div class="row">
-									<div class="col-xs-12 text-center">
-										<div class="bg_image_half cs"></div>
-										<img src="images/person.png" alt="">
-									</div>
+								<div class="media-body toppadding_5">
+									<h3 class="muli">
+										<a href="{!! url('services') !!}/{!! $service->slug !!}">{!! $service->service !!}</a>
+									</h3>
+									<hr class="divider_30_3 divider_left divider_10 main_bg_color">
+									<p>{!! $service->intro !!}</p>
 								</div>
 							</div>
+							<div style="clear:both"></div>
 						</div>
-						<!-- .col-* -->
-
+					@endforeach
 					</div>
 				</div>
 			</section>
+@else
 
 			<section id="services" class="ds section_padding_50 section_services parallax">
 				<div class="container">
@@ -59,7 +53,7 @@
 							</div>
 							<h2 class="section_header">Practice Areas</h2>
 							<p>When it comes to righting wrongs for victims of accidents, negligence, or any other area we work in, our attorneys at Adams Davis fight aggressively for your rights. When we take on your case, you become a critical part of our legal team and we work with you every step of the way. </p>
-							<p>
+
 						</div>
 					</div>
 					<div class="row columns_padding_25 columns_margin_bottom_60 topmargin_30">
@@ -220,7 +214,7 @@
 					</div>
 				</div>
 			</section>
-
+@endif
 			<section id="team" class="ls ms section_padding_top_50 section_padding_bottom_100">
 				<div class="container">
 					<div class="row">
@@ -229,7 +223,8 @@
 								<span>03</span>
 							</div>
 							<h2 class="section_header highlight">Our Attorneys</h2>
-							<p>Personal Injury Attorneys Ready To Fight For You. We Provide Extremely Aggressive Representation. Let Us Help!</p>
+							<p>We invite you to learn more about our attorneys, our experience, and the kinds of cases we have handled for our clients.</p>
+						{{-- 	<p>Personal Injury Attorneys Ready To Fight For You. We Provide Extremely Aggressive Representation. Let Us Help!</p> --}}
 							<p>
 
 								<div class="owl-carousel topmargin_60 bottommargin_0" data-nav="true" data-dots="true" data-responsive-lg="3" data-responsive-md="3">
@@ -380,8 +375,10 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-sm-12 text-center">
-							<h2 class="section_header highlight">20 Years of Experience in Various Cases</h2>
-							<p>It is not exhaustive since throught our experience we understand that a client’s needs are always diverse and dynamic.</p>
+							{{-- <h2 class="section_header highlight">20 Years of Experience in Various Cases</h2> --}}
+							<h2 class="section_header highlight">Have you been injured?</h2>
+							{{-- <p>Speak directly with an experienced Personal Injury Attorney today at no cost to you.</p> --}}
+							<p>Please feel free to contact us if you have questions or would like to schedule a free confidential consultation.</p>
 							<p>
 								<p class="topmargin_50">
 									<a href="#" class="theme_button">Free consultation</a>
@@ -399,7 +396,7 @@
 								<span>05</span>
 							</div>
 							<h2 class="section_header highlight">Supporting Staff</h2>
-
+							<p>Your legal team includes trained paralegals, meticulous investigators, expert witnesses, and other professional staff to support you and your attorney.</p>
 							<p>
 
 								<div class="owl-carousel topmargin_60 bottommargin_0" data-nav="true" data-dots="true" data-responsive-lg="5" data-responsive-md="5">
@@ -556,7 +553,7 @@
 								<span>04</span>
 							</div>
 							<h2 class="section_header highlight">Why Choose Us</h2>
-							<p>Pork chop sirloin kielbasa swine short ribs, t-bone pork belly T-bone leberkas frankfurter pork belly kielbasa beef ribs.</p>
+							<p>We do not hesitate to try your case in court, going toe-to-toe against big insurance companies and powerful corporations that put their profit before your safety is one of our specialties.</p>
 							<p>
 						</div>
 					</div>
@@ -565,7 +562,7 @@
 							<div class="teaser media media-sm-block text-right">
 								<div class="media-body media-middle">
 									<h3 class="muli">
-										<a href="service-single.html">Great Discount</a>
+										<a href="service-single.html">Auto Accidents</a>
 									</h3>
 									<hr class="divider_30_3 divider_right divider_10 main_bg_color">
 									<p>Tempor ribeye eiusmod, filet mignon aliqua est sed non labo</p>
@@ -580,7 +577,7 @@
 							<div class="teaser media media-sm-block text-right topmargin_40">
 								<div class="media-body media-middle">
 									<h3 class="muli">
-										<a href="service-single.html">Community Service</a>
+										<a href="service-single.html">Premises Liability</a>
 									</h3>
 									<hr class="divider_30_3 divider_right divider_10 main_bg_color">
 									<p>Ut bacon filet mignon frankfurter venison shank sed quis</p>
@@ -594,7 +591,7 @@
 						</div>
 
 						<div class="col-lg-4 col-md-4 text-center">
-							<img src="images/themis.png" alt="" />
+							<img src="{!! asset('images/themis.png') !!}" alt="" />
 						</div>
 
 						<div class="col-lg-4 col-md-4">
@@ -606,7 +603,7 @@
 								</div>
 								<div class="media-body media-middle">
 									<h3 class="muli">
-										<a href="service-single.html">Great Discount</a>
+										<a href="service-single.html">Slip and Fall</a>
 									</h3>
 									<hr class="divider_30_3 divider_left divider_10 main_bg_color">
 									<p>Tempor ribeye eiusmod, filet mignon aliqua est sed non labo</p>
@@ -621,7 +618,7 @@
 								</div>
 								<div class="media-body media-middle">
 									<h3 class="muli">
-										<a href="service-single.html">Community Service</a>
+										<a href="service-single.html">Other Cases</a>
 									</h3>
 									<hr class="divider_30_3 divider_left divider_10 main_bg_color">
 									<p>Ut bacon filet mignon frankfurter venison shank sed quis</p>
@@ -857,4 +854,36 @@
 					</div>
 				</div>
 			</section>
+@endsection
+
+@section('seo')
+    <meta name="title" content="Adams Davis P.C.">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author"content="Adams Davis P.C."/>
+    <meta property='og:site_name' value='Adams Davis P.C.'/>
+    <meta property='og:title' content='Adams Davis on FaceBook' />
+    <meta property='og:url' content='{!! Request::url() !!}' />
+    <meta property="og:description" content="" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Adams Davis on Twitter" />
+    <meta name="twitter:description" content="" />
+    <meta name="twitter:site" content="@adamsdavis" />
+@endsection
+
+@section('json-ld')
+
+    <script type="application/ld+json">
+    {
+       "@context":"http:\/\/schema.org\/",
+       "name":"Adams Davis P.C.",
+       "@type":"Article",
+       "author":"Adams Davis P.C.",
+       "ArticleSection":"Blog Section",
+       "datePublished":"2017-01-01 12:00:00",
+       "Publisher":"Adams Davis P.C.",
+       "url":"{!! Request::url() !!}"
+    }
+    </script>
+
 @endsection

@@ -13,12 +13,13 @@ class ServiceRepository extends BaseRepository
     protected $fieldSearchable = [
         'service',
         'intro',
-        'content',
+        'upper_content',
+        'lower_content',
         'meta_description',
         'banner',
         'slug',
         'lang',
-        'icon-class'
+        'icon_class'
     ];
 
     /**
@@ -28,4 +29,6 @@ class ServiceRepository extends BaseRepository
     {
         return Service::class;
     }
+
+
 }

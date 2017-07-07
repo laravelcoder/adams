@@ -19,8 +19,18 @@
     "inForm": true,
     "inIndex": true
 }, {
+    "name": "status",
+    "dbType": "string:nullable",
+    "htmlType": "select,Draft,Published,Off",
+    "validations": null,
+    "searchable": true,
+    "fillable": true,
+    "primary": false,
+    "inForm": true,
+    "inIndex": true
+},{
     "name": "subtitle",
-    "dbType": "string",
+    "dbType": "string:nullable",
     "htmlType": "text",
     "validations": null,
     "searchable": true,
@@ -40,7 +50,7 @@
     "inIndex": true
 }, {
     "name": "notes",
-    "dbType": "text",
+    "dbType": "text:nullable",
     "htmlType": "textarea",
     "validations": null,
     "searchable": true,
@@ -49,8 +59,18 @@
     "inForm": true,
     "inIndex": true
 }, {
+    "name": "image",
+    "dbType": "string:nullable",
+    "htmlType": "file",
+    "validations": null,
+    "searchable": true,
+    "fillable": true,
+    "primary": false,
+    "inForm": true,
+    "inIndex": false
+}, {
     "name": "slug",
-    "dbType": "string",
+    "dbType": "string:nullable",
     "htmlType": "text",
     "validations": null,
     "searchable": true,
@@ -60,7 +80,7 @@
     "inIndex": true
 }, {
     "name": "meta_title",
-    "dbType": "string",
+    "dbType": "string:nullable",
     "htmlType": "text",
     "validations": null,
     "searchable": true,
@@ -70,7 +90,7 @@
     "inIndex": true
 }, {
     "name": "fb_title",
-    "dbType": "string",
+    "dbType": "string:nullable",
     "htmlType": "text",
     "validations": null,
     "searchable": true,
@@ -80,7 +100,7 @@
     "inIndex": true
 }, {
     "name": "gp_title",
-    "dbType": "string",
+    "dbType": "string:nullable",
     "htmlType": "text",
     "validations": null,
     "searchable": true,
@@ -90,7 +110,7 @@
     "inIndex": true
 }, {
     "name": "tw_title",
-    "dbType": "string",
+    "dbType": "string:nullable",
     "htmlType": "text",
     "validations": null,
     "searchable": true,
@@ -100,7 +120,7 @@
     "inIndex": true
 }, {
     "name": "meta_description",
-    "dbType": "text",
+    "dbType": "text:nullable",
     "htmlType": "textarea",
     "validations": null,
     "searchable": true,
@@ -110,7 +130,7 @@
     "inIndex": true
 }, {
     "name": "category_id",
-    "dbType": "integer,false,true",
+    "dbType": "integer:nullable",
     "htmlType": null,
     "validations": null,
     "searchable": true,
@@ -120,7 +140,7 @@
     "inIndex": true
 }, {
     "name": "user_id",
-    "dbType": "integer,false,true",
+    "dbType": "integer:nullable",
     "htmlType": null,
     "validations": null,
     "searchable": true,

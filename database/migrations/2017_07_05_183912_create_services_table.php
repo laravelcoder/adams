@@ -17,13 +17,13 @@ class CreateServicesTable extends Migration
             $table->increments('id');
             $table->string('service');
             $table->string('intro')->nullable();
-            $table->text('upper-content')->nullable();
-            $table->text('lower-content')->nullable();
+            $table->text('upper_content')->nullable();
+            $table->text('lower_content')->nullable();
             $table->text('meta_description')->nullable();
             $table->string('banner')->nullable();
             $table->string('slug')->nullable();
-            $table->string('lang')->nullable();
-            $table->string('icon-class')->nullable();
+            $table->string('lang', 20)->default('en');
+            $table->string('icon_class')->nullable();
             $table->timestamp('updated_at')->useCurrent();
             $table->timestamp('created_at')->useCurrent();
             $table->softDeletes();

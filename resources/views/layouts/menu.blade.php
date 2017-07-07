@@ -1,4 +1,4 @@
-<li class="{{ Request::is('posts*') ? 'active' : '' }}">
+<li class="{{ Request::is('secure/posts*') ? 'active' : '' }}">
     <a href="#"> <i class="fa fa-file-text"></i> <span>Posts</span> </a>
     <ul>
     	<li> <a href="{!! route('posts.index') !!}"> <i class="fa fa-file-text"></i> <span>Posts</span> </a> </li>
@@ -6,7 +6,7 @@
     </ul>
 </li>
 
-<li class="{{ Request::is('services*') ? 'active' : '' }}">
+<li class="{{ Request::is('secure/services*') ? 'active' : '' }}">
     <a href="#"> <i class="fa fa-file-text"></i> <span>Services</span> </a>
     <ul>
     	<li> <a href="{!! route('services.index') !!}"> <i class="fa fa-file-text"></i> <span>Services</span> </a> </li>
@@ -14,7 +14,7 @@
     </ul>
 </li>
 
-<li class="{{ Request::is('pages*') ? 'active' : '' }}">
+<li class="{{ Request::is('secure/pages*') ? 'active' : '' }}">
     <a href="#"> <i class="fa fa-file-text"></i> <span>Pages</span> </a>
     <ul>
     	<li> <a href="{!! route('pages.index') !!}"> <i class="fa fa-file-text"></i> <span>Pages</span> </a> </li>
@@ -22,7 +22,7 @@
     </ul>
 </li>
 
-<li class="{{ Request::is('attorneys*') ? 'active' : '' }}">
+<li class="{{ Request::is('secure/attorneys*') ? 'active' : '' }}">
     <a href="#"> <i class="fa fa-file-text"></i> <span>Attorneys</span> </a>
     <ul>
     	<li> <a href="{!! route('attorneys.index') !!}"> <i class="fa fa-file-text"></i> <span>Attorneys</span> </a> </li>
@@ -30,7 +30,7 @@
     </ul>
 </li>
 
-<li class="{{ Request::is('staff*') ? 'active' : '' }}">
+<li class="{{ Request::is('secure/staff*') ? 'active' : '' }}">
     <a href="#"> <i class="fa fa-file-text"></i> <span>Staff</span> </a>
     <ul>
     	<li> <a href="{!! route('staff.index') !!}"> <i class="fa fa-file-text"></i> <span>Staff</span> </a> </li>
@@ -38,7 +38,7 @@
     </ul>
 </li>
 
-<li class="{{ Request::is('cases*') ? 'active' : '' }}">
+<li class="{{ Request::is('secure/cases*') ? 'active' : '' }}">
     <a href="#"> <i class="fa fa-file-text"></i> <span>Cases</span> </a>
     <ul>
     	<li> <a href="{!! route('cases.index') !!}"> <i class="fa fa-file-text"></i> <span>Cases</span> </a> </li>
@@ -46,7 +46,7 @@
     </ul>
 </li>
 
-<li class="{{ Request::is('courthouses*') ? 'active' : '' }}">
+<li class="{{ Request::is('secure/courthouses*') ? 'active' : '' }}">
     <a href="#"> <i class="fa fa-file-text"></i> <span>Courthouses</span> </a>
     <ul>
     	<li> <a href="{!! route('courthouses.index') !!}"> <i class="fa fa-file-text"></i> <span>Courthouses</span> </a> </li>
@@ -54,7 +54,7 @@
     </ul>
 </li>
 
-<li class="{{ Request::is('courtdates*') ? 'active' : '' }}">
+<li class="{{ Request::is('secure/courtdates*') ? 'active' : '' }}">
     <a href="#"> <i class="fa fa-file-text"></i> <span>Courtdates</span> </a>
     <ul>
     	<li> <a href="{!! route('courtdates.index') !!}"> <i class="fa fa-file-text"></i> <span>Courtdates</span> </a> </li>
@@ -62,11 +62,27 @@
     </ul>
 </li>
 
-<li class="{{ Request::is('timelines*') ? 'active' : '' }}">
+<li class="{{ Request::is('secure/timelines*') ? 'active' : '' }}">
     <a href="#"> <i class="fa fa-file-text"></i> <span>Timelines</span> </a>
     <ul>
     	<li> <a href="{!! route('timelines.index') !!}"> <i class="fa fa-file-text"></i> <span>Timelines</span> </a> </li>
     	<li> <a href="{!! route('timelines.create') !!}"> <i class="fa fa-file-text"></i> <span>Create Timeline</span> </a> </li>
+    </ul>
+</li>
+
+<li class="{{ Request::is('secure/categories*') ? 'active' : '' }}">
+    <a href="#"> <i class="fa fa-file-text"></i> <span>Categories</span> </a>
+    <ul>
+    	<li> <a href="{!! route('categories.index') !!}"> <i class="fa fa-file-text"></i> <span>Categories</span> </a> </li>
+    	<li> <a href="{!! route('categories.create') !!}"> <i class="fa fa-file-text"></i> <span>Create Category</span> </a> </li>
+    </ul>
+</li>
+
+<li class="{{ Request::is('users*') ? 'active' : '' }}">
+    <a href="#"> <i class="fa fa-file-text"></i> <span>Users</span> </a>
+    <ul>
+    	<li> <a href="{!! route('users.index') !!}"> <i class="fa fa-file-text"></i> <span>Users</span> </a> </li>
+    	<li> <a href="{!! route('users.create') !!}"> <i class="fa fa-file-text"></i> <span>Create User</span> </a> </li>
     </ul>
 </li>
 

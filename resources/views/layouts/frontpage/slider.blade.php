@@ -17,11 +17,11 @@
 												</div>
 												<div class="intro-layer" data-animation="fadeInUp">
 													<p>
-														As personal injury lawyers we’ve secured millions and millions of dollars, on behalf of our clients, in verdicts and settlements. No One Will Work Harder For You And Your Case, Than We Will.
+														As personal injury lawyers we’ve secured millions of dollars, on behalf of our clients, in verdicts and settlements. No One Will Work Harder For You And Your Case, Than We Will.
 													</p>
 												</div>
 												<div class="intro-layer" data-animation="fadeInUp">
-													<a class="theme_button color1" href="services.html">Read More</a>
+													<a class="theme_button color1" href="{!! url('services') !!}">Read More</a>
 												</div>
 											</div>
 											<!-- eof .slide_description -->

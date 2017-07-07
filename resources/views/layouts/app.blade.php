@@ -23,6 +23,8 @@
     <link rel="stylesheet" href="{!! asset('css/main.css') !!}" id="color-switcher-link">
     <script src="{!! asset('js/vendor/modernizr-2.6.2.min.js') !!}"></script>
 
+
+
     <!--[if lt IE 9]>
         <script src="{!! asset('js/vendor/html5shiv.min.js') !!}"></script>
         <script src="{!! asset('js/vendor/respond.min.js') !!}"></script>
@@ -178,7 +180,12 @@
         <!-- eof #box_wrapper -->
     </div>
     <!-- eof #canvas -->
-
+     <script src="{!! asset('ckeditor/ckeditor.js') !!}"></script>
+<script>
+    CKEDITOR.replace( 'upper_content');
+    CKEDITOR.replace( 'lower_content');
+    CKEDITOR.replace( 'content');
+</script>
     <script src="{!! asset('js/compressed.js') !!}"></script>
     <script src="{!! asset('js/vendor/Chart.bundle.min.js') !!}"></script>
     <script src="{!! asset('js/main.js') !!}"></script>

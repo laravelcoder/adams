@@ -16,14 +16,15 @@ class CreateCourthousesTable extends Migration
         Schema::create('courthouses', function (Blueprint $table) {
             $table->increments('id');
             $table->string('courthouse');
-            $table->string('street');
-            $table->string('street2');
-            $table->string('city');
-            $table->string('state');
-            $table->string('zip');
-            $table->string('country');
-            $table->text('notes');
-            $table->timestamps();
+            $table->string('street')->nullable();
+            $table->string('street2')->nullable();
+            $table->string('city')->nullable();
+            $table->string('state')->nullable();
+            $table->string('zip')->nullable();
+            $table->string('country')->nullable();
+            $table->text('notes')->nullable();
+            $table->timestamp('updated_at')->useCurrent();
+            $table->timestamp('created_at')->useCurrent();
             $table->softDeletes();
         });
     }

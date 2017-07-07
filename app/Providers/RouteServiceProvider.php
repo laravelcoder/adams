@@ -26,6 +26,9 @@ class RouteServiceProvider extends ServiceProvider
         //
 
         parent::boot();
+
+        // Route::model('user', App\User::class);
+        // Route::model('service', App\Models\Service::class);
     }
 
     /**
