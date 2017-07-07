@@ -19,9 +19,9 @@ class CreateTimelinesTable extends Migration
             $table->text('notes')->nullable();
             $table->datetime('dated_at')->nullable();
             $table->integer('case_id')->unsigned()->nullable();
-            $table->timestamp('updated_at')->useCurrent();
-            $table->timestamp('created_at')->useCurrent();
+            $table->timestamps();
             $table->softDeletes();
+            $table->engine = 'InnoDB';
             $table->foreign('case_id')->references('id')->on('cases');
         });
     }

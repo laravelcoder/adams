@@ -21,9 +21,9 @@ class CreatePagesTable extends Migration
             $table->string('banner')->nullable();
             $table->string('slug')->nullable();
             $table->string('lang', 20)->default('en');
-            $table->timestamp('updated_at')->useCurrent();
-            $table->timestamp('created_at')->useCurrent();
+            $table->timestamps();
             $table->softDeletes();
+                        $table->engine = 'InnoDB';
         });
     }
 

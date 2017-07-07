@@ -24,9 +24,9 @@ class CreateServicesTable extends Migration
             $table->string('slug')->nullable();
             $table->string('lang', 20)->default('en');
             $table->string('icon_class')->nullable();
-            $table->timestamp('updated_at')->useCurrent();
-            $table->timestamp('created_at')->useCurrent();
+            $table->timestamps();
             $table->softDeletes();
+                        $table->engine = 'InnoDB';
         });
     }
 

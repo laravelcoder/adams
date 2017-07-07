@@ -28,10 +28,9 @@ class CreatePostsTable extends Migration
             $table->string('gp_title')->nullable();
             $table->string('tw_title')->nullable();
             $table->text('meta_description')->nullable();
-            $table->integer('category_id')->unsigned()->index();
-            $table->unsignedInteger('user_id')->nullable();
-            $table->timestamp('updated_at')->useCurrent();
-            $table->timestamp('created_at')->useCurrent();
+            $table->integer('category_id')->index();
+            $table->Integer('user_id')->nullable();
+            $table->timestamps();
             $table->softDeletes();
             $table->engine = 'InnoDB';
         });

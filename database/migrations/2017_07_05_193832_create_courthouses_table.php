@@ -23,9 +23,9 @@ class CreateCourthousesTable extends Migration
             $table->string('zip')->nullable();
             $table->string('country')->nullable();
             $table->text('notes')->nullable();
-            $table->timestamp('updated_at')->useCurrent();
-            $table->timestamp('created_at')->useCurrent();
+            $table->timestamps();
             $table->softDeletes();
+            $table->engine = 'InnoDB';
         });
     }
 
