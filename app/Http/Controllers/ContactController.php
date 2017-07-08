@@ -26,7 +26,7 @@ class ContactController extends Controller {
 //Specify default values//
 //////////////////////////
 //Your E-mail
-        $your_email = 'raviverma9590@gmail.com';
+        $your_email = 'pmadsen2013@gmail.com';
 
 //Default Subject if 'subject' field not specified
         $default_subject = 'From My Contact Form';
