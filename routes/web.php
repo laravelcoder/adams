@@ -43,6 +43,7 @@
 Route::get('/', function () {return view('layouts.site'); });
 Route::get('tasks' , ['as' => 'tasks', 'uses' => 'TasksController@index']);
 Route::get('tasks/{task}', ['as' => 'tasks.show', 'uses' => 'TasksController@show']);
+Route::post('contact/sendrequest', ['as' => 'contact.sendreuest', 'uses' => 'ContactController@sendrequest']);
 
 
 Auth::routes();
