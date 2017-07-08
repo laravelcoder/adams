@@ -66,7 +66,7 @@ Route::middleware('auth')->group(function ()
 
         Route::resource('pages', 'PageController');
 
-        Route::resource('attorneys', 'AttorneyController');
+	Route::resource('lawyers', 'LawyerController');
 
         Route::resource('staff', 'StaffController');
 
@@ -100,7 +100,8 @@ Route::get('services/{service}', ['as' => 'service', 'uses' => 'ServiceControlle
 Route::get('blog', ['as' => 'blog', 'uses' => 'BlogController@index']);
 Route::get('blog/{post}', ['as' => 'post', 'uses' => 'BlogController@show']);
 
+Route::get('attorneys', ['as' => 'attorneys', 'uses' => 'AttorneysController@index']);
+Route::get('attorneys/{attorney}', ['as' => 'attorney', 'uses' => 'AttorneysController@show']);
 
-
-
-
+ Route::get('team', ['as' => 'team', 'uses' => 'TeamController@index']);
+Route::get('team/{staff}', ['as' => 'associate', 'uses' => 'TeamController@show']);

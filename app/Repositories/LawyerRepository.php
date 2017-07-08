@@ -2,10 +2,10 @@
 
 namespace App\Repositories;
 
-use App\Models\Attorney;
+use App\Models\Lawyer;
 use InfyOm\Generator\Common\BaseRepository;
 
-class AttorneyRepository extends BaseRepository
+class LawyerRepository extends BaseRepository
 {
     /**
      * @var array
@@ -16,6 +16,7 @@ class AttorneyRepository extends BaseRepository
         'lower_content',
         'meta_description',
         'bio',
+        'image',
         'banner',
         'slug',
         'lang'
@@ -26,6 +27,6 @@ class AttorneyRepository extends BaseRepository
      **/
     public function model()
     {
-        return Attorney::class;
+        return Lawyer::class;
     }
 }

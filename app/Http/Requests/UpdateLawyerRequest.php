@@ -3,9 +3,9 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
-use App\Models\Attorney;
+use App\Models\Lawyer;
 
-class CreateAttorneyRequest extends FormRequest
+class UpdateLawyerRequest extends FormRequest
 {
 
     /**
@@ -25,6 +25,6 @@ class CreateAttorneyRequest extends FormRequest
      */
     public function rules()
     {
-        return Attorney::$rules;
+        return Lawyer::$rules;
     }
 }

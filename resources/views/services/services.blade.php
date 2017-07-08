@@ -1,4 +1,4 @@
-@extends('layouts.site')
+@extends('layouts.service')
 
 @section('content')
 

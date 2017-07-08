@@ -9,16 +9,6 @@
     "inForm": false,
     "inIndex": false
 }, {
-    "name": "staff_type",
-    "dbType": "string,150",
-    "htmlType": "select,Paralegal, Assistant Paralegal, Investigator, Clerk, Office Personel",
-    "validations": "required",
-    "searchable": true,
-    "fillable": true,
-    "primary": false,
-    "inForm": true,
-    "inIndex": true
-},{
     "name": "name",
     "dbType": "string,150",
     "htmlType": "text",
@@ -58,7 +48,7 @@
     "primary": false,
     "inForm": true,
     "inIndex": false
-}, {
+},  {
     "name": "bio",
     "dbType": "text:nullable",
     "htmlType": "textarea",
@@ -68,7 +58,7 @@
     "primary": false,
     "inForm": true,
     "inIndex": false
-},{
+}, {
     "name": "image",
     "dbType": "string:nullable",
     "htmlType": "file",
@@ -97,7 +87,7 @@
     "fillable": true,
     "primary": false,
     "inForm": true,
-    "inIndex": false
+    "inIndex": true
 }, {
     "name": "lang",
     "dbType": "string,20:nullable",
@@ -107,7 +97,7 @@
     "fillable": true,
     "primary": false,
     "inForm": true,
-    "inIndex": false
+    "inIndex": true
 }, {
     "name": "created_at",
     "dbType": "datetime",

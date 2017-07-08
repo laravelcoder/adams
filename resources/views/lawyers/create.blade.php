@@ -5,7 +5,7 @@
   <div class="container-fluid">
       <div class="row">
           <div class="col-sm-12">
-              <h3>Attorney </h3>
+              <h3>Lawyer </h3>
           </div>
       </div>
       <!-- .row -->
@@ -15,9 +15,9 @@
           <div class="clearfix"></div>
           <div class="col-xs-12">
               <div class="with_background with_padding">
-                    {!! Form::open(['route' => 'attorneys.store']) !!}
+                    {!! Form::open(['route' => 'lawyers.store']) !!}
 
-                        @include('attorneys.fields')
+                        @include('lawyers.fields')
 
                     {!! Form::close() !!}
               </div>

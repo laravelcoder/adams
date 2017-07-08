@@ -86,3 +86,35 @@
     </ul>
 </li>
 
+<li class="{{ Request::is('lawyers*') ? 'active' : '' }}">
+    <a href="#"> <i class="fa fa-file-text"></i> <span>Lawyers</span> </a>
+    <ul>
+    	<li> <a href="{!! route('lawyers.index') !!}"> <i class="fa fa-file-text"></i> <span>Lawyers</span> </a> </li>
+    	<li> <a href="{!! route('lawyers.create') !!}"> <i class="fa fa-file-text"></i> <span>Create Lawyer</span> </a> </li>
+    </ul>
+</li>
+
+<li class="{{ Request::is('lawyers*') ? 'active' : '' }}">
+    <a href="#"> <i class="fa fa-file-text"></i> <span>Lawyers</span> </a>
+    <ul>
+    	<li> <a href="{!! route('lawyers.index') !!}"> <i class="fa fa-file-text"></i> <span>Lawyers</span> </a> </li>
+    	<li> <a href="{!! route('lawyers.create') !!}"> <i class="fa fa-file-text"></i> <span>Create Lawyer</span> </a> </li>
+    </ul>
+</li>
+
+<li class="{{ Request::is('staff*') ? 'active' : '' }}">
+    <a href="#"> <i class="fa fa-file-text"></i> <span>Staff</span> </a>
+    <ul>
+    	<li> <a href="{!! route('staff.index') !!}"> <i class="fa fa-file-text"></i> <span>Staff</span> </a> </li>
+    	<li> <a href="{!! route('staff.create') !!}"> <i class="fa fa-file-text"></i> <span>Create Staff</span> </a> </li>
+    </ul>
+</li>
+
+<li class="{{ Request::is('staff*') ? 'active' : '' }}">
+    <a href="#"> <i class="fa fa-file-text"></i> <span>Staff</span> </a>
+    <ul>
+    	<li> <a href="{!! route('staff.index') !!}"> <i class="fa fa-file-text"></i> <span>Staff</span> </a> </li>
+    	<li> <a href="{!! route('staff.create') !!}"> <i class="fa fa-file-text"></i> <span>Create Staff</span> </a> </li>
+    </ul>
+</li>
+

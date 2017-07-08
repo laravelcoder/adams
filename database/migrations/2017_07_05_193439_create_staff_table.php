@@ -20,6 +20,7 @@ class CreateStaffTable extends Migration
             $table->text('upper_content')->nullable();
             $table->text('lower_content')->nullable();
             $table->text('bio')->nullable();
+            $table->string('image')->nullable();
             $table->string('banner')->nullable();
             $table->string('slug')->nullable();
             $table->string('lang', 20)->default('en');

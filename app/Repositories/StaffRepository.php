@@ -11,11 +11,13 @@ class StaffRepository extends BaseRepository
      * @var array
      */
     protected $fieldSearchable = [
+        'staff_type',
         'name',
         'upper_content',
         'lower_content',
         'meta_description',
         'bio',
+        'image',
         'banner',
         'slug',
         'lang'

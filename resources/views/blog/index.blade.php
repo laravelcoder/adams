@@ -31,14 +31,14 @@ Adams Davis Blog Articles Updates and News
 			<section class="ls ms section_padding_top_100 section_padding_bottom_75">
 				<div class="container">
 
-{{-- @include('blog.partials.slider') --}}
-{{-- @include('blog.partials.highlight') --}}
+					{{-- @include('blog.partials.slider') --}}
+					{{-- @include('blog.partials.highlight') --}}
 
 
 					<div class="row columns_padding_25">
 
 						<div class="col-sm-7 col-md-8 col-lg-8">
-@foreach($posts as $post)
+						@foreach($posts as $post)
 
 
 							<article class="vertical-item content-padding post format-standard with_background bottom-color-border" itemscope itemtype="http://schema.org/Article">
@@ -91,7 +91,7 @@ Adams Davis Blog Articles Updates and News
 								<!-- .item-content.entry-content -->
 							</article>
 
-@endforeach
+						@endforeach
 
 
 

@@ -4,6 +4,12 @@
     <p>{!! $staff->id !!}</p>
 </div>
 
+<!-- Staff Type Field -->
+<div class="form-group">
+    {!! Form::label('staff_type', 'Staff Type:') !!}
+    <p>{!! $staff->staff_type !!}</p>
+</div>
+
 <!-- Name Field -->
 <div class="form-group">
     {!! Form::label('name', 'Name:') !!}
@@ -32,6 +38,12 @@
 <div class="form-group">
     {!! Form::label('bio', 'Bio:') !!}
     <p>{!! $staff->bio !!}</p>
+</div>
+
+<!-- Image Field -->
+<div class="form-group">
+    {!! Form::label('image', 'Image:') !!}
+    <p>{!! $staff->image !!}</p>
 </div>
 
 <!-- Banner Field -->

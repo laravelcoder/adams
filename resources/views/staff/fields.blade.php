@@ -1,3 +1,9 @@
+<!-- Staff Type Field -->
+<div class="form-group col-sm-6">
+    {!! Form::label('staff_type', 'Staff Type:') !!}
+    {!! Form::select('staff_type', ['Paralegal' => 'Paralegal', ' Assistant Paralegal' => ' Assistant Paralegal', ' Investigator' => ' Investigator', ' Clerk' => ' Clerk', ' Office Personel' => ' Office Personel'], null, ['class' => 'form-control']) !!}
+</div>
+
 <!-- Name Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('name', 'Name:') !!}
@@ -27,6 +33,13 @@
     {!! Form::label('bio', 'Bio:') !!}
     {!! Form::textarea('bio', null, ['class' => 'form-control']) !!}
 </div>
+
+<!-- Image Field -->
+<div class="form-group col-sm-6">
+    {!! Form::label('image', 'Image:') !!}
+    {!! Form::file('image') !!}
+</div>
+<div class="clearfix"></div>
 
 <!-- Banner Field -->
 <div class="form-group col-sm-6">

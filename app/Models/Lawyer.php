@@ -6,15 +6,15 @@ use Eloquent as Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
- * Class Attorney
+ * Class Lawyer
  * @package App\Models
- * @version July 6, 2017, 6:48 pm UTC
+ * @version July 8, 2017, 4:03 am UTC
  */
-class Attorney extends Model
+class Lawyer extends Model
 {
     use SoftDeletes;
 
-    public $table = 'attorneys';
+    public $table = 'lawyers';
     
 
     protected $dates = ['deleted_at'];
@@ -26,6 +26,7 @@ class Attorney extends Model
         'lower_content',
         'meta_description',
         'bio',
+        'image',
         'banner',
         'slug',
         'lang'
@@ -42,6 +43,7 @@ class Attorney extends Model
         'lower_content' => 'string',
         'meta_description' => 'string',
         'bio' => 'string',
+        'image' => 'string',
         'banner' => 'string',
         'slug' => 'string',
         'lang' => 'string'

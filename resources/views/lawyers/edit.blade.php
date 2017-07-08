@@ -6,7 +6,7 @@
   <div class="container-fluid">
       <div class="row">
           <div class="col-sm-12">
-              <h3>Attorney </h3>
+              <h3>Lawyer </h3>
           </div>
       </div>
       <!-- .row -->
@@ -16,8 +16,8 @@
           <div class="clearfix"></div>
           <div class="col-xs-12">
               <div class="with_background with_padding">
-                  {!! Form::model($attorney, ['route' => ['attorneys.update', $attorney->id], 'method' => 'patch']) !!}
-                  @include('attorneys.fields')
+                  {!! Form::model($lawyer, ['route' => ['lawyers.update', $lawyer->id], 'method' => 'patch']) !!}
+                  @include('lawyers.fields')
                   {!! Form::close() !!}
               </div>
           </div>

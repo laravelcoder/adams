@@ -28,6 +28,13 @@
     {!! Form::textarea('bio', null, ['class' => 'form-control']) !!}
 </div>
 
+<!-- Image Field -->
+<div class="form-group col-sm-6">
+    {!! Form::label('image', 'Image:') !!}
+    {!! Form::file('image') !!}
+</div>
+<div class="clearfix"></div>
+
 <!-- Banner Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('banner', 'Banner:') !!}
@@ -50,5 +57,5 @@
 <!-- Submit Field -->
 <div class="form-group col-sm-12">
     {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}
-    <a href="{!! route('attorneys.index') !!}" class="btn btn-default">Cancel</a>
+    <a href="{!! route('lawyers.index') !!}" class="btn btn-default">Cancel</a>
 </div>

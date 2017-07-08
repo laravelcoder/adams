@@ -1,11 +1,13 @@
 <table class="table table-responsive" id="staff-table">
     <thead>
+        <th>Staff Type</th>
         <th>Name</th>
         <th colspan="3">Action</th>
     </thead>
     <tbody>
     @foreach($staff as $staff)
         <tr>
+            <td>{!! $staff->staff_type !!}</td>
             <td>{!! $staff->name !!}</td>
             <td>
                 {!! Form::open(['route' => ['staff.destroy', $staff->id], 'method' => 'delete']) !!}
