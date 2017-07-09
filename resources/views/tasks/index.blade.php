@@ -6,9 +6,7 @@
 
                     <div class="row">
                         <div class="col-sm-12">
-                            <h3>Dashboard
-                                <small><a href="{!! url('tasks/create') !!}">Add New</a></small>
-                            </h3>
+                            <h3>Dashboard <small><a href="{!! url('tasks/create') !!}">Add New</a></small> </h3>
                         </div>
                     </div>
                     <!-- .row -->

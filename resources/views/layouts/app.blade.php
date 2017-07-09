@@ -17,16 +17,18 @@
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="css/fonts.css">
-    <link rel="stylesheet" href="css/main.css" id="color-switcher-link">
-    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    <link rel="stylesheet" href="{!! asset('css/bootstrap.min.css') !!}">
+    <link rel="stylesheet" href="{!! asset('css/animations.css') !!}">
+    <link rel="stylesheet" href="{!! asset('css/fonts.css') !!}">
+    <link rel="stylesheet" href="{!! asset('css/main.css') !!}" id="color-switcher-link">
+    <script src="{!! asset('js/vendor/modernizr-2.6.2.min.js') !!}"></script>
+
+
 
     <!--[if lt IE 9]>
-        <script src="js/vendor/html5shiv.min.js"></script>
-        <script src="js/vendor/respond.min.js"></script>
-        <script src="js/vendor/jquery-1.12.4.min.js"></script>
+        <script src="{!! asset('js/vendor/html5shiv.min.js') !!}"></script>
+        <script src="{!! asset('js/vendor/respond.min.js') !!}"></script>
+        <script src="{!! asset('js/vendor/jquery-1.12.4.min.js') !!}"></script>
     <![endif]-->
 
 </head>
@@ -59,20 +61,18 @@
 
                             <div class="user-menu">
                                 <div class="user-menu-media">
-                                    <img src="images/team/01.jpg" alt="{!! Auth::user()->name !!} img">
+                                    <img src="{!! asset('images/team/01.jpg') !!}" alt="{!! Auth::user()->name !!} img">
                                 </div>
                                 <div class="user-menu-info">
                                     <h4>{!! Auth::user()->name !!}</h4>
                                     <small>Member since {!! Auth::user()->created_at->format('M. Y') !!}</small>
                                     <ul class="nav menu-side-click">
                                         <li class="active">
-                                            <a href="#">
-                                                Administrator
-                                            </a>
-                                            <ul>
-                                    {{--             <li> <a href="admin_profile.html"> <i class="fa fa-user"></i> Profile </a> </li> --}}
-                                                {{-- <li> <a href="admin_profile_edit.html"> <i class="fa fa-edit"></i> Edit Profile </a> </li> --}}
-                                            {{--     <li> <a href="admin_inbox.html"> <i class="fa fa-envelope-o"></i> Inbox </a> </li> --}}
+                                            <a href="#"> Administrator </a>
+                                        <ul>
+                                    {{--  <li> <a href="admin_profile.html"> <i class="fa fa-user"></i> Profile </a> </li> --}}
+                                    {{-- <li> <a href="admin_profile_edit.html"> <i class="fa fa-edit"></i> Edit Profile </a> </li> --}}
+                                    {{--     <li> <a href="admin_inbox.html"> <i class="fa fa-envelope-o"></i> Inbox </a> </li> --}}
                                                 <li>
                                                     <a href="{!! url('/logout') !!}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                                         <i class="fa fa-sign-out"></i>
@@ -180,11 +180,16 @@
         <!-- eof #box_wrapper -->
     </div>
     <!-- eof #canvas -->
-
-    <script src="js/compressed.js"></script>
-    <script src="js/vendor/Chart.bundle.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/admin-charts.js"></script>
+    <script src="{!! asset('ckeditor/ckeditor.js') !!}"></script>
+    <script>
+        CKEDITOR.replace( 'upper_content');
+        CKEDITOR.replace( 'lower_content');
+        CKEDITOR.replace( 'content');
+    </script>
+    <script src="{!! asset('js/compressed.js') !!}"></script>
+    <script src="{!! asset('js/vendor/Chart.bundle.min.js') !!}"></script>
+    <script src="{!! asset('js/main.js') !!}"></script>
+    <script src="{!! asset('js/admin-charts.js') !!}"></script>
 
 </body>
 

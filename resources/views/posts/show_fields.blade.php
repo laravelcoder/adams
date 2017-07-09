@@ -10,6 +10,12 @@
     <p>{!! $post->title !!}</p>
 </div>
 
+<!-- Status Field -->
+<div class="form-group">
+    {!! Form::label('status', 'Status:') !!}
+    <p>{!! $post->status !!}</p>
+</div>
+
 <!-- Subtitle Field -->
 <div class="form-group">
     {!! Form::label('subtitle', 'Subtitle:') !!}
@@ -26,6 +32,12 @@
 <div class="form-group">
     {!! Form::label('notes', 'Notes:') !!}
     <p>{!! $post->notes !!}</p>
+</div>
+
+<!-- Image Field -->
+<div class="form-group">
+    {!! Form::label('image', 'Image:') !!}
+    <p>{!! $post->image !!}</p>
 </div>
 
 <!-- Slug Field -->

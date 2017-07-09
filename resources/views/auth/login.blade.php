@@ -1,107 +1,108 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>InfyOm Laravel Generator</title>
+@extends('auth.admin_signin')
 
-    <!-- Tell the browser to be responsive to screen width -->
-    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+@section('content')
+            <section class="ls ms section_padding_top_100 section_padding_bottom_100 section_full_height">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
+                            <div class="with_background with_padding">
+                                    <div class="login-logo ds">
+                                        <a href="{!! url('/') !!}" class="logo top_logo">
+                                            <img src="{!! asset('images/logo.png') !!}" alt="Adams Davis Logo">
+                                            <span class="logo_text">
+                                                <span class="playfair title">Adams Davis</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                <h4 class="text-center">
+                                    Sign In to Your Account
+                                </h4>
+                                <hr class="bottommargin_30">
+                                <div class="wrap-forms">
+                                    <form method="post" action="{{ url('/login') }}">
+                                    {!! csrf_field() !!}
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <div class="form-group has-placeholder {{ $errors->has('email') ? ' has-error' : '' }}">
+                                                    <label for="login-email">Email address</label>
+                                                    <i class="grey fa fa-envelope-o"></i>
+                                                    <input type="email" class="form-control" id="login-email" name="email" value="{{ old('email') }}" placeholder="Email">
+                                                    @if ($errors->has('email'))
+                                                        <span class="help-block">
+                                                        <strong>{{ $errors->first('email') }}</strong>
+                                                    </span>
+                                                    @endif
+                                                </div>
 
-    <!-- Bootstrap 3.3.7 -->
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <div class="form-group has-placeholder {{ $errors->has('password') ? ' has-error' : '' }}">
+                                                    <label for="login-password">Password</label>
+                                                    <i class="grey fa fa-pencil-square-o"></i>
+                                                    <input type="password" class="form-control" id="login-password" name="password" placeholder="Password">
+                                                    @if ($errors->has('password'))
+                                                        <span class="help-block">
+                                                        <strong>{{ $errors->first('password') }}</strong>
+                                                    </span>
+                                                    @endif
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <div class="checkbox">
+                                                    <input type="checkbox" id="remember_me_checkbox">
+                                                    <label for="remember_me_checkbox">Rememrber Me
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="theme_button block_button color1">Sign In</button>
+                                    </form>
+                                </div>
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+                                <div class="darklinks text-center topmargin_20">
 
-    <!-- Ionicons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+                                    <a role="button" data-toggle="collapse" href="#signin-resend-password" aria-expanded="false" aria-controls="signin-resend-password">
+                                        Forgot your password?
+                                    </a>
 
-    <!-- Theme style -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.3.11/css/AdminLTE.min.css">
+                                </div>
+                                <div class="collapse form-inline-button" id="signin-resend-password">
+                                    <form class="form-inline topmargin_20" method="post" action="{{ url('/password/email') }}">
+                                     {!! csrf_field() !!}
 
-    <!-- iCheck -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.3.11/css/skins/_all-skins.min.css">
+                                        <div class="form-group">
+                                            <label class="sr-only">Enter your e-mail</label>
+                                            <input type="email" class="form-control" name="email" value="{{ old('email') }}"  placeholder="E-mail">
+                                            @if ($errors->has('email'))
+                                                <span class="help-block">
+                                                <strong>{{ $errors->first('email') }}</strong>
+                                            </span>
+                                            @endif
+                                        </div>
+                                        <button type="submit" class="theme_button with_icon">
+                                            <i class="fa fa-share"></i> Send Password Reset Link
+                                        </button>
+                                    </form>
+                                </div>
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
 
-</head>
-<body class="hold-transition login-page">
-<div class="login-box">
-    <div class="login-logo">
-        <a href="{{ url('/home') }}"><b>InfyOm </b>Generator</a>
-    </div>
+                            </div>
+                            <!-- .with_background -->
 
-    <!-- /.login-logo -->
-    <div class="login-box-body">
-        <p class="login-box-msg">Sign in to start your session</p>
+                            <p class="divider_20 text-center">
+                                Not registered?
+                                <a href="{{ url('/register') }}">Create an account</a>.
+                            </p>
 
-        <form method="post" action="{{ url('/login') }}">
-            {!! csrf_field() !!}
-
-            <div class="form-group has-feedback {{ $errors->has('email') ? ' has-error' : '' }}">
-                <input type="email" class="form-control" name="email" value="{{ old('email') }}" placeholder="Email">
-                <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
-                @if ($errors->has('email'))
-                    <span class="help-block">
-                    <strong>{{ $errors->first('email') }}</strong>
-                </span>
-                @endif
-            </div>
-
-            <div class="form-group has-feedback{{ $errors->has('password') ? ' has-error' : '' }}">
-                <input type="password" class="form-control" placeholder="Password" name="password">
-                <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-                @if ($errors->has('password'))
-                    <span class="help-block">
-                    <strong>{{ $errors->first('password') }}</strong>
-                </span>
-                @endif
-
-            </div>
-            <div class="row">
-                <div class="col-xs-8">
-                    <div class="checkbox icheck">
-                        <label>
-                            <input type="checkbox" name="remember"> Remember Me
-                        </label>
+                        </div>
+                        <!-- .col-* -->
                     </div>
+                    <!-- .row -->
                 </div>
-                <!-- /.col -->
-                <div class="col-xs-4">
-                    <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
-                </div>
-                <!-- /.col -->
-            </div>
-        </form>
-
-        <a href="{{ url('/password/reset') }}">I forgot my password</a><br>
-        <a href="{{ url('/register') }}" class="text-center">Register a new membership</a>
-
-    </div>
-    <!-- /.login-box-body -->
-</div>
-<!-- /.login-box -->
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/icheck.min.js"></script>
-
-<!-- AdminLTE App -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.3.11/js/app.min.js"></script>
-<script>
-    $(function () {
-        $('input').iCheck({
-            checkboxClass: 'icheckbox_square-blue',
-            radioClass: 'iradio_square-blue',
-            increaseArea: '20%' // optional
-        });
-    });
-</script>
-</body>
-</html>
+                <!-- .container -->
+            </section>
+@endsection

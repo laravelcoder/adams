@@ -11,7 +11,7 @@
                                     </li>
                                 </ul>
 
-                                <h3 class="dark_bg_color">Pages</h3>
+                                <h3 class="dark_bg_color">Sections</h3>
                                 <ul class="nav menu-side-click">
                                    {{--  <li>
                                         <a href="#">
@@ -49,11 +49,11 @@
 
                                 </ul>
 
-                                <h3 class="dark_bg_color">Sections</h3>
-                                <ul class="nav menu-side-click">
+{{--                                 <h3 class="dark_bg_color">Sections</h3> --}}
+{{--                                 <ul class="nav menu-side-click"> --}}
 {{--                                     <li> <a href="admin_tables.html"> <i class="fa fa-table"></i> Tables </a> </li> --}}
 {{--                                     <li> <a href="admin_forms.html"> <i class="fa fa-check-square-o"></i> Forms </a> </li> --}}
 {{--                                     <li> <a href="admin_bootstrap.html"> <i class="fa fa-cog"></i> Bootstrap </a> </li> --}}
-                                </ul>
+{{--                                 </ul> --}}
                             </nav>
                             <!-- eof main side nav -->

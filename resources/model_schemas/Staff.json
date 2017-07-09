@@ -9,6 +9,16 @@
     "inForm": false,
     "inIndex": false
 }, {
+    "name": "staff_type",
+    "dbType": "string,150",
+    "htmlType": "select,Paralegal, Assistant Paralegal, Investigator, Clerk, Office Personel",
+    "validations": "required",
+    "searchable": true,
+    "fillable": true,
+    "primary": false,
+    "inForm": true,
+    "inIndex": true
+},{
     "name": "name",
     "dbType": "string,150",
     "htmlType": "text",
@@ -18,20 +28,9 @@
     "primary": false,
     "inForm": true,
     "inIndex": true
-},  {
-    "name": "meta_description",
-    "dbType": "text",
-    "htmlType": "textarea",
-    "validations": null,
-    "searchable": true,
-    "fillable": true,
-    "primary": false,
-    "inForm": true,
-    "inIndex": false
-},
-{
-    "name": "content",
-    "dbType": "text",
+}, {
+    "name": "upper_content",
+    "dbType": "text:nullable",
     "htmlType": "textarea",
     "validations": null,
     "searchable": true,
@@ -40,8 +39,8 @@
     "inForm": true,
     "inIndex": false
 },{
-    "name": "bio",
-    "dbType": "text",
+    "name": "lower_content",
+    "dbType": "text:nullable",
     "htmlType": "textarea",
     "validations": null,
     "searchable": true,
@@ -49,10 +48,39 @@
     "primary": false,
     "inForm": true,
     "inIndex": false
-},
-{
+}, {
+    "name": "meta_description",
+    "dbType": "text:nullable",
+    "htmlType": "textarea",
+    "validations": null,
+    "searchable": true,
+    "fillable": true,
+    "primary": false,
+    "inForm": true,
+    "inIndex": false
+}, {
+    "name": "bio",
+    "dbType": "text:nullable",
+    "htmlType": "textarea",
+    "validations": null,
+    "searchable": true,
+    "fillable": true,
+    "primary": false,
+    "inForm": true,
+    "inIndex": false
+},{
+    "name": "image",
+    "dbType": "string:nullable",
+    "htmlType": "file",
+    "validations": null,
+    "searchable": true,
+    "fillable": true,
+    "primary": false,
+    "inForm": true,
+    "inIndex": false
+}, {
     "name": "banner",
-    "dbType": "string",
+    "dbType": "string:nullable",
     "htmlType": "file",
     "validations": null,
     "searchable": true,
@@ -62,29 +90,28 @@
     "inIndex": false
 }, {
     "name": "slug",
-    "dbType": "string",
+    "dbType": "string:nullable",
     "htmlType": "text",
     "validations": null,
     "searchable": true,
     "fillable": true,
     "primary": false,
     "inForm": true,
-    "inIndex": true
+    "inIndex": false
 }, {
     "name": "lang",
-    "dbType": "string,20",
+    "dbType": "string,20:nullable",
     "htmlType": "text",
     "validations": null,
     "searchable": true,
     "fillable": true,
     "primary": false,
     "inForm": true,
-    "inIndex": true
-},{
+    "inIndex": false
+}, {
     "name": "created_at",
     "dbType": "datetime",
     "htmlType": "date",
-
     "validations": null,
     "searchable": false,
     "fillable": false,

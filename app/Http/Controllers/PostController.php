@@ -30,7 +30,7 @@ class PostController extends AppBaseController
     public function index(Request $request)
     {
         $this->postRepository->pushCriteria(new RequestCriteria($request));
-        $posts = $this->postRepository->all();
+        $posts = $this->postRepository->paginate(20);
 
         return view('posts.index')
             ->with('posts', $posts);
