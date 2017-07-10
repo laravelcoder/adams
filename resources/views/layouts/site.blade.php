@@ -144,10 +144,10 @@ function sendrequest() {
         data: $("#sendrequest").serialize() + "&_token={{ csrf_token() }}",
         success: function () {
             $('#sendrequest')[0].reset()
-            $('#requestsent').show();
+            $('#sendrequest').prepend('<div id="requestsent" class="alert alert-success" style="padding:0">'+data+'</div>');
             setTimeout(function () {
                 $('#requestsent').hide();
-            }, 5000);
+            }, 30000);
         }
     });
     return false;
