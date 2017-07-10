@@ -19,10 +19,31 @@ class MenuMiddleware
             $about = $menu->add('About', array('url'  => 'about', 'class' => 'navbar navbar-about dropdown'));
 
             $menu->about->attr(array('class' => 'dropdown-toggle', 'data-toggle' => 'dropdown'))->append(' <b class="caret"></b>')->prepend('<span class="glyphicon glyphicon-user"></span> ');
+
+
+  $menu->about->add('Our Attorneys', '/attorneys');
+  $menu->about->add('Our Team', '/team');
+
             // $menu->About->raw('Another Plain Text Item');
+            // $menu->about->divide();
+
+            // $menu->add('About',    array('url'  => 'page.about'))
+            //                                         ->add('Level2', 'link address')
+            //                                         ->add('level3', 'Link address')
+            //                                         ->add('level4', 'Link address');
 
             $services = $menu->add('Services', 'services');
             $menu->services->attr(array('class' => 'dropdown-toggle', 'data-toggle' => 'dropdown'))->append(' <b class="caret"></b>')->prepend('<span class="fa fa-balance-scale"></span> ');
+
+              $menu->services->add('Personal Injury', '/services/personal-injury');
+              $menu->services->add('Wrongful Death', '/services/wrongful-death');
+              $menu->services->add('Vehicle Accidents', '/services/personal-injury');
+              $menu->services->add('Brain Injuries', '/services/braininjuries');
+              $menu->services->add('Catastrophic Injuries', '/services/catastrophic-injuries');
+              $menu->services->add('Dog Bite Injury', '/services/dog-bite-injury');
+              $menu->services->add('Construction Accidents', '/services/construction-accidents');
+              $menu->services->add('Premises Accidents', '/services/premises-accidents');
+
             $menu->add('Contact',  'contact');
 
             // $menu->raw('<li>|</li>');

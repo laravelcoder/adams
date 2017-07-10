@@ -3,7 +3,7 @@
     <a href="#"> <i class="fa fa-file-text"></i> <span>Lawyers</span> </a>
     <ul>
         <li> <a href="{!! route('lawyers.index') !!}"> <i class="fa fa-file-text"></i> <span>Lawyers</span> </a> </li>
-        <li> <a href="{!! route('lawyers.create') !!}"> <i class="fa fa-file-text"></i> <span>Create Lawyer</span> </a> </li>
+        <li> <a href="{!! route('lawyers.create') !!}"> <i class="fa fa-plus"></i> <span>Lawyer</span> </a> </li>
     </ul>
 </li>
 
@@ -11,7 +11,7 @@
     <a href="#"> <i class="fa fa-file-text"></i> <span>Staff</span> </a>
     <ul>
         <li> <a href="{!! route('staff.index') !!}"> <i class="fa fa-file-text"></i> <span>Staff</span> </a> </li>
-        <li> <a href="{!! route('staff.create') !!}"> <i class="fa fa-file-text"></i> <span>Create Staff</span> </a> </li>
+        <li> <a href="{!! route('staff.create') !!}"> <i class="fa fa-plus"></i> <span>Staff</span> </a> </li>
     </ul>
 </li>
 
@@ -20,9 +20,9 @@
     <a href="#"> <i class="fa fa-file-text"></i> <span>Posts</span> </a>
     <ul>
         <li> <a href="{!! route('posts.index') !!}"> <i class="fa fa-file-text"></i> <span>Posts</span> </a> </li>
-        <li> <a href="{!! route('posts.create') !!}"> <i class="fa fa-file-text"></i> <span>New Post</span> </a> </li>
+        <li> <a href="{!! route('posts.create') !!}"> <i class="fa fa-plus"></i> <span>Post</span> </a> </li>
         <li> <a href="{!! route('categories.index') !!}"> <i class="fa fa-file-text"></i> <span>Categories</span> </a> </li>
-        <li> <a href="{!! route('categories.create') !!}"> <i class="fa fa-file-text"></i> <span>New Category</span> </a>
+        <li> <a href="{!! route('categories.create') !!}"> <i class="fa fa-plus"></i> <span>Category</span> </a>
     </ul>
 </li>
 
@@ -38,7 +38,7 @@
     <a href="#"> <i class="fa fa-file-text"></i> <span>Services</span> </a>
     <ul>
     	<li> <a href="{!! route('services.index') !!}"> <i class="fa fa-file-text"></i> <span>Services</span> </a> </li>
-    	<li> <a href="{!! route('services.create') !!}"> <i class="fa fa-file-text"></i> <span>New</span> </a> </li>
+    	<li> <a href="{!! route('services.create') !!}"> <i class="fa fa-plus"></i> <span>New</span> </a> </li>
     </ul>
 </li>
 
@@ -46,15 +46,7 @@
     <a href="#"> <i class="fa fa-file-text"></i> <span>Pages</span> </a>
     <ul>
     	<li> <a href="{!! route('pages.index') !!}"> <i class="fa fa-file-text"></i> <span>Pages</span> </a> </li>
-    	<li> <a href="{!! route('pages.create') !!}"> <i class="fa fa-file-text"></i> <span>New Page</span> </a> </li>
-    </ul>
-</li>
-
-<li class="{{ Request::is('secure/staff*') ? 'active' : '' }}">
-    <a href="#"> <i class="fa fa-file-text"></i> <span>Staff</span> </a>
-    <ul>
-    	<li> <a href="{!! route('staff.index') !!}"> <i class="fa fa-file-text"></i> <span>Staff</span> </a> </li>
-    	<li> <a href="{!! route('staff.create') !!}"> <i class="fa fa-file-text"></i> <span>Create Staff</span> </a> </li>
+    	<li> <a href="{!! route('pages.create') !!}"> <i class="fa fa-plus"></i> <span>New Page</span> </a> </li>
     </ul>
 </li>
 
@@ -96,47 +88,7 @@
     <a href="#"> <i class="fa fa-file-text"></i> <span>Users</span> </a>
     <ul>
     	<li> <a href="{!! route('users.index') !!}"> <i class="fa fa-file-text"></i> <span>Users</span> </a> </li>
-    	<li> <a href="{!! route('users.create') !!}"> <i class="fa fa-file-text"></i> <span>Create User</span> </a> </li>
-    </ul>
-</li>
-
-
-<li class="{{ Request::is('lawyers*') ? 'active' : '' }}">
-    <a href="#"> <i class="fa fa-file-text"></i> <span>Lawyers</span> </a>
-    <ul>
-    	<li> <a href="{!! route('lawyers.index') !!}"> <i class="fa fa-file-text"></i> <span>Lawyers</span> </a> </li>
-    	<li> <a href="{!! route('lawyers.create') !!}"> <i class="fa fa-file-text"></i> <span>Create Lawyer</span> </a> </li>
-    </ul>
-</li>
-<li class="{{ Request::is('lawyers*') ? 'active' : '' }}">
-    <a href="#"> <i class="fa fa-file-text"></i> <span>Lawyers</span> </a>
-    <ul>
-    	<li> <a href="{!! route('lawyers.index') !!}"> <i class="fa fa-file-text"></i> <span>Lawyers</span> </a> </li>
-    	<li> <a href="{!! route('lawyers.create') !!}"> <i class="fa fa-file-text"></i> <span>Create Lawyer</span> </a> </li>
-    </ul>
-</li>
-
-<li class="{{ Request::is('staff*') ? 'active' : '' }}">
-    <a href="#"> <i class="fa fa-file-text"></i> <span>Staff</span> </a>
-    <ul>
-    	<li> <a href="{!! route('staff.index') !!}"> <i class="fa fa-file-text"></i> <span>Staff</span> </a> </li>
-    	<li> <a href="{!! route('staff.create') !!}"> <i class="fa fa-file-text"></i> <span>Create Staff</span> </a> </li>
-    </ul>
-</li>
-
-<li class="{{ Request::is('staff*') ? 'active' : '' }}">
-    <a href="#"> <i class="fa fa-file-text"></i> <span>Staff</span> </a>
-    <ul>
-    	<li> <a href="{!! route('staff.index') !!}"> <i class="fa fa-file-text"></i> <span>Staff</span> </a> </li>
-    	<li> <a href="{!! route('staff.create') !!}"> <i class="fa fa-file-text"></i> <span>Create Staff</span> </a> </li>
-    </ul>
-</li>
-
-<li class="{{ Request::is('lawyers*') ? 'active' : '' }}">
-    <a href="#"> <i class="fa fa-file-text"></i> <span>Lawyers</span> </a>
-    <ul>
-    	<li> <a href="{!! route('lawyers.index') !!}"> <i class="fa fa-file-text"></i> <span>Lawyers</span> </a> </li>
-    	<li> <a href="{!! route('lawyers.create') !!}"> <i class="fa fa-file-text"></i> <span>Create Lawyer</span> </a> </li>
+    	<li> <a href="{!! route('users.create') !!}"> <i class="fa fa-plus"></i> <span>User</span> </a> </li>
     </ul>
 </li>
 
