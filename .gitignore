@@ -1,3 +1,4 @@
+
 /node_modules
 /public/hot
 /public/storage
@@ -13,3 +14,4 @@ npm-debug.log
 composer.lock
 .not/
 .idea/
+ /nbproject/private/

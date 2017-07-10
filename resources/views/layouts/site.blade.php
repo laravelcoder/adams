@@ -133,7 +133,26 @@
 
 	<script src="{!! asset('js/compressed.js') !!}"></script>
 	<script src="{!! asset('js/main.js') !!}"></script>
+        <script>
 
+function sendrequest() {
+    // do the extra stuff here
+    $('#requestsent').hide();
+    $.ajax({
+        type: "POST",
+        url: "contact/sendrequest",
+        data: $("#sendrequest").serialize() + "&_token={{ csrf_token() }}",
+        success: function () {
+            $('#sendrequest')[0].reset()
+            $('#requestsent').show();
+            setTimeout(function () {
+                $('#requestsent').hide();
+            }, 5000);
+        }
+    });
+    return false;
+}
+        </script>
 
 </body>
 
