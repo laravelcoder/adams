@@ -106,6 +106,7 @@ Route::get('attorneys/{attorney}', ['as' => 'attorney', 'uses' => 'AttorneysCont
  Route::get('team', ['as' => 'team', 'uses' => 'TeamController@index']);
 Route::get('team/{staff}', ['as' => 'associate', 'uses' => 'TeamController@show']);
 
-
+Route::get('contact', ['as' => 'contact', 'uses' => 'ContactController@index']);
 Route::post('contact/sendrequest', ['as' => 'contact.sendreuest', 'uses' => 'ContactController@sendrequest']);
+
 
