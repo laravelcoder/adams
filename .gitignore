@@ -1,4 +1,4 @@
-composer.lock
+
 /node_modules
 /public/hot
 /public/storage
@@ -11,5 +11,7 @@ Homestead.yaml
 npm-debug.log
 .env
 *.psd
+composer.lock
 .not/
-/nbproject/private/
+.idea/
+ /nbproject/private/

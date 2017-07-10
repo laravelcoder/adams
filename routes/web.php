@@ -77,7 +77,8 @@ Route::middleware('auth')->group(function ()
         Route::resource('courtdates', 'CourtdateController');
 
         Route::resource('categories', 'CategoryController');
- 
+
+        Route::resource('timelines', 'TimelineController');
 
         Route::resource('users', 'UserController');
 
@@ -104,4 +105,8 @@ Route::get('attorneys/{attorney}', ['as' => 'attorney', 'uses' => 'AttorneysCont
 
  Route::get('team', ['as' => 'team', 'uses' => 'TeamController@index']);
 Route::get('team/{staff}', ['as' => 'associate', 'uses' => 'TeamController@show']);
- 
+
+Route::get('contact', ['as' => 'contact', 'uses' => 'ContactController@index']);
+Route::post('contact/sendrequest', ['as' => 'contact.sendreuest', 'uses' => 'ContactController@sendrequest']);
+
+

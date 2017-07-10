@@ -13,8 +13,18 @@ class ContactController extends Controller {
      * @return void
      */
     public function __construct() {
-        
+
     }
+
+
+    public function index()
+    {
+
+
+        return view('contact');
+
+    }
+
 
     /**
      * Show the application dashboard.
@@ -86,7 +96,7 @@ class ContactController extends Controller {
 
                 //adding another CUSTOM contact form fields that added by user to email message body
                 foreach ($_POST as $key => $value) {
-                    //checking for standard fields 
+                    //checking for standard fields
                     if ($key == 'name' || $key == 'message' || $key == 'subject' || $key == 'email') {
                         continue;
                     }

@@ -8,6 +8,7 @@ use App\Repositories\LawyerRepository;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
 use Flash;
+use File;
 use Prettus\Repository\Criteria\RequestCriteria;
 use Response;
 
@@ -57,12 +58,13 @@ class LawyerController extends AppBaseController
     {
         $input = $request->all();
 
-            // $request->file('file')->storeAs('upload', $fileName);
+             // $fileName = time().'.'.$input->image->getClientOriginalExtension();
+          // $request->file('file')->storeAs('images/lawyers', $fileName);
 
-        $photoName = time().'.'.$input->image->getClientOriginalExtension();
-        $input->image->move(public_path('images/lawyers'), $photoName);
+        // $photoName = time().'.'.$input->image->getClientOriginalExtension();
+        // $input->image->move(public_path('images/lawyers'), $photoName);
 
-        dd($input);
+        // dd($input);
 
         $lawyer = $this->lawyerRepository->create($input);
 
