@@ -1140,7 +1140,7 @@ $window.on('load', function(){
 				var infowindow = new google.maps.InfoWindow({
 					content: markerDescription
 				});
-
+                                infowindow.open(map,marker);
 				google.maps.event.addListener(marker, 'click', function() {
 					infowindow.open(map,marker);
 				});
