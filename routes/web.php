@@ -107,22 +107,5 @@ Route::get('attorneys/{attorney}', ['as' => 'attorney', 'uses' => 'AttorneysCont
 Route::get('team/{staff}', ['as' => 'associate', 'uses' => 'TeamController@show']);
 
 
-Route::resource('lawyers', 'LawyerController');
+Route::post('contact/sendrequest', ['as' => 'contact.sendreuest', 'uses' => 'ContactController@sendrequest']);
 
-Route::resource('lawyers', 'LawyerController');
-
-Route::resource('lawyers', 'LawyerController');
-
-Route::resource('lawyers', 'LawyerController');
-
-Route::resource('lawyers', 'LawyerController');
-
-Route::resource('lawyers', 'LawyerController');
-
-Route::resource('lawyers', 'LawyerController');
-
-Route::resource('staff', 'StaffController');
-
-Route::resource('staff', 'StaffController');
-
-Route::resource('lawyers', 'LawyerController');
