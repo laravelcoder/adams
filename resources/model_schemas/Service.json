@@ -7,10 +7,10 @@
     "fillable": false,
     "primary": true,
     "inForm": false,
-    "inIndex": false
+    "inIndex": true
 }, {
     "name": "service",
-    "dbType": "string,150",
+    "dbType": "string",
     "htmlType": "text",
     "validations": "required",
     "searchable": true,
@@ -18,9 +18,19 @@
     "primary": false,
     "inForm": true,
     "inIndex": true
-},  {
-    "name": "meta_description",
-    "dbType": "text",
+},{
+    "name": "intro",
+    "dbType": "string:nullable",
+    "htmlType": "text",
+    "validations": "required",
+    "searchable": true,
+    "fillable": true,
+    "primary": false,
+    "inForm": true,
+    "inIndex": false
+}, {
+    "name": "upper_content",
+    "dbType": "text:nullable",
     "htmlType": "textarea",
     "validations": null,
     "searchable": true,
@@ -28,10 +38,19 @@
     "primary": false,
     "inForm": true,
     "inIndex": false
-},
-{
-    "name": "content",
-    "dbType": "text",
+},{
+    "name": "lower_content",
+    "dbType": "text:nullable",
+    "htmlType": "textarea",
+    "validations": null,
+    "searchable": true,
+    "fillable": true,
+    "primary": false,
+    "inForm": true,
+    "inIndex": false
+}, {
+    "name": "meta_description",
+    "dbType": "text:nullable",
     "htmlType": "textarea",
     "validations": null,
     "searchable": true,
@@ -41,7 +60,7 @@
     "inIndex": false
 },{
     "name": "banner",
-    "dbType": "string",
+    "dbType": "string:nullable",
     "htmlType": "file",
     "validations": null,
     "searchable": true,
@@ -51,29 +70,38 @@
     "inIndex": false
 }, {
     "name": "slug",
-    "dbType": "string",
+    "dbType": "string:nullable",
     "htmlType": "text",
     "validations": null,
     "searchable": true,
     "fillable": true,
     "primary": false,
     "inForm": true,
-    "inIndex": true
+    "inIndex": false
 }, {
     "name": "lang",
-    "dbType": "string,20",
+    "dbType": "string:nullable",
     "htmlType": "text",
     "validations": null,
     "searchable": true,
     "fillable": true,
     "primary": false,
     "inForm": true,
-    "inIndex": true
-},{
+    "inIndex": false
+}, {
+    "name": "icon_class",
+    "dbType": "string:nullable",
+    "htmlType": "text",
+    "validations": null,
+    "searchable": true,
+    "fillable": true,
+    "primary": false,
+    "inForm": true,
+    "inIndex": false
+}, {
     "name": "created_at",
-    "dbType": "datetime",
+    "dbType": "datetime:useCurrent",
     "htmlType": "date",
-
     "validations": null,
     "searchable": false,
     "fillable": false,
@@ -82,7 +110,7 @@
     "inIndex": false
 }, {
     "name": "updated_at",
-    "dbType": "datetime",
+    "dbType": "datetime:useCurrent",
     "htmlType": "date",
     "validations": null,
     "searchable": false,

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "b73f051cd679fbaca6f561de45135464",
+    "content-hash": "03e7e513005cbf7d21f49b00f885ab3d",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -1590,105 +1590,6 @@
             "time": "2017-06-28T20:53:48+00:00"
         },
         {
-            "name": "okipa/laravel-bootstrap-table-list",
-            "version": "1.1.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Okipa/laravel-bootstrap-table-list.git",
-                "reference": "71b7c16719bf9b93441964aeec1e3289c1c7e990"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Okipa/laravel-bootstrap-table-list/zipball/71b7c16719bf9b93441964aeec1e3289c1c7e990",
-                "reference": "71b7c16719bf9b93441964aeec1e3289c1c7e990",
-                "shasum": ""
-            },
-            "require": {
-                "laravel/framework": "~5.0",
-                "okipa/laravel-toggle-switch-button": "^1.0",
-                "php": ">=7.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Okipa\\LaravelBootstrapTableList\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Arthur LORENT",
-                    "email": "arthur.lorent@gmail.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "A Laravel entities table list generator, that simply builds your table HTML directly from your controller.",
-            "homepage": "https://github.com/Okipa/table-list",
-            "keywords": [
-                "bootstrap",
-                "entities",
-                "generate",
-                "generation",
-                "laravel",
-                "list",
-                "okipa",
-                "php",
-                "table"
-            ],
-            "time": "2017-07-04T12:34:59+00:00"
-        },
-        {
-            "name": "okipa/laravel-toggle-switch-button",
-            "version": "1.0.6",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Okipa/laravel-toggle-switch-button.git",
-                "reference": "eaa2f71168d63b36995c0ca9a0f6d606649ee4ef"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Okipa/laravel-toggle-switch-button/zipball/eaa2f71168d63b36995c0ca9a0f6d606649ee4ef",
-                "reference": "eaa2f71168d63b36995c0ca9a0f6d606649ee4ef",
-                "shasum": ""
-            },
-            "require": {
-                "laravel/framework": "~5.0",
-                "php": ">=7.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Okipa\\LaravelToggleSwitchButton\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Arthur LORENT",
-                    "email": "arthur.lorent@gmail.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "A customizable toggle switch button generator for Laravel that enables you to simply display it on your projects pages.",
-            "homepage": "https://github.com/Okipa/laravel-toggle-switch-button",
-            "keywords": [
-                "button",
-                "generate",
-                "generator",
-                "okipa",
-                "php",
-                "switch",
-                "toggle"
-            ],
-            "time": "2017-06-16T10:22:43+00:00"
-        },
-        {
             "name": "orangehill/iseed",
             "version": "dev-master",
             "source": {
@@ -2141,52 +2042,6 @@
             "time": "2017-03-26T20:37:53+00:00"
         },
         {
-            "name": "spatie/html-element",
-            "version": "1.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spatie/html-element.git",
-                "reference": "876b73a9d6d77dae7a157288a2a911bf1dbba1b9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/spatie/html-element/zipball/876b73a9d6d77dae7a157288a2a911bf1dbba1b9",
-                "reference": "876b73a9d6d77dae7a157288a2a911bf1dbba1b9",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "5.*"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Spatie\\HtmlElement\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Sebastian De Deyne",
-                    "email": "sebastian@spatie.be",
-                    "homepage": "https://spatie.be",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Html rendering in php inspired by hyperscript",
-            "homepage": "https://github.com/spatie/html-element",
-            "keywords": [
-                "html-element",
-                "spatie"
-            ],
-            "time": "2017-03-13T11:16:53+00:00"
-        },
-        {
             "name": "spatie/image",
             "version": "1.3.2",
             "source": {
@@ -2507,55 +2362,6 @@
                 "v2"
             ],
             "time": "2017-05-22T11:30:34+00:00"
-        },
-        {
-            "name": "spatie/menu",
-            "version": "2.2.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spatie/menu.git",
-                "reference": "769f50cf234434894ddabe04fb7ef8c5cb4efe18"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/spatie/menu/zipball/769f50cf234434894ddabe04fb7ef8c5cb4efe18",
-                "reference": "769f50cf234434894ddabe04fb7ef8c5cb4efe18",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.0",
-                "spatie/html-element": "^1.0.0",
-                "spatie/url": "^1.0.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^5.2.10"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Spatie\\Menu\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Sebastian De Deyne",
-                    "email": "sebastian@spatie.be",
-                    "homepage": "https://spatie.be",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Html menu generator",
-            "homepage": "https://github.com/spatie/menu",
-            "keywords": [
-                "menu",
-                "navigation",
-                "spatie"
-            ],
-            "time": "2017-03-07T08:54:50+00:00"
         },
         {
             "name": "spatie/opening-hours",

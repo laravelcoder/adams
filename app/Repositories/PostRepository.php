@@ -12,9 +12,11 @@ class PostRepository extends BaseRepository
      */
     protected $fieldSearchable = [
         'title',
+        'status',
         'subtitle',
         'content',
         'notes',
+        'image',
         'slug',
         'meta_title',
         'fb_title',

@@ -1,0 +1,66 @@
+[{
+    "name": "id",
+    "dbType": "increments",
+    "htmlType": "",
+    "validations": "",
+    "searchable": false,
+    "fillable": false,
+    "primary": true,
+    "inForm": false,
+    "inIndex": false
+}, {
+    "name": "title",
+    "dbType": "string,150",
+    "htmlType": "text",
+    "validations": "required",
+    "searchable": true,
+    "fillable": true,
+    "primary": false,
+    "inForm": true,
+    "inIndex": true
+},{
+    "name": "notes",
+    "dbType": "text",
+    "htmlType": "textarea",
+    "validations": null,
+    "searchable": true,
+    "fillable": true,
+    "primary": false,
+    "inForm": true,
+    "inIndex": false
+}, {
+    "name": "dated_at",
+    "dbType": "datetime",
+    "htmlType": "date",
+    "validations": null,
+    "searchable": false,
+    "fillable": false,
+    "primary": false,
+    "inForm": false,
+    "inIndex": false
+}, {
+    "name": "case_id",
+    "dbType": "integer:unsigned:foreign,cases,id",
+    "htmlType": "text",
+    "relation": "mt1,Case,case_id,id"
+}, {
+    "name": "created_at",
+    "dbType": "datetime",
+    "htmlType": "date",
+    "validations": null,
+    "searchable": false,
+    "fillable": false,
+    "primary": false,
+    "inForm": false,
+    "inIndex": false
+}, {
+    "name": "updated_at",
+    "dbType": "datetime",
+    "htmlType": "date",
+    "validations": null,
+    "searchable": false,
+    "fillable": false,
+    "primary": false,
+    "inForm": false,
+    "inIndex": false
+}]

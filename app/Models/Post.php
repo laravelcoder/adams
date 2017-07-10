@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 /**
  * Class Post
  * @package App\Models
- * @version June 29, 2017, 2:50 am UTC
+ * @version July 7, 2017, 4:24 am UTC
  */
 class Post extends Model
 {
@@ -22,9 +22,11 @@ class Post extends Model
 
     public $fillable = [
         'title',
+        'status',
         'subtitle',
         'content',
         'notes',
+        'image',
         'slug',
         'meta_title',
         'fb_title',
@@ -43,9 +45,11 @@ class Post extends Model
     protected $casts = [
         'id' => 'integer',
         'title' => 'string',
+        'status' => 'string',
         'subtitle' => 'string',
         'content' => 'string',
         'notes' => 'string',
+        'image' => 'string',
         'slug' => 'string',
         'meta_title' => 'string',
         'fb_title' => 'string',
