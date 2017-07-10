@@ -12,14 +12,26 @@ class LawyerRepository extends BaseRepository
      */
     protected $fieldSearchable = [
         'name',
+        'title',
+        'intro',
+        'phone',
+        'email',
         'upper_content',
+        'bio',
         'lower_content',
         'meta_description',
-        'bio',
+        'facebook',
+        'twitter',
+        'googleplus',
+        'youtube',
         'image',
         'banner',
+        'status',
         'slug',
-        'lang'
+        'lang',
+        'video',
+        'video2',
+        'video3'
     ];
 
     /**

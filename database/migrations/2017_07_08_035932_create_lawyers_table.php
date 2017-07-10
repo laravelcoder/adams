@@ -16,14 +16,26 @@ class CreateLawyersTable extends Migration
         Schema::create('lawyers', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name', 150);
+            $table->string('title')->nullable();
+            $table->string('intro')->nullable();
+            $table->string('phone')->nullable();
+            $table->string('email')->nullable();
             $table->text('upper_content')->nullable();
             $table->text('lower_content')->nullable();
             $table->text('bio')->nullable();
             $table->text('meta_description')->nullable();
+            $table->string('facebook')->nullable();
+            $table->string('twitter')->nullable();
+            $table->string('googleplus')->nullable();
+            $table->string('youtube')->nullable();
             $table->string('image')->nullable();
             $table->string('banner')->nullable();
             $table->string('slug')->nullable();
+            $table->string('status')->nullable();
             $table->string('lang', 20)->default('en');
+            $table->string('video')->nullable();
+            $table->string('video2')->nullable();
+            $table->string('video3')->nullable();
             $table->timestamps();
             $table->softDeletes();
             $table->engine = 'InnoDB';

@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="{!! asset('css/animations.css') !!}">
     <link rel="stylesheet" href="{!! asset('css/fonts.css') !!}">
     <link rel="stylesheet" href="{!! asset('css/main.css') !!}" id="color-switcher-link">
+    <link rel="stylesheet" href="{!! asset('css/bootstrap-imageupload.css') !!}">
     <script src="{!! asset('js/vendor/modernizr-2.6.2.min.js') !!}"></script>
 
 
@@ -30,6 +31,9 @@
         <script src="{!! asset('js/vendor/respond.min.js') !!}"></script>
         <script src="{!! asset('js/vendor/jquery-1.12.4.min.js') !!}"></script>
     <![endif]-->
+    <script>
+
+</script>
 
 </head>
 
@@ -181,16 +185,12 @@
     </div>
     <!-- eof #canvas -->
     <script src="{!! asset('ckeditor/ckeditor.js') !!}"></script>
-    <script>
-        CKEDITOR.replace( 'upper_content');
-        CKEDITOR.replace( 'lower_content');
-        CKEDITOR.replace( 'content');
-    </script>
+
     <script src="{!! asset('js/compressed.js') !!}"></script>
     <script src="{!! asset('js/vendor/Chart.bundle.min.js') !!}"></script>
     <script src="{!! asset('js/main.js') !!}"></script>
     <script src="{!! asset('js/admin-charts.js') !!}"></script>
-
+<script src="{!! asset('js/bootstrap-imageupload.js') !!}"></script>
 </body>
 
 </html>

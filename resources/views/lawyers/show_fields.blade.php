@@ -10,10 +10,40 @@
     <p>{!! $lawyer->name !!}</p>
 </div>
 
+<!-- Title Field -->
+<div class="form-group">
+    {!! Form::label('title', 'Title:') !!}
+    <p>{!! $lawyer->title !!}</p>
+</div>
+
+<!-- Intro Field -->
+<div class="form-group">
+    {!! Form::label('intro', 'Intro:') !!}
+    <p>{!! $lawyer->intro !!}</p>
+</div>
+
+<!-- Phone Field -->
+<div class="form-group">
+    {!! Form::label('phone', 'Phone:') !!}
+    <p>{!! $lawyer->phone !!}</p>
+</div>
+
+<!-- Email Field -->
+<div class="form-group">
+    {!! Form::label('email', 'Email:') !!}
+    <p>{!! $lawyer->email !!}</p>
+</div>
+
 <!-- Upper Content Field -->
 <div class="form-group">
     {!! Form::label('upper_content', 'Upper Content:') !!}
     <p>{!! $lawyer->upper_content !!}</p>
+</div>
+
+<!-- Bio Field -->
+<div class="form-group">
+    {!! Form::label('bio', 'Bio:') !!}
+    <p>{!! $lawyer->bio !!}</p>
 </div>
 
 <!-- Lower Content Field -->
@@ -28,10 +58,28 @@
     <p>{!! $lawyer->meta_description !!}</p>
 </div>
 
-<!-- Bio Field -->
+<!-- Facebook Field -->
 <div class="form-group">
-    {!! Form::label('bio', 'Bio:') !!}
-    <p>{!! $lawyer->bio !!}</p>
+    {!! Form::label('facebook', 'Facebook:') !!}
+    <p>{!! $lawyer->facebook !!}</p>
+</div>
+
+<!-- Twitter Field -->
+<div class="form-group">
+    {!! Form::label('twitter', 'Twitter:') !!}
+    <p>{!! $lawyer->twitter !!}</p>
+</div>
+
+<!-- Googleplus Field -->
+<div class="form-group">
+    {!! Form::label('googleplus', 'Googleplus:') !!}
+    <p>{!! $lawyer->googleplus !!}</p>
+</div>
+
+<!-- Youtube Field -->
+<div class="form-group">
+    {!! Form::label('youtube', 'Youtube:') !!}
+    <p>{!! $lawyer->youtube !!}</p>
 </div>
 
 <!-- Image Field -->
@@ -46,6 +94,12 @@
     <p>{!! $lawyer->banner !!}</p>
 </div>
 
+<!-- Status Field -->
+<div class="form-group">
+    {!! Form::label('status', 'Status:') !!}
+    <p>{!! $lawyer->status !!}</p>
+</div>
+
 <!-- Slug Field -->
 <div class="form-group">
     {!! Form::label('slug', 'Slug:') !!}
@@ -56,6 +110,24 @@
 <div class="form-group">
     {!! Form::label('lang', 'Lang:') !!}
     <p>{!! $lawyer->lang !!}</p>
+</div>
+
+<!-- Video Field -->
+<div class="form-group">
+    {!! Form::label('video', 'Video:') !!}
+    <p>{!! $lawyer->video !!}</p>
+</div>
+
+<!-- Video2 Field -->
+<div class="form-group">
+    {!! Form::label('video2', 'Video2:') !!}
+    <p>{!! $lawyer->video2 !!}</p>
+</div>
+
+<!-- Video3 Field -->
+<div class="form-group">
+    {!! Form::label('video3', 'Video3:') !!}
+    <p>{!! $lawyer->video3 !!}</p>
 </div>
 
 <!-- Created At Field -->

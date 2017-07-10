@@ -57,7 +57,18 @@ class LawyerController extends AppBaseController
     {
         $input = $request->all();
 
+            // $request->file('file')->storeAs('upload', $fileName);
+
+        $photoName = time().'.'.$input->image->getClientOriginalExtension();
+        $input->image->move(public_path('images/lawyers'), $photoName);
+
+        dd($input);
+
         $lawyer = $this->lawyerRepository->create($input);
+
+
+
+
 
         Flash::success('Lawyer saved successfully.');
 
@@ -101,6 +112,22 @@ class LawyerController extends AppBaseController
             return redirect(route('lawyers.index'));
         }
 
+        // if ($request->hasFile('image')) {
+
+        //     if($request->file('image')->isValid()) {
+        //         try {
+        //             $path = public_path('images/lawyers');
+        //             $file = $request->file('image');
+        //             $name = time() . '.' . $file->getClientOriginalExtension();
+
+        //             $request->file('image')->move($path, $name);
+
+        //         } catch (Illuminate\Filesystem\FileNotFoundException $e) {
+
+        //         }
+        //     }
+        // }
+
         return view('lawyers.edit')->with('lawyer', $lawyer);
     }
 
@@ -116,13 +143,27 @@ class LawyerController extends AppBaseController
     {
         $lawyer = $this->lawyerRepository->findWithoutFail($id);
 
+
+
         if (empty($lawyer)) {
             Flash::error('Lawyer not found');
 
             return redirect(route('lawyers.index'));
         }
 
+
+        // $lawyer
+        // $imageName = time().'.'.$request->image->getClientOriginalExtension();
+        // $request->image->move(public_path('fotoupload'), $imageName);
+
+        // $photoName = time().'.'.$request->image->getClientOriginalExtension();
+        // $request->image->move(public_path('images/lawyers'), $photoName);
+
         $lawyer = $this->lawyerRepository->update($request->all(), $id);
+
+
+
+        dd($request->all());
 
         Flash::success('Lawyer updated successfully.');
 

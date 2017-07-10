@@ -105,3 +105,24 @@ Route::get('attorneys/{attorney}', ['as' => 'attorney', 'uses' => 'AttorneysCont
 
  Route::get('team', ['as' => 'team', 'uses' => 'TeamController@index']);
 Route::get('team/{staff}', ['as' => 'associate', 'uses' => 'TeamController@show']);
+
+
+Route::resource('lawyers', 'LawyerController');
+
+Route::resource('lawyers', 'LawyerController');
+
+Route::resource('lawyers', 'LawyerController');
+
+Route::resource('lawyers', 'LawyerController');
+
+Route::resource('lawyers', 'LawyerController');
+
+Route::resource('lawyers', 'LawyerController');
+
+Route::resource('lawyers', 'LawyerController');
+
+Route::resource('staff', 'StaffController');
+
+Route::resource('staff', 'StaffController');
+
+Route::resource('lawyers', 'LawyerController');

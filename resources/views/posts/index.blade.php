@@ -6,7 +6,7 @@
         <div class="row">
             <div class="col-sm-12">
                 <h3>Posts
-                    <small><a href="{!! route('posts.create') !!}">Add New</a></small>
+                    <small><a href="{!! route('posts.create') !!}" class="btn btn-default btn-sm">Add New</a></small>
                 </h3>
             </div>
         </div>

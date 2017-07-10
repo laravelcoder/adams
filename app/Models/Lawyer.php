@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 /**
  * Class Lawyer
  * @package App\Models
- * @version July 8, 2017, 4:03 am UTC
+ * @version July 10, 2017, 2:25 am UTC
  */
 class Lawyer extends Model
 {
@@ -22,14 +22,26 @@ class Lawyer extends Model
 
     public $fillable = [
         'name',
+        'title',
+        'intro',
+        'phone',
+        'email',
         'upper_content',
+        'bio',
         'lower_content',
         'meta_description',
-        'bio',
+        'facebook',
+        'twitter',
+        'googleplus',
+        'youtube',
         'image',
         'banner',
+        'status',
         'slug',
-        'lang'
+        'lang',
+        'video',
+        'video2',
+        'video3'
     ];
 
     /**
@@ -39,14 +51,26 @@ class Lawyer extends Model
      */
     protected $casts = [
         'name' => 'string',
+        'title' => 'string',
+        'intro' => 'string',
+        'phone' => 'string',
+        'email' => 'string',
         'upper_content' => 'string',
+        'bio' => 'string',
         'lower_content' => 'string',
         'meta_description' => 'string',
-        'bio' => 'string',
+        'facebook' => 'string',
+        'twitter' => 'string',
+        'googleplus' => 'string',
+        'youtube' => 'string',
         'image' => 'string',
         'banner' => 'string',
+        'status' => 'string',
         'slug' => 'string',
-        'lang' => 'string'
+        'lang' => 'string',
+        'video' => 'string',
+        'video2' => 'string',
+        'video3' => 'string'
     ];
 
     /**
@@ -55,7 +79,11 @@ class Lawyer extends Model
      * @var array
      */
     public static $rules = [
-        'name' => 'required'
+        'name' => 'required',
+        'title' => 'required',
+        'intro' => 'required',
+        'phone' => 'required',
+        'email' => 'required'
     ];
 
     

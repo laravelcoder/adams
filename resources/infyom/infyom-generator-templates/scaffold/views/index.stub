@@ -6,7 +6,7 @@
         <div class="row">
             <div class="col-sm-12">
                 <h3>$MODEL_NAME_PLURAL_HUMAN$
-                    <small><a href="{!! route('$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.create') !!}">Add New</a></small>
+                    <small><a href="{!! route('$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.create') !!}" class="btn btn-default btn-sm">Add New</a></small>
                 </h3>
             </div>
         </div>

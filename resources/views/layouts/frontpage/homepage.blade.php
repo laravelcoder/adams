@@ -250,7 +250,7 @@
 													Darren Davis is a co-founder of Adams Davis, P.C. and represents plaintiffs in injury cases.
 												</p>
 												<p class="topmargin_30">
-													<a href="team-single.html" class="theme_button color1">Read more</a>
+													<a href="#" class="theme_button color1">Read more</a>
 												</p>
 											</div>
 										</div>
@@ -277,7 +277,7 @@
 													Sam Adams is a co-founder of Adams Davis, P.C. and represents plaintiffs in injury cases.
 												</p>
 												<p class="topmargin_30">
-													<a href="team-single.html" class="theme_button color1">Read more</a>
+													<a href="#" class="theme_button color1">Read more</a>
 												</p>
 											</div>
 										</div>
@@ -304,7 +304,7 @@
 													Brett began his personal injury practice in late 2006 at Keith Barton & Associates.
 												</p>
 												<p class="topmargin_30">
-													<a href="team-single.html" class="theme_button color1">Read more</a>
+													<a href="#" class="theme_button color1">Read more</a>
 												</p>
 											</div>
 										</div>
@@ -331,7 +331,7 @@
 													York Major is a premier injury and complex tort litigation attorney.
 												</p>
 												<p class="topmargin_30">
-													<a href="team-single.html" class="theme_button color1">Read more</a>
+													<a href="#" class="theme_button color1">Read more</a>
 												</p>
 											</div>
 										</div>
@@ -358,7 +358,7 @@
 													 His practice focuses on representing individuals against the faceless machinery of Insurance Companies, Corporations, and the State.
 												</p>
 												<p class="topmargin_30">
-													<a href="team-single.html" class="theme_button color1">Read more</a>
+													<a href="#" class="theme_button color1">Read more</a>
 												</p>
 											</div>
 										</div>
@@ -381,7 +381,7 @@
 							<p>Please feel free to contact us if you have questions or would like to schedule a free confidential consultation.</p>
 							<p>
 								<p class="topmargin_50">
-									<a href="#" class="theme_button">Free consultation</a>
+									<a href="#consultation" class="theme_button">Free consultation</a>
 								</p>
 						</div>
 					</div>
@@ -422,7 +422,7 @@
 													Audrey has been working in the legal field for eight years and has an Associates Degree in Paralegal Studies.
 												</p>
 												<p class="topmargin_30">
-													<a href="team-single.html" class="theme_button color1">Read more</a>
+													<a href="#" class="theme_button color1">Read more</a>
 												</p>
 											</div>
 										</div>
@@ -449,7 +449,7 @@
 													Ashli joined Adams Davis P.C. this year as a paralegal assistant. She enjoys shopping as well as spending time boating and camping.
 												</p>
 												<p class="topmargin_30">
-													<a href="team-single.html" class="theme_button color1">Read more</a>
+													<a href="#" class="theme_button color1">Read more</a>
 												</p>
 											</div>
 										</div>
@@ -478,7 +478,7 @@
 													Ericka has been with the firm for four years.  She works as a litigation paralegal. Erica enjoys reading, dancing and camping.
 												</p>
 												<p class="topmargin_30">
-													<a href="team-single.html" class="theme_button color1">Read more</a>
+													<a href="#" class="theme_button color1">Read more</a>
 												</p>
 											</div>
 										</div>
@@ -505,7 +505,7 @@
 													Brandie has 13 years of experience working as a paralegal. She handles litigation and claims for Brett Blood.
 												</p>
 												<p class="topmargin_30">
-													<a href="team-single.html" class="theme_button color1">Read more</a>
+													<a href="#" class="theme_button color1">Read more</a>
 												</p>
 											</div>
 										</div>
@@ -532,7 +532,7 @@
 													 Yocelin has been with the firm as a legal assistant for two years. In addition to legal experience, she has a background in social work. She is bilingual in Spanish and English.
 												</p>
 												<p class="topmargin_30">
-													<a href="team-single.html" class="theme_button color1">Read more</a>
+													<a href="" class="theme_button color1">Read more</a>
 												</p>
 											</div>
 										</div>

@@ -4,10 +4,28 @@
     {!! Form::select('staff_type', ['Paralegal' => 'Paralegal', ' Assistant Paralegal' => ' Assistant Paralegal', ' Investigator' => ' Investigator', ' Clerk' => ' Clerk', ' Office Personel' => ' Office Personel'], null, ['class' => 'form-control']) !!}
 </div>
 
-<!-- Name Field -->
+<!-- Title Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('name', 'Name:') !!}
-    {!! Form::text('name', null, ['class' => 'form-control']) !!}
+    {!! Form::label('title', 'Title:') !!}
+    {!! Form::text('title', null, ['class' => 'form-control']) !!}
+</div>
+
+<!-- Intro Field -->
+<div class="form-group col-sm-6">
+    {!! Form::label('intro', 'Intro:') !!}
+    {!! Form::text('intro', null, ['class' => 'form-control']) !!}
+</div>
+
+<!-- Phone Field -->
+<div class="form-group col-sm-6">
+    {!! Form::label('phone', 'Phone:') !!}
+    {!! Form::text('phone', null, ['class' => 'form-control']) !!}
+</div>
+
+<!-- Email Field -->
+<div class="form-group col-sm-6">
+    {!! Form::label('email', 'Email:') !!}
+    {!! Form::text('email', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Upper Content Field -->
@@ -47,6 +65,30 @@
     {!! Form::file('banner') !!}
 </div>
 <div class="clearfix"></div>
+
+<!-- Facebook Field -->
+<div class="form-group col-sm-6">
+    {!! Form::label('facebook', 'Facebook:') !!}
+    {!! Form::text('facebook', null, ['class' => 'form-control']) !!}
+</div>
+
+<!-- Twitter Field -->
+<div class="form-group col-sm-6">
+    {!! Form::label('twitter', 'Twitter:') !!}
+    {!! Form::text('twitter', null, ['class' => 'form-control']) !!}
+</div>
+
+<!-- Googleplus Field -->
+<div class="form-group col-sm-6">
+    {!! Form::label('googleplus', 'Googleplus:') !!}
+    {!! Form::text('googleplus', null, ['class' => 'form-control']) !!}
+</div>
+
+<!-- Youtube Field -->
+<div class="form-group col-sm-6">
+    {!! Form::label('youtube', 'Youtube:') !!}
+    {!! Form::text('youtube', null, ['class' => 'form-control']) !!}
+</div>
 
 <!-- Slug Field -->
 <div class="form-group col-sm-6">

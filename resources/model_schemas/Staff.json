@@ -18,9 +18,9 @@
     "primary": false,
     "inForm": true,
     "inIndex": true
-},{
-    "name": "name",
-    "dbType": "string,150",
+}, {
+    "name": "title",
+    "dbType": "string:nullable",
     "htmlType": "text",
     "validations": "required",
     "searchable": true,
@@ -29,6 +29,36 @@
     "inForm": true,
     "inIndex": true
 }, {
+    "name": "intro",
+    "dbType": "string:nullable",
+    "htmlType": "text",
+    "validations": "required",
+    "searchable": true,
+    "fillable": true,
+    "primary": false,
+    "inForm": true,
+    "inIndex": true
+},{
+    "name": "phone",
+    "dbType": "string:nullable",
+    "htmlType": "text",
+    "validations": "required",
+    "searchable": true,
+    "fillable": true,
+    "primary": false,
+    "inForm": true,
+    "inIndex": true
+}, {
+    "name": "email",
+    "dbType": "string:nullable",
+    "htmlType": "text",
+    "validations": "required",
+    "searchable": true,
+    "fillable": true,
+    "primary": false,
+    "inForm": true,
+    "inIndex": true
+},{
     "name": "upper_content",
     "dbType": "text:nullable",
     "htmlType": "textarea",
@@ -38,7 +68,7 @@
     "primary": false,
     "inForm": true,
     "inIndex": false
-},{
+}, {
     "name": "lower_content",
     "dbType": "text:nullable",
     "htmlType": "textarea",
@@ -68,7 +98,7 @@
     "primary": false,
     "inForm": true,
     "inIndex": false
-},{
+}, {
     "name": "image",
     "dbType": "string:nullable",
     "htmlType": "file",
@@ -82,6 +112,46 @@
     "name": "banner",
     "dbType": "string:nullable",
     "htmlType": "file",
+    "validations": null,
+    "searchable": true,
+    "fillable": true,
+    "primary": false,
+    "inForm": true,
+    "inIndex": false
+}, {
+    "name": "facebook",
+    "dbType": "string:nullable",
+    "htmlType": "text",
+    "validations": null,
+    "searchable": true,
+    "fillable": true,
+    "primary": false,
+    "inForm": true,
+    "inIndex": false
+}, {
+    "name": "twitter",
+    "dbType": "string:nullable",
+    "htmlType": "text",
+    "validations": null,
+    "searchable": true,
+    "fillable": true,
+    "primary": false,
+    "inForm": true,
+    "inIndex": false
+}, {
+    "name": "googleplus",
+    "dbType": "string:nullable",
+    "htmlType": "text",
+    "validations": null,
+    "searchable": true,
+    "fillable": true,
+    "primary": false,
+    "inForm": true,
+    "inIndex": false
+}, {
+    "name": "youtube",
+    "dbType": "string:nullable",
+    "htmlType": "text",
     "validations": null,
     "searchable": true,
     "fillable": true,

@@ -12,13 +12,20 @@ class StaffRepository extends BaseRepository
      */
     protected $fieldSearchable = [
         'staff_type',
-        'name',
+        'title',
+        'intro',
+        'phone',
+        'email',
         'upper_content',
         'lower_content',
         'meta_description',
         'bio',
         'image',
         'banner',
+        'facebook',
+        'twitter',
+        'googleplus',
+        'youtube',
         'slug',
         'lang'
     ];

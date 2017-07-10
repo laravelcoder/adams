@@ -38,6 +38,7 @@ class UsersTableSeeder extends Seeder
                 'name'       => 'Darren Davis',
                 'email'      => 'darren@adamsdavis.com',
                 'password'   => bcrypt('d@rr3nsp@ssw0rd'),
+                'remember_token' => null,
                 'created_at' => '2017-06-29 03:24:38',
                 'updated_at' => '2017-06-29 03:24:38'
             ]

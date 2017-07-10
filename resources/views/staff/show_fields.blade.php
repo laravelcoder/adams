@@ -10,10 +10,28 @@
     <p>{!! $staff->staff_type !!}</p>
 </div>
 
-<!-- Name Field -->
+<!-- Title Field -->
 <div class="form-group">
-    {!! Form::label('name', 'Name:') !!}
-    <p>{!! $staff->name !!}</p>
+    {!! Form::label('title', 'Title:') !!}
+    <p>{!! $staff->title !!}</p>
+</div>
+
+<!-- Intro Field -->
+<div class="form-group">
+    {!! Form::label('intro', 'Intro:') !!}
+    <p>{!! $staff->intro !!}</p>
+</div>
+
+<!-- Phone Field -->
+<div class="form-group">
+    {!! Form::label('phone', 'Phone:') !!}
+    <p>{!! $staff->phone !!}</p>
+</div>
+
+<!-- Email Field -->
+<div class="form-group">
+    {!! Form::label('email', 'Email:') !!}
+    <p>{!! $staff->email !!}</p>
 </div>
 
 <!-- Upper Content Field -->
@@ -50,6 +68,30 @@
 <div class="form-group">
     {!! Form::label('banner', 'Banner:') !!}
     <p>{!! $staff->banner !!}</p>
+</div>
+
+<!-- Facebook Field -->
+<div class="form-group">
+    {!! Form::label('facebook', 'Facebook:') !!}
+    <p>{!! $staff->facebook !!}</p>
+</div>
+
+<!-- Twitter Field -->
+<div class="form-group">
+    {!! Form::label('twitter', 'Twitter:') !!}
+    <p>{!! $staff->twitter !!}</p>
+</div>
+
+<!-- Googleplus Field -->
+<div class="form-group">
+    {!! Form::label('googleplus', 'Googleplus:') !!}
+    <p>{!! $staff->googleplus !!}</p>
+</div>
+
+<!-- Youtube Field -->
+<div class="form-group">
+    {!! Form::label('youtube', 'Youtube:') !!}
+    <p>{!! $staff->youtube !!}</p>
 </div>
 
 <!-- Slug Field -->
