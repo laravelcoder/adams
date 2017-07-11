@@ -11,13 +11,12 @@ use Flash;
 use Prettus\Repository\Criteria\RequestCriteria;
 use Response;
 
-class CategoryController extends AppBaseController
-{
+class CategoryController extends AppBaseController {
+
     /** @var  CategoryRepository */
     private $categoryRepository;
 
-    public function __construct(CategoryRepository $categoryRepo)
-    {
+    public function __construct(CategoryRepository $categoryRepo) {
         $this->categoryRepository = $categoryRepo;
     }
 
@@ -27,13 +26,12 @@ class CategoryController extends AppBaseController
      * @param Request $request
      * @return Response
      */
-    public function index(Request $request)
-    {
+    public function index(Request $request) {
         $this->categoryRepository->pushCriteria(new RequestCriteria($request));
         $categories = $this->categoryRepository->paginate(20);
 
         return view('categories.index')
-            ->with('categories', $categories);
+                        ->with('categories', $categories);
     }
 
     /**
@@ -41,8 +39,7 @@ class CategoryController extends AppBaseController
      *
      * @return Response
      */
-    public function create()
-    {
+    public function create() {
         return view('categories.create');
     }
 
@@ -53,10 +50,14 @@ class CategoryController extends AppBaseController
      *
      * @return Response
      */
-    public function store(CreateCategoryRequest $request)
-    {
+    public function store(CreateCategoryRequest $request) {
         $input = $request->all();
+        if ($request->banner) {
+            $photoName = time() . '.' . $request->banner->getClientOriginalExtension();
+            $request->banner->move(public_path('images\\catrgory'), $photoName);
 
+            $input['banner'] = $photoName;
+        }
         $category = $this->categoryRepository->create($input);
 
         Flash::success('Category saved successfully.');
@@ -71,8 +72,7 @@ class CategoryController extends AppBaseController
      *
      * @return Response
      */
-    public function show($id)
-    {
+    public function show($id) {
         $category = $this->categoryRepository->findWithoutFail($id);
 
         if (empty($category)) {
@@ -91,8 +91,7 @@ class CategoryController extends AppBaseController
      *
      * @return Response
      */
-    public function edit($id)
-    {
+    public function edit($id) {
         $category = $this->categoryRepository->findWithoutFail($id);
 
         if (empty($category)) {
@@ -112,8 +111,7 @@ class CategoryController extends AppBaseController
      *
      * @return Response
      */
-    public function update($id, UpdateCategoryRequest $request)
-    {
+    public function update($id, UpdateCategoryRequest $request) {
         $category = $this->categoryRepository->findWithoutFail($id);
 
         if (empty($category)) {
@@ -121,8 +119,15 @@ class CategoryController extends AppBaseController
 
             return redirect(route('categories.index'));
         }
+        $data = $request->all();
+        if ($request->banner) {
+            $photoName = time() . '.' . $request->banner->getClientOriginalExtension();
+            $request->banner->move(public_path('images\\category'), $photoName);
 
-        $category = $this->categoryRepository->update($request->all(), $id);
+            $data['banner'] = $photoName;
+        } else
+            unset($data['banner']);
+        $category = $this->categoryRepository->update($data, $id);
 
         Flash::success('Category updated successfully.');
 
@@ -136,8 +141,7 @@ class CategoryController extends AppBaseController
      *
      * @return Response
      */
-    public function destroy($id)
-    {
+    public function destroy($id) {
         $category = $this->categoryRepository->findWithoutFail($id);
 
         if (empty($category)) {
@@ -152,4 +156,5 @@ class CategoryController extends AppBaseController
 
         return redirect(route('categories.index'));
     }
+
 }

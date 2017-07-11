@@ -71,7 +71,6 @@ class Staff extends Model
      * @var array
      */
     public static $rules = [
-        'staff_type' => 'required',
         'title' => 'required',
         'intro' => 'required',
         'phone' => 'required',

@@ -15,7 +15,7 @@
           <div class="clearfix"></div>
           <div class="col-xs-12">
               <div class="with_background with_padding">
-                    {!! Form::open(['route' => 'users.store']) !!}
+                    {!! Form::open(['route' => 'users.store','enctype'=>'multipart/form-data']) !!}
 
                         @include('users.fields')
 

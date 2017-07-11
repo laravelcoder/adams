@@ -15,7 +15,7 @@
           <div class="clearfix"></div>
           <div class="col-xs-12">
               <div class="with_background with_padding">
-                    {!! Form::open(['route' => 'pages.store']) !!}
+                    {!! Form::open(['route' => 'pages.store','enctype'=>'multipart/form-data']) !!}
 
                         @include('pages.fields')
 

@@ -12,13 +12,12 @@ use File;
 use Prettus\Repository\Criteria\RequestCriteria;
 use Response;
 
-class LawyerController extends AppBaseController
-{
+class LawyerController extends AppBaseController {
+
     /** @var  LawyerRepository */
     private $lawyerRepository;
 
-    public function __construct(LawyerRepository $lawyerRepo)
-    {
+    public function __construct(LawyerRepository $lawyerRepo) {
         $this->lawyerRepository = $lawyerRepo;
     }
 
@@ -28,13 +27,12 @@ class LawyerController extends AppBaseController
      * @param Request $request
      * @return Response
      */
-    public function index(Request $request)
-    {
+    public function index(Request $request) {
         $this->lawyerRepository->pushCriteria(new RequestCriteria($request));
         $lawyers = $this->lawyerRepository->paginate(20);
 
         return view('lawyers.index')
-            ->with('lawyers', $lawyers);
+                        ->with('lawyers', $lawyers);
     }
 
     /**
@@ -42,8 +40,7 @@ class LawyerController extends AppBaseController
      *
      * @return Response
      */
-    public function create()
-    {
+    public function create() {
         return view('lawyers.create');
     }
 
@@ -54,17 +51,21 @@ class LawyerController extends AppBaseController
      *
      * @return Response
      */
-    public function store(CreateLawyerRequest $request)
-    {
+    public function store(CreateLawyerRequest $request) {
         $input = $request->all();
 
-             // $fileName = time().'.'.$input->image->getClientOriginalExtension();
-          // $request->file('file')->storeAs('images/lawyers', $fileName);
+        if ($request->image) {
+            $photoName = time() . '.' . $request->image->getClientOriginalExtension();
+            $request->image->move(public_path('images\\lawyers'), $photoName);
 
-        // $photoName = time().'.'.$input->image->getClientOriginalExtension();
-        // $input->image->move(public_path('images/lawyers'), $photoName);
+            $input['image'] = $photoName;
+        }
+        if ($request->banner) {
+            $photoName = time() . '.' . $request->banner->getClientOriginalExtension();
+            $request->banner->move(public_path('images\\lawyers'), $photoName);
 
-        // dd($input);
+            $input['banner'] = $photoName;
+        }
 
         $lawyer = $this->lawyerRepository->create($input);
 
@@ -84,8 +85,7 @@ class LawyerController extends AppBaseController
      *
      * @return Response
      */
-    public function show($id)
-    {
+    public function show($id) {
         $lawyer = $this->lawyerRepository->findWithoutFail($id);
 
         if (empty($lawyer)) {
@@ -104,8 +104,7 @@ class LawyerController extends AppBaseController
      *
      * @return Response
      */
-    public function edit($id)
-    {
+    public function edit($id) {
         $lawyer = $this->lawyerRepository->findWithoutFail($id);
 
         if (empty($lawyer)) {
@@ -114,21 +113,7 @@ class LawyerController extends AppBaseController
             return redirect(route('lawyers.index'));
         }
 
-        // if ($request->hasFile('image')) {
 
-        //     if($request->file('image')->isValid()) {
-        //         try {
-        //             $path = public_path('images/lawyers');
-        //             $file = $request->file('image');
-        //             $name = time() . '.' . $file->getClientOriginalExtension();
-
-        //             $request->file('image')->move($path, $name);
-
-        //         } catch (Illuminate\Filesystem\FileNotFoundException $e) {
-
-        //         }
-        //     }
-        // }
 
         return view('lawyers.edit')->with('lawyer', $lawyer);
     }
@@ -141,8 +126,7 @@ class LawyerController extends AppBaseController
      *
      * @return Response
      */
-    public function update($id, UpdateLawyerRequest $request)
-    {
+    public function update($id, UpdateLawyerRequest $request) {
         $lawyer = $this->lawyerRepository->findWithoutFail($id);
 
 
@@ -152,20 +136,29 @@ class LawyerController extends AppBaseController
 
             return redirect(route('lawyers.index'));
         }
-
-
+        $data = $request->all();
         // $lawyer
-        // $imageName = time().'.'.$request->image->getClientOriginalExtension();
-        // $request->image->move(public_path('fotoupload'), $imageName);
+        if ($request->image) {
+            $photoName = time() . '.' . $request->image->getClientOriginalExtension();
+            $request->image->move(public_path('images\\lawyers'), $photoName);
 
-        // $photoName = time().'.'.$request->image->getClientOriginalExtension();
-        // $request->image->move(public_path('images/lawyers'), $photoName);
+            $data['image'] = $photoName;
+        } else
+            unset($data['image']);
 
-        $lawyer = $this->lawyerRepository->update($request->all(), $id);
+        if ($request->banner) {
+            $photoName = time() . '.' . $request->banner->getClientOriginalExtension();
+            $request->banner->move(public_path('images\\lawyers'), $photoName);
+
+            $data['banner'] = $photoName;
+        } else
+            unset($data['banner']);
+
+        $lawyer = $this->lawyerRepository->update($data, $id);
 
 
 
-        dd($request->all());
+//        /dd($request->all());
 
         Flash::success('Lawyer updated successfully.');
 
@@ -179,8 +172,7 @@ class LawyerController extends AppBaseController
      *
      * @return Response
      */
-    public function destroy($id)
-    {
+    public function destroy($id) {
         $lawyer = $this->lawyerRepository->findWithoutFail($id);
 
         if (empty($lawyer)) {
@@ -195,4 +187,5 @@ class LawyerController extends AppBaseController
 
         return redirect(route('lawyers.index'));
     }
+
 }

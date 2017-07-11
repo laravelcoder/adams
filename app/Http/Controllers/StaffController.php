@@ -56,7 +56,18 @@ class StaffController extends AppBaseController
     public function store(CreateStaffRequest $request)
     {
         $input = $request->all();
+        if ($request->image) {
+            $photoName = time() . '.' . $request->image->getClientOriginalExtension();
+            $request->image->move(public_path('images\\staff'), $photoName);
 
+            $input['image'] = $photoName;
+        }
+        if ($request->banner) {
+            $photoName = time() . '.' . $request->banner->getClientOriginalExtension();
+            $request->banner->move(public_path('images\\staff'), $photoName);
+
+            $input['banner'] = $photoName;
+        }
         $staff = $this->staffRepository->create($input);
 
         Flash::success('Staff saved successfully.');
@@ -121,8 +132,23 @@ class StaffController extends AppBaseController
 
             return redirect(route('staff.index'));
         }
+        $data = $request->all();
+         if ($request->image) {
+            $photoName = time() . '.' . $request->image->getClientOriginalExtension();
+            $request->image->move(public_path('images\\lawyers'), $photoName);
 
-        $staff = $this->staffRepository->update($request->all(), $id);
+            $data['image'] = $photoName;
+        } else
+            unset($data['image']);
+
+        if ($request->banner) {
+            $photoName = time() . '.' . $request->banner->getClientOriginalExtension();
+            $request->banner->move(public_path('images\\lawyers'), $photoName);
+
+            $data['banner'] = $photoName;
+        } else
+            unset($data['banner']);
+        $staff = $this->staffRepository->update($data, $id);
 
         Flash::success('Staff updated successfully.');
 
