@@ -14,13 +14,12 @@ use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Str;
 
-class ServiceController extends AppBaseController
-{
+class ServiceController extends AppBaseController {
+
     /** @var  ServiceRepository */
     private $serviceRepository;
 
-    public function __construct(ServiceRepository $serviceRepo)
-    {
+    public function __construct(ServiceRepository $serviceRepo) {
         $this->serviceRepository = $serviceRepo;
     }
 
@@ -30,8 +29,7 @@ class ServiceController extends AppBaseController
      * @param Request $request
      * @return Response
      */
-    public function index(Request $request)
-    {
+    public function index(Request $request) {
         $this->serviceRepository->pushCriteria(new RequestCriteria($request));
         $services = $this->serviceRepository->paginate(20);
 
@@ -43,8 +41,7 @@ class ServiceController extends AppBaseController
      *
      * @return Response
      */
-    public function create()
-    {
+    public function create() {
 
         return view('services.create');
     }
@@ -56,15 +53,20 @@ class ServiceController extends AppBaseController
      *
      * @return Response
      */
-    public function store(CreateServiceRequest $request)
-    {
+    public function store(CreateServiceRequest $request) {
 
 
         $input = $request->all();
 
-       // $service->slug = Str::slug($request->service);
-       // $service->addMediaFromRequest($request->file('image'))->toMediaCollection('images');
+        // $service->slug = Str::slug($request->service);
+        // $service->addMediaFromRequest($request->file('image'))->toMediaCollection('images');
 
+        if ($request->banner) {
+            $photoName = time() . '.' . $request->banner->getClientOriginalExtension();
+            $request->banner->move(public_path('images\\services'), $photoName);
+
+            $input['banner'] = $photoName;
+        }
         // dd( request()->all());
 
 
@@ -86,8 +88,7 @@ class ServiceController extends AppBaseController
      *
      * @return Response
      */
-    public function show($id, $slug)
-    {
+    public function show($id, $slug) {
         $service = $this->serviceRepository->findWithoutFail($id);
         $service = Service::where('slug', $slug)->firstOrFail();
 
@@ -107,8 +108,7 @@ class ServiceController extends AppBaseController
      *
      * @return Response
      */
-    public function edit($id)
-    {
+    public function edit($id) {
         $service = $this->serviceRepository->findWithoutFail($id);
 
         if (empty($service)) {
@@ -128,8 +128,7 @@ class ServiceController extends AppBaseController
      *
      * @return Response
      */
-    public function update($id, UpdateServiceRequest $request)
-    {
+    public function update($id, UpdateServiceRequest $request) {
         $service = $this->serviceRepository->findWithoutFail($id);
 
 
@@ -139,9 +138,15 @@ class ServiceController extends AppBaseController
 
             return redirect(route('services.index'));
         }
+        $data = $request->all();
+        if ($request->banner) {
+            $photoName = time() . '.' . $request->banner->getClientOriginalExtension();
+            $request->banner->move(public_path('images\\services'), $photoName);
 
-
-        $service = $this->serviceRepository->update($request->all(), $id);
+            $data['banner'] = $photoName;
+        } else
+            unset($data['banner']);
+        $service = $this->serviceRepository->update($data, $id);
 
         $service->update(['slug' => Str::slug($service->service)]);
 
@@ -158,8 +163,7 @@ class ServiceController extends AppBaseController
      *
      * @return Response
      */
-    public function destroy($id)
-    {
+    public function destroy($id) {
         $service = $this->serviceRepository->findWithoutFail($id);
 
         if (empty($service)) {
@@ -174,4 +178,5 @@ class ServiceController extends AppBaseController
 
         return redirect(route('services.index'));
     }
+
 }

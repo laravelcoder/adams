@@ -16,7 +16,7 @@
           <div class="clearfix"></div>
           <div class="col-xs-12">
               <div class="with_background with_padding">
-                  {!! Form::model($user, ['route' => ['users.update', $user->id], 'method' => 'patch']) !!}
+                  {!! Form::model($user, ['route' => ['users.update', $user->id], 'method' => 'patch','enctype'=>'multipart/form-data']) !!}
                   @include('users.fields')
                   {!! Form::close() !!}
               </div>

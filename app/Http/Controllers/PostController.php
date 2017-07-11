@@ -11,13 +11,12 @@ use Flash;
 use Prettus\Repository\Criteria\RequestCriteria;
 use Response;
 
-class PostController extends AppBaseController
-{
+class PostController extends AppBaseController {
+
     /** @var  PostRepository */
     private $postRepository;
 
-    public function __construct(PostRepository $postRepo)
-    {
+    public function __construct(PostRepository $postRepo) {
         $this->postRepository = $postRepo;
     }
 
@@ -27,13 +26,12 @@ class PostController extends AppBaseController
      * @param Request $request
      * @return Response
      */
-    public function index(Request $request)
-    {
+    public function index(Request $request) {
         $this->postRepository->pushCriteria(new RequestCriteria($request));
         $posts = $this->postRepository->paginate(20);
 
         return view('posts.index')
-            ->with('posts', $posts);
+                        ->with('posts', $posts);
     }
 
     /**
@@ -41,8 +39,7 @@ class PostController extends AppBaseController
      *
      * @return Response
      */
-    public function create()
-    {
+    public function create() {
         return view('posts.create');
     }
 
@@ -53,10 +50,14 @@ class PostController extends AppBaseController
      *
      * @return Response
      */
-    public function store(CreatePostRequest $request)
-    {
+    public function store(CreatePostRequest $request) {
         $input = $request->all();
+        if ($request->image) {
+            $photoName = time() . '.' . $request->image->getClientOriginalExtension();
+            $request->image->move(public_path('images\\post'), $photoName);
 
+            $input['image'] = $photoName;
+        }
         $post = $this->postRepository->create($input);
 
         Flash::success('Post saved successfully.');
@@ -71,8 +72,7 @@ class PostController extends AppBaseController
      *
      * @return Response
      */
-    public function show($id)
-    {
+    public function show($id) {
         $post = $this->postRepository->findWithoutFail($id);
 
         if (empty($post)) {
@@ -91,8 +91,7 @@ class PostController extends AppBaseController
      *
      * @return Response
      */
-    public function edit($id)
-    {
+    public function edit($id) {
         $post = $this->postRepository->findWithoutFail($id);
 
         if (empty($post)) {
@@ -112,8 +111,7 @@ class PostController extends AppBaseController
      *
      * @return Response
      */
-    public function update($id, UpdatePostRequest $request)
-    {
+    public function update($id, UpdatePostRequest $request) {
         $post = $this->postRepository->findWithoutFail($id);
 
         if (empty($post)) {
@@ -121,8 +119,15 @@ class PostController extends AppBaseController
 
             return redirect(route('posts.index'));
         }
+        $data = $request->all();
+        if ($request->image) {
+            $photoName = time() . '.' . $request->image->getClientOriginalExtension();
+            $request->image->move(public_path('images\\post'), $photoName);
 
-        $post = $this->postRepository->update($request->all(), $id);
+            $data['image'] = $photoName;
+        } else
+            unset($data['image']);
+        $post = $this->postRepository->update($data, $id);
 
         Flash::success('Post updated successfully.');
 
@@ -136,8 +141,7 @@ class PostController extends AppBaseController
      *
      * @return Response
      */
-    public function destroy($id)
-    {
+    public function destroy($id) {
         $post = $this->postRepository->findWithoutFail($id);
 
         if (empty($post)) {
@@ -152,4 +156,5 @@ class PostController extends AppBaseController
 
         return redirect(route('posts.index'));
     }
+
 }

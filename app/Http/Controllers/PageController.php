@@ -56,7 +56,12 @@ class PageController extends AppBaseController
     public function store(CreatePageRequest $request)
     {
         $input = $request->all();
+        if ($request->banner) {
+            $photoName = time() . '.' . $request->banner->getClientOriginalExtension();
+            $request->banner->move(public_path('images\\page'), $photoName);
 
+            $input['banner'] = $photoName;
+        }
         $page = $this->pageRepository->create($input);
 
         Flash::success('Page saved successfully.');
@@ -121,8 +126,15 @@ class PageController extends AppBaseController
 
             return redirect(route('pages.index'));
         }
+        $data = $request->all();
+        if ($request->banner) {
+            $photoName = time() . '.' . $request->banner->getClientOriginalExtension();
+            $request->banner->move(public_path('images\\page'), $photoName);
 
-        $page = $this->pageRepository->update($request->all(), $id);
+            $data['banner'] = $photoName;
+        } else
+            unset($data['banner']);
+        $page = $this->pageRepository->update($data, $id);
 
         Flash::success('Page updated successfully.');
 
