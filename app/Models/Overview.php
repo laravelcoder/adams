@@ -6,22 +6,23 @@ use Eloquent as Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
- * Class Case
+ * Class Overview
  * @package App\Models
- * @version July 5, 2017, 7:36 pm UTC
+ * @version July 17, 2017, 10:24 pm UTC
  */
-class Case extends Model
+class Overview extends Model
 {
     use SoftDeletes;
 
-    public $table = 'cases';
+    public $table = 'overviews';
     
 
     protected $dates = ['deleted_at'];
 
 
     public $fillable = [
-        'name'
+        'name',
+        'details'
     ];
 
     /**
@@ -30,7 +31,8 @@ class Case extends Model
      * @var array
      */
     protected $casts = [
-        'name' => 'string'
+        'name' => 'string',
+        'details' => 'string'
     ];
 
     /**
@@ -42,11 +44,5 @@ class Case extends Model
         'name' => 'required'
     ];
 
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     **/
-    public function comments()
-    {
-        return $this->hasMany(\App\Models\Comment::class, 'post_id');
-    }
+    
 }

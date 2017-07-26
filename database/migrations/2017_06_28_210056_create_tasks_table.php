@@ -18,6 +18,8 @@ class CreateTasksTable extends Migration
             $table->string('task');
             $table->text('details');
             $table->boolean('completed')->default(false);
+            $table->string('lang', 20)->default('en');
+            $table->string('slug')->nullable();
             $table->timestamps();
         });
     }

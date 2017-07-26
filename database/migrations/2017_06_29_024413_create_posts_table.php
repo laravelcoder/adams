@@ -30,6 +30,7 @@ class CreatePostsTable extends Migration
             $table->text('meta_description')->nullable();
             $table->integer('category_id')->index();
             $table->Integer('user_id')->nullable();
+            $table->string('lang', 20)->default('en');
             $table->timestamps();
             $table->softDeletes();
             $table->engine = 'InnoDB';

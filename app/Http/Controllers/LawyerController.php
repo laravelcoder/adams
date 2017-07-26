@@ -9,6 +9,7 @@ use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
 use Flash;
 use File;
+use Illuminate\Http\UploadedFile;
 use Prettus\Repository\Criteria\RequestCriteria;
 use Response;
 
@@ -56,22 +57,19 @@ class LawyerController extends AppBaseController {
 
         if ($request->image) {
             $photoName = time() . '.' . $request->image->getClientOriginalExtension();
-            $request->image->move(public_path('images\\lawyers'), $photoName);
+            $request->image->move(public_path('images/lawyers'), $photoName);
 
             $input['image'] = $photoName;
         }
+
         if ($request->banner) {
             $photoName = time() . '.' . $request->banner->getClientOriginalExtension();
-            $request->banner->move(public_path('images\\lawyers'), $photoName);
+            $request->banner->move(public_path('images/lawyers/banners'), $photoName);
 
             $input['banner'] = $photoName;
         }
 
         $lawyer = $this->lawyerRepository->create($input);
-
-
-
-
 
         Flash::success('Lawyer saved successfully.');
 
@@ -127,28 +125,30 @@ class LawyerController extends AppBaseController {
      * @return Response
      */
     public function update($id, UpdateLawyerRequest $request) {
+
         $lawyer = $this->lawyerRepository->findWithoutFail($id);
-
-
 
         if (empty($lawyer)) {
             Flash::error('Lawyer not found');
 
             return redirect(route('lawyers.index'));
         }
+
         $data = $request->all();
         // $lawyer
         if ($request->image) {
             $photoName = time() . '.' . $request->image->getClientOriginalExtension();
-            $request->image->move(public_path('images\\lawyers'), $photoName);
+            $request->image->move(public_path('images/lawyers'), $photoName);
 
             $data['image'] = $photoName;
+
         } else
+
             unset($data['image']);
 
         if ($request->banner) {
             $photoName = time() . '.' . $request->banner->getClientOriginalExtension();
-            $request->banner->move(public_path('images\\lawyers'), $photoName);
+            $request->banner->move(public_path('images/lawyers/banners'), $photoName);
 
             $data['banner'] = $photoName;
         } else

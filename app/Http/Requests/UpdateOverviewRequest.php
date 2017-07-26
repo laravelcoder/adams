@@ -3,9 +3,9 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
-use App\Models\Case;
+use App\Models\Overview;
 
-class UpdateCaseRequest extends FormRequest
+class UpdateOverviewRequest extends FormRequest
 {
 
     /**
@@ -25,6 +25,6 @@ class UpdateCaseRequest extends FormRequest
      */
     public function rules()
     {
-        return Case::$rules;
+        return Overview::$rules;
     }
 }

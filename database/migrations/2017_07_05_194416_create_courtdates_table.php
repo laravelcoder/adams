@@ -18,11 +18,12 @@ class CreateCourtdatesTable extends Migration
             $table->string('title', 150)->nullable();
             $table->text('notes')->nullable();
             $table->datetime('court_date')->nullable();
-            $table->integer('case_id')->unsigned()->nullable();
+            $table->integer('overview_id')->unsigned()->nullable();
+            $table->string('lang', 20)->default('en');
             $table->timestamps();
             $table->softDeletes();
             $table->engine = 'InnoDB';
-            $table->foreign('case_id')->references('id')->on('cases');
+            $table->foreign('overview_id')->references('id')->on('overviews');
         });
     }
 

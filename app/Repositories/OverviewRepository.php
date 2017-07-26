@@ -2,16 +2,17 @@
 
 namespace App\Repositories;
 
-use App\Models\Case;
+use App\Models\Overview;
 use InfyOm\Generator\Common\BaseRepository;
 
-class CaseRepository extends BaseRepository
+class OverviewRepository extends BaseRepository
 {
     /**
      * @var array
      */
     protected $fieldSearchable = [
-        'name'
+        'name',
+        'details'
     ];
 
     /**
@@ -19,6 +20,6 @@ class CaseRepository extends BaseRepository
      **/
     public function model()
     {
-        return Case::class;
+        return Overview::class;
     }
 }

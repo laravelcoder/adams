@@ -23,6 +23,8 @@ class CreateCourthousesTable extends Migration
             $table->string('zip')->nullable();
             $table->string('country')->nullable();
             $table->text('notes')->nullable();
+            $table->string('lang', 20)->default('en');
+            $table->string('slug')->nullable();
             $table->timestamps();
             $table->softDeletes();
             $table->engine = 'InnoDB';

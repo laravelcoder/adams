@@ -26,7 +26,7 @@
 
                                     @include('layouts.menu')
 
-                                    <li>
+{{--                                     <li>
                                         <a href="#">
                                             <i class="fa fa-file-text"></i>
                                             Tasks
@@ -44,7 +44,7 @@
                                             </li>
 
                                         </ul>
-                                    </li>
+                                    </li> --}}
 
 
                                 </ul>

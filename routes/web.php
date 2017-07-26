@@ -42,7 +42,7 @@ Route::get('/r', function ()
 |
  */
 
-$router->model('services', 'App\Models\Service');
+//$router->model('services', 'App\Models\Service');
 
 
 
@@ -56,8 +56,6 @@ Route::middleware('auth')->group(function ()
         Route::get('tasks', ['as' => 'tasks', 'uses' => 'TasksController@index']);
         Route::get('tasks/{task}', ['as' => 'tasks.show', 'uses' => 'TasksController@show']);
 
-        //Route::get('/home', 'HomeController@index');
-
         Route::resource('posts', 'PostController');
 
         Route::resource('services', 'ServiceController', ['except' => ['show'], 'names' => [
@@ -66,11 +64,11 @@ Route::middleware('auth')->group(function ()
 
         Route::resource('pages', 'PageController');
 
-	Route::resource('lawyers', 'LawyerController');
+        Route::resource('lawyers', 'LawyerController');
 
         Route::resource('staff', 'StaffController');
 
-        Route::resource('cases', 'CaseController');
+        Route::resource('overviews', 'OverviewController');
 
         Route::resource('courthouses', 'CourthouseController');
 
@@ -87,10 +85,6 @@ Route::middleware('auth')->group(function ()
 
 /* live site areas  */
 
-// Route::resource('photo', 'PhotoController', ['except' => [
-
-//     'create', 'store', 'update', 'destroy'
-// ]]);
 
 Auth::routes();
 Route::get('/', ['as' => 'homepage', 'uses' => 'SiteController@homepage']);
@@ -103,10 +97,12 @@ Route::get('blog/{post}', ['as' => 'post', 'uses' => 'BlogController@show']);
 Route::get('attorneys', ['as' => 'attorneys', 'uses' => 'AttorneysController@index']);
 Route::get('attorneys/{attorney}', ['as' => 'attorney', 'uses' => 'AttorneysController@show']);
 
- Route::get('team', ['as' => 'team', 'uses' => 'TeamController@index']);
+Route::get('team', ['as' => 'team', 'uses' => 'TeamController@index']);
 Route::get('team/{staff}', ['as' => 'associate', 'uses' => 'TeamController@show']);
 
 Route::get('contact', ['as' => 'contact', 'uses' => 'ContactController@index']);
 Route::post('contact/sendrequest', ['as' => 'contact.sendreuest', 'uses' => 'ContactController@sendrequest']);
+
+
 
 

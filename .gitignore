@@ -15,3 +15,5 @@ composer.lock
 .not/
 .idea/
  /nbproject/private/
+
+func.php

@@ -50,14 +50,6 @@
     </ul>
 </li>
 
-{{-- <li class="{{ Request::is('secure/cases*') ? 'active' : '' }}">
-    <a href="#"> <i class="fa fa-file-text"></i> <span>Cases</span> </a>
-    <ul>
-    	<li> <a href="{!! route('cases.index') !!}"> <i class="fa fa-file-text"></i> <span>Cases</span> </a> </li>
-    	<li> <a href="{!! route('cases.create') !!}"> <i class="fa fa-file-text"></i> <span>Create Case</span> </a> </li>
-    </ul>
-</li> --}}
-
 {{-- <li class="{{ Request::is('secure/courthouses*') ? 'active' : '' }}">
     <a href="#"> <i class="fa fa-file-text"></i> <span>Courthouses</span> </a>
     <ul>
@@ -91,4 +83,12 @@
     	<li> <a href="{!! route('users.create') !!}"> <i class="fa fa-plus"></i> <span>User</span> </a> </li>
     </ul>
 </li>
+
+{{-- <li class="{{ Request::is('overviews*') ? 'active' : '' }}">
+    <a href="#"> <i class="fa fa-file-text"></i> <span>Overviews</span> </a>
+    <ul>
+    	<li> <a href="{!! route('overviews.index') !!}"> <i class="fa fa-file-text"></i> <span>Overviews</span> </a> </li>
+    	<li> <a href="{!! route('overviews.create') !!}"> <i class="fa fa-file-text"></i> <span>Create Overview</span> </a> </li>
+    </ul>
+</li> --}}
 

@@ -31,6 +31,8 @@ class CreateStaffTable extends Migration
             $table->string('twitter')->nullable();
             $table->string('googleplus')->nullable();
             $table->string('youtube')->nullable();
+            $table->string('staff_type');
+            $table->integer('order_column')->unsigned()->nullable();
             $table->timestamps();
             $table->softDeletes();
             $table->engine = 'InnoDB';

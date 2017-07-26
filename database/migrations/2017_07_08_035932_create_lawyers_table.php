@@ -36,6 +36,8 @@ class CreateLawyersTable extends Migration
             $table->string('video')->nullable();
             $table->string('video2')->nullable();
             $table->string('video3')->nullable();
+            $table->integer('order_column')->unsigned()->nullable();
+
             $table->timestamps();
             $table->softDeletes();
             $table->engine = 'InnoDB';

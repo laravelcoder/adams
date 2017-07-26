@@ -21,8 +21,8 @@ class MenuMiddleware
             $menu->about->attr(array('class' => 'dropdown-toggle', 'data-toggle' => 'dropdown'))->append(' <b class="caret"></b>')->prepend('<span class="glyphicon glyphicon-user"></span> ');
 
 
-  $menu->about->add('Our Attorneys', '/attorneys');
-  $menu->about->add('Our Team', '/team');
+  $menu->about->add('Our Attorneys', array('route'  => 'attorneys'));
+  $menu->about->add('Our Team', array('route'  => 'team'));
 
             // $menu->About->raw('Another Plain Text Item');
             // $menu->about->divide();

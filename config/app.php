@@ -190,6 +190,7 @@ return [
         Barryvdh\Debugbar\ServiceProvider::class,
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
         Lavary\Menu\ServiceProvider::class,
+        Intervention\Image\ImageServiceProvider::class,
 
 
     ],
@@ -247,6 +248,7 @@ return [
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
         'Menu'       => Lavary\Menu\Facade::class,
         'Str' => Illuminate\Support\Str::class,
+        'Image' => Intervention\Image\Facades\Image::class,
 
 
 

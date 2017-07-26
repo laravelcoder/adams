@@ -36,7 +36,7 @@ Our Attorneys | Adams Daveis P.C.
 								<div class="item-media">
 
 								@if($lawyer->image)
-                        		<img src="{!! url('/images/lawyer_rectangle') !!}/{!! $lawyer->image !!}" alt="{!! $lawyer->image !!} section" />
+                        		<img src="{!! url('/images/lawyer') !!}/{!! $lawyer->image !!}" alt="{!! $lawyer->image !!} section" />
 			                    @else
 			                    <img class="image_fade" src="http://lorempixel.com/371/585/people/" style="border: 1px solid #bdc3c7;" alt="{!! $lawyer->name !!} image" itemprop="image" />
 			                    @endif

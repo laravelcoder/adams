@@ -3,7 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
-class CreateCasesTable extends Migration
+class CreateOverviewsTable extends Migration
 {
 
     /**
@@ -13,9 +13,12 @@ class CreateCasesTable extends Migration
      */
     public function up()
     {
-        Schema::create('cases', function (Blueprint $table) {
+        Schema::create('overviews', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name', 150);
+            $table->text('details')->nullable();
+            $table->integer('order_column')->unsigned()->nullable();
+            $table->string('lang', 20)->default('en');
             $table->timestamps();
             $table->softDeletes();
             $table->engine = 'InnoDB';
@@ -29,6 +32,6 @@ class CreateCasesTable extends Migration
      */
     public function down()
     {
-        Schema::drop('cases');
+        Schema::drop('overviews');
     }
 }

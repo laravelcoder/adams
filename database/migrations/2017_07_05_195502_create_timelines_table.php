@@ -18,11 +18,12 @@ class CreateTimelinesTable extends Migration
             $table->string('title', 150);
             $table->text('notes')->nullable();
             $table->datetime('dated_at')->nullable();
-            $table->integer('case_id')->unsigned()->nullable();
+            $table->integer('overview_id')->unsigned()->nullable();
+            $table->string('slug')->nullable();
             $table->timestamps();
             $table->softDeletes();
             $table->engine = 'InnoDB';
-            $table->foreign('case_id')->references('id')->on('cases');
+            $table->foreign('overview_id')->references('id')->on('overviews');
         });
     }
 
