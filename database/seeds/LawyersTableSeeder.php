@@ -25,7 +25,7 @@ class LawyersTableSeeder extends Seeder
                 'title' => 'Co-Founder Attorney',
                 'intro' => 'Sam Adams is a co-founder of Adams Davis, P.C. and represents plaintiffs in injury cases.',
                 'phone' => '801-888-8888',
-                'email' => 'sam@samadams.com',
+                'email' => 'sam@adamsdavis.com',
                 'upper_content' => '<p>Sam Adams Graduated from the College of Law at the University of Utah. &nbsp;Since that time, he has been a plaintiff&rsquo;s lawyer and has successfully arbitrated, mediated and tried numerous lawsuits on behalf of his clients.</p>',
                 'lower_content' => '<p>At the end of 2007, Sam Adams and his partner, Darren Davis, founded the law firm of Adams Davis, P.C. to enhance the service that they provide to their personal injury clients. He enjoys being a community activist and has served as the Park City Bar President.</p>',
                 'bio' => NULL,
@@ -44,7 +44,7 @@ class LawyersTableSeeder extends Seeder
                 'video3' => NULL,
                 'order_column' => NULL,
                 'created_at' => '2017-07-10 00:25:31',
-                'updated_at' => '2018-02-06 04:18:56',
+                'updated_at' => '2018-02-09 06:09:44',
                 'deleted_at' => NULL,
             ),
             1 => 
@@ -55,7 +55,7 @@ class LawyersTableSeeder extends Seeder
                 'title' => 'Co-Founder Attorney',
                 'intro' => 'Darren Davis is a co-founder of Adams Davis, P.C. and represents plaintiffs in injury cases.',
                 'phone' => '801-888-8888',
-                'email' => 'darren@samsdavis.com',
+                'email' => 'darren@adamsdavis.com',
                 'upper_content' => '<p>&nbsp;He has tried numerous cases to significant plaintiff verdicts and has achieved multi-million dollar settlements on behalf of the injured. &nbsp;Mr. Davis specializes in the litigation of injuries arising from traffic incidents, industrial accidents, medical malpractice, and defective products. &nbsp;</p>',
                 'lower_content' => '<p>He lectures often at legal seminars on variety of topics including trial practice, damages and litigation of injury claims. &nbsp;He has recently been recognized as one of Utah&rsquo;s top personal injury lawyers by his peers in Utah Business Magazine.</p>',
                 'bio' => '<p>Darren Davis is a co-founder of Adams Davis, P.C. and represents plaintiffs in injury cases. He is a member of the Utah and Louisiana Bar.</p>',
@@ -74,7 +74,7 @@ class LawyersTableSeeder extends Seeder
                 'video3' => NULL,
                 'order_column' => NULL,
                 'created_at' => '2017-07-10 02:10:23',
-                'updated_at' => '2018-02-06 04:18:15',
+                'updated_at' => '2018-02-09 06:10:03',
                 'deleted_at' => NULL,
             ),
             2 => 
@@ -85,10 +85,21 @@ class LawyersTableSeeder extends Seeder
                 'title' => 'Associate Attorney',
                 'intro' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et.',
                 'phone' => '801-888-8888',
-                'email' => 'coming@soon.com',
-                'upper_content' => '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et fermentum dui. Ut orci quam, ornare sed lorem sed, hendrerit auctor dolor. Nulla viverra, nibh quis ultrices malesuada, ligula ipsum vulputate diam, aliquam egestas nibh ante vel dui. Sed in tellus interdum eros vulputate placerat sed non enim. Pellentesque eget.</p>',
-                'lower_content' => NULL,
-                'bio' => NULL,
+                'email' => 'mike@adamsdavis.com',
+                'upper_content' => '<p>Mike is an avid vintage motorcycle and car enthusiast. Mike has restored several Volkswagen Beetles, Vespa Scooters, Honda Cubs, and is currently restoring a Ural Russian Sidecar Motorcycle. Mike&rsquo;s work ethic is unparalleled. At the age of seven Mike started delivering the Green Sheet Newspaper, and has worked hard ever since. This experience taught him that rewards are tied directly to hard work and follow through. At the age of seven, he was responsible for delivering newspapers, and collecting the subscription charges. Mike was entrusted with the Newspaper&rsquo;s collections, and his pay was determined by the results he obtained for the paper.</p>',
+                'lower_content' => '<p>Mike&rsquo;s work ethic and curiosity have served him well in his path to becoming a lawyer. &nbsp;Mike worked full time as a debt collector as he worked his way through college. &nbsp;Mike earned two bachelor&rsquo;s degrees from the University of Utah in less than 3 years. &nbsp;Mike went on to attend law school at Willamette University. &nbsp;He attended additional summer courses at the University of Oregon so that he could finish law school early to time the completion of his graduate studies with his wife&rsquo;s completion of graduate school. &nbsp;During law school Mike worked as a law clerk for Oregon&rsquo;s Office of Administrative Hearings, researching and writing about extremely complex issues involved in the Klamath Basin Water Rights Adjudication. &nbsp;</p>
+
+<p>After law school, Mike returned to Utah to begin practicing law. &nbsp;His first job as a licensed attorney was managing the legal intake process of Robert J. DeBry &amp; Associates. &nbsp;Michael was very successful in this job, and quickly advanced to a position handling complex and difficult litigation cases within DeBry&rsquo;s office. &nbsp;Working at DeBry allowed Mike to gain tons of experience quickly. &nbsp;Mike has tried more cases to a jury than almost any other accident lawyer of his age. &nbsp;Mike was intimately involved in a team of lawyers who obtained a verdict of $58,500,000.00 for the family of a man who was killed in an auto accident.&nbsp;</p>
+
+<p>Mike left Robert J. DeBry &amp; Associates in 2015 to join Adams Davis, P.C. because he wanted to have a practice that focused more on clients as individuals. &nbsp;Michael enjoys working at Adams Davis because it allows him the time he needs to prepare well for his cases, and visit with his clients as individuals.&nbsp;<br />
+&nbsp;<br />
+One of the most influential moments in Mike&rsquo;s life in the legal profession occurred during his first semester of law school. &nbsp;In a class of more than 80 students, Mike was completely impressed when Professor Carlton Snow came into class the first day, knowing all of the students, whom he had never met, by name and background. &nbsp;Professor Snow had taken the time to pull the admissions files of all of his students, and memorize their names and background information. &nbsp;When he called on a student during class, the student commented on the fact that Professor Snow knew all about him. &nbsp;Professor Snow stopped and told the class: &ldquo;Life to me is about people.&rdquo; &nbsp;Professor Snow died before the end of the semester, but Mike thinks about this lesson frequently.</p>
+
+<p>Practicing law at Adams Davis, P.C. allows Mike to focus on people, his clients, as opposed to marketing concerns, and numbers.<br />
+&nbsp;</p>',
+                'bio' => 'Mike began working in his grandfather’s shop at the age of twelve.  He learned discipline and the benefits of hard work while carrying five-gallon buckets to and from the fleet of semi’s serviced by his grandfather’s business.
+
+Mike has always been curious, and eager to learn and explain.  As a child, Mike went through his family’s home, and systematically dismantled everything he could.  He took the legs off the family table.  He dismantled his father’s exercise bike.  He took apart his brother’s drum set.  He disassembled the lawnmower.  At some point, the problem became so severe that Mike’s dad brought an extremely large broken guitar amp home from his music store, and instructed Mike to disassemble the amp completely, including removing each and every resistor soldered to the circuitry of the amp.  There was no stopping Mike’s curiosity, so his dad had no choice but to engage the curiosity and provide inexpensive ways to encourage it.',
                 'meta_description' => NULL,
                 'facebook' => NULL,
                 'twitter' => NULL,
@@ -104,7 +115,7 @@ class LawyersTableSeeder extends Seeder
                 'video3' => NULL,
                 'order_column' => NULL,
                 'created_at' => '2018-02-05 18:12:47',
-                'updated_at' => '2018-02-06 04:19:18',
+                'updated_at' => '2018-02-09 05:23:51',
                 'deleted_at' => NULL,
             ),
             3 => 

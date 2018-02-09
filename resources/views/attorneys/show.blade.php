@@ -51,48 +51,23 @@
 
 						<div class="col-md-6">
 							<p>
-								T-bone tenderloin bresaola pork cupim. Prosciutto picanha boudin pork loin sirloin chuck. Strip steak short ribs spare ribs, ball tip picanha tenderloin hamburger porche. Beef venison tail, tri-tip bresaola jowl boudin chuck andouille.
+								{!! $lawyer->upper_content !!}
 							</p>
-							<p>
-								Meatball turkey rump pork chop leberkas sausage chicken chuck shoulder boudin shankle flank tenderloin venison tri-tip. Jerky leberkas salami chicken picanha pig sirloin ribeye short ribs flank sausage drumstick.
-							</p>
-							<ul class="list2 triangle-bullets darklinks highlight">
-								<li>
-									<a href="services.html">Lorem ipsum dolor sit amet</a>
-								</li>
-								<li>
-									<a href="services.html">Sint animi non ut sed</a>
-								</li>
-								<li>
-									<a href="services.html">Eaque blanditiis nemo</a>
-								</li>
-								<li>
-									<a href="services.html">Amet, consectetur adipisicing</a>
-								</li>
-								<li>
-									<a href="services.html">Blanditiis nemo quaerat</a>
-								</li>
-							</ul>
 
-
+							@if($lawyer->bio)
 							<!-- Nav tabs -->
 							<ul class="nav nav-tabs dark topmargin_40" role="tablist">
-								<li class="active">
-									<a href="#tab1" role="tab" data-toggle="tab">Biography</a>
-								</li>
-								<li>
-									<a href="#tab2" role="tab" data-toggle="tab">Skills</a>
-								</li>
-								<li>
-									<a href="#tab3" role="tab" data-toggle="tab">Send Message</a>
-								</li>
+								<li class="active"> <a href="#tab1" role="tab" data-toggle="tab">Biography</a> </li>
+								{{-- <li> <a href="#tab2" role="tab" data-toggle="tab">Skills</a> </li> --}}
+								{{-- <li> <a href="#tab3" role="tab" data-toggle="tab">Send Message</a> </li> --}}
 							</ul>
 
 							<!-- Tab panes -->
 							<div class="tab-content top-color-border ds bottommargin_40">
 
 								<div class="tab-pane fade in active" id="tab1">
-									<h3 class="highlight">Biography:</h3>
+									{!! $lawyer->bio !!}
+			{{-- 						<h3 class="highlight">Biography:</h3>
 									<p>
 										Ut wisi enim ad minim veniaquis nostrud exetation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Dutem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at
 										vero eros et accumsan et iusto odio dignissim qui blandit.
@@ -101,11 +76,10 @@
 									<p>
 										Dutem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit. Praesent luptatum zzril delenit augue duis dolore te feugait
 										nulla facilisi.
-									</p>
-
+									</p> --}}
 								</div>
 
-								<div class="tab-pane fade" id="tab2">
+								{{-- <div class="tab-pane fade" id="tab2">
 									<p>
 										<strong class="grey">Skill Name</strong>
 									</p>
@@ -141,11 +115,9 @@
 											<span>95%</span>
 										</div>
 									</div>
+								</div> --}}
 
-
-								</div>
-
-								<div class="tab-pane fade" id="tab3">
+							{{-- 	<div class="tab-pane fade" id="tab3">
 									<form class="contact-form" method="post" action="./">
 										<p class="contact-form-name">
 											<!-- <label for="name">Name <span class="required">*</span></label> -->
@@ -163,16 +135,15 @@
 											<button type="submit" name="contact_submit" class="theme_button">Send Message</button>
 										</p>
 									</form>
-								</div>
+								</div> --}}
 							</div>
 							<!-- eof .tab-content -->
-
+							@endif
 							<p>
-								Filet mignon capicola pork sausage pork belly corned beef meatloaf shoulder, bacon leberkas jerky burgdoggen ham hock kielbasa bresaola. Kielbasa bacon drumstick jowl pastrami cupim meatball pork loin ball tip picanha corned beef brisket biltong kevin
-								meatloaf.
+								{!! $lawyer->lower_content !!}
 							</p>
 
-							<blockquote>
+						{{-- 	<blockquote>
 								“Chicken venison pastrami shankle fatback meatball pancetta beef. Ground round bacon t-bone prosciutto strip steak pork.”
 
 								<div class="item-meta topmargin_30">
@@ -181,11 +152,8 @@
 									</h5>
 									<p class="highlight">Founder of the Justice</p>
 								</div>
-							</blockquote>
+							</blockquote> --}}
 
-							<p>
-								Sausage pork loin brisket sirloin, ham drumstick picanha kevin chuck. Prosciutto venison t-bone pig tenderloin tail short ribs meatloaf porchetta biltong flank bacon cupim. Burgdoggen bresaola cupim corned beef.
-							</p>
 
 						</div>
 
@@ -205,4 +173,23 @@
 @endsection
 
 @section('json-ld')
+	<script type='application/ld+json'>
+	{
+	  "@context": "http://www.schema.org",
+	  "@type": "person",
+	  "name": "{!! $lawyer->name !!}",
+	  "jobTitle": "Founder Attorney",
+	  "url": "http://www.adamsdavis.com",
+	  "address": {
+	    "@type": "PostalAddress",
+	    "streetAddress": "35 W. Broadway",
+	    "addressLocality": "Salt Lake City",
+	    "addressRegion": "Utah",
+	    "postalCode": "84101",
+	    "addressCountry": "United States"
+	  },
+	  "email": "{!! $lawyer->email !!}",
+	  "telephone": "118018888888"
+	}
+	 </script>
 @endsection
