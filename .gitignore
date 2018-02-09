@@ -15,7 +15,7 @@ composer.lock
 .not/
 .idea/
  /nbproject/private/
-
+*.TODO
 func.php
 /.phpintel/
 /.not/
