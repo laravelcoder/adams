@@ -4,6 +4,8 @@ namespace App\Providers;
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
+use App\Models\Lawyer;
+use App\Models\Attorney;
 
 class RouteServiceProvider extends ServiceProvider
 {
@@ -23,12 +25,16 @@ class RouteServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        Route::pattern('id', '[0-9]+');
 
         parent::boot();
 
-        // Route::model('user', App\User::class);
-        // Route::model('service', App\Models\Service::class);
+//        \Route::model('service', \App\Models\Service::class);
+//         Route::model('user', App\User::class);
+//        Route::model('service', \App\Models\Service::class);
+//        Route::model('attorney', Attorney::class);
+//        \Route::model('lawyer', Lawyer::class);
+//        Route::model('staff', \App\Models\Staff::class);
     }
 
     /**

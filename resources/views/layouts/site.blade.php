@@ -17,18 +17,16 @@
 @yield('seo')
 @yield('json-ld')
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-
 	<link rel="stylesheet" href="{!! asset('css/bootstrap.min.css') !!}">
 	<link rel="stylesheet" href="{!! asset('css/animations.css') !!}">
 	<link rel="stylesheet" href="{!! asset('css/fonts.css') !!}">
 	<link rel="stylesheet" href="{!! asset('css/main.css') !!}" id="color-switcher-link">
 	<script src="{!! asset('js/vendor/modernizr-2.6.2.min.js') !!}"></script>
 
-
 	<!--[if lt IE 9]>
-		<script src="{!! asset('js/vendor/html5shiv.min.js') !!}"></script>
-		<script src="{!! asset('js/vendor/respond.min.js') !!}"></script>
-		<script src="{!! asset('js/vendor/jquery-1.12.4.min.js') !!}"></script>
+	<script src="{!! asset('js/vendor/html5shiv.min.js') !!}"></script>
+	<script src="{!! asset('js/vendor/respond.min.js') !!}"></script>
+	<script src="{!! asset('js/vendor/jquery-1.12.4.min.js') !!}"></script>
 	<![endif]-->
 
 </head>
@@ -41,7 +39,6 @@
 	<div class="preloader">
 		<div class="preloader_image"></div>
 	</div>
-
 	<!-- search modal -->
 	<div class="modal" tabindex="-1" role="dialog" aria-labelledby="search_modal" id="search_modal">
 		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -58,70 +55,34 @@
 			</form>
 		</div>
 	</div>
-
 	<!-- Unyson messages modal -->
 	<div class="modal fade" tabindex="-1" role="dialog" id="messages_modal">
 		<div class="fw-messages-wrap ls with_padding">
 			<!-- Uncomment this UL with LI to show messages in modal popup to your user: -->
-			<!--
-		<ul>
-			<li>Message To User</li>
-		</ul>
-		-->
-
+			<!-- <ul> <li>Message To User</li> </ul> -->
 		</div>
 	</div>
 	<!-- eof .modal -->
-
 	<!-- wrappers for visual page editor and boxed version of template -->
 	<div id="canvas">
 		<div id="box_wrapper">
-
-
 			<!-- template sections -->
-{{-- @include('layouts.partials.top') --}}
+			@desktop
+			 @include('layouts.partials.top')
+			@elsedesktop
 
-@include('layouts.frontpage.slider')
-
+			@enddesktop
+			{{-- @include('layouts.partials.top') --}}
+			@include('layouts.partials.header')
+			@include('layouts.frontpage.slider')
 			<!--	{{-- https://youtu.be/7Hcp0BvMdPc --}}  -->
 
 
 
-			<header class="page_header header_darkgrey header_transparent table_section table_section_md columns_margin_0 toggler_right">
+			@yield('content')
 
-				<div class="container">
-					<div class="row">
-						<div class="col-md-4">
-							<a href="{!! url('/') !!}" class="logo top_logo">
-								<img src="{!! asset('images/logo.png') !!}" alt="">
-								<span class="logo_text">
-									<span class="playfair title">Adams Davis</span>
-									<span class="highlight">ACCIDENT TRIAL ATTORNEYS</span>
-								</span>
-							</a>
-							<!-- header toggler -->
-							<span class="toggle_menu">
-								<span></span>
-							</span>
-						</div>
-						<div class="col-md-8 text-right">
-
-							<!-- main nav start -->
-							<nav class="mainmenu_wrapper">
-
-									{!! $primary->asUl(array('class' => 'mainmenu nav sf-menu', 'data-in'=> 'fadeIn', 'data-out' => 'fadeOut')) !!}
-
-							</nav>
-							<!-- eof main nav -->
-						</div>
-					</div>
-				</div>
-			</header>
-
-@yield('content')
-
-@include('layouts.partials.footer')
-@include('layouts.partials.copy')
+			@include('layouts.partials.footer')
+			@include('layouts.partials.copy')
 
 
 
@@ -133,6 +94,7 @@
 
 	<script src="{!! asset('js/compressed.js') !!}"></script>
 	<script src="{!! asset('js/main.js') !!}"></script>
+
         <script>
 
 function sendrequest() {

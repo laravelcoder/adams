@@ -15,9 +15,11 @@ class CreateStaffTable extends Migration
     {
         Schema::create('staff', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('intro')->nullable();
+            $table->boolean('is_published')->default(0);
+            $table->string('name', 150);
             $table->string('title')->nullable();
-            $table->string('phone')->nullable();
+            $table->string('intro')->nullable();
+            $table->string('phone')->default('801-888-8888');
             $table->string('email')->nullable();
             $table->text('meta_description')->nullable();
             $table->text('upper_content')->nullable();
@@ -31,6 +33,8 @@ class CreateStaffTable extends Migration
             $table->string('twitter')->nullable();
             $table->string('googleplus')->nullable();
             $table->string('youtube')->nullable();
+            $table->string('linkedin')->nullable();
+            $table->string('other_link')->nullable();
             $table->string('staff_type');
             $table->integer('order_column')->unsigned()->nullable();
             $table->timestamps();

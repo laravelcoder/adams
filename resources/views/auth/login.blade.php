@@ -9,9 +9,10 @@
                                     <div class="login-logo ds">
                                         <a href="{!! url('/') !!}" class="logo top_logo">
                                             <img src="{!! asset('images/logo.png') !!}" alt="Adams Davis Logo">
-                                            <span class="logo_text">
-                                                <span class="playfair title">Adams Davis</span>
-                                            </span>
+        								<span class="logo_text">
+											<span class="playfair title">Adams Davis P.C.</span>
+											<span class="highlight">--- ACCIDENT TRIAL ATTORNEYS ---</span>
+										</span>
                                         </a>
                                     </div>
                                 <h4 class="text-center">

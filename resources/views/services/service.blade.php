@@ -9,7 +9,12 @@
 				<div class="container">
 					<div class="row columns_padding_25">
 						<div class="col-md-6">
-							<img src="images/gallery/03.jpg" alt="">
+							@if($service->banner)
+							<img src="{!! asset('images/services/'. $service->slug .'/'. $service->banner) !!}" alt="{!! $service->service !!} image">
+							@else
+							<img src="http://via.placeholder.com/585x780" alt="dummy image">
+							@endif
+
 						</div>
 						<div class="col-md-6">
 							<h2 class="section_header bottommargin_20">{!! $service->service !!}</h2>

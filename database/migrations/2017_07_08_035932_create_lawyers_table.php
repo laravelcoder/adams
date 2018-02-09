@@ -15,6 +15,7 @@ class CreateLawyersTable extends Migration
     {
         Schema::create('lawyers', function (Blueprint $table) {
             $table->increments('id');
+            $table->boolean('is_published')->default(0);
             $table->string('name', 150);
             $table->string('title')->nullable();
             $table->string('intro')->nullable();
@@ -28,6 +29,8 @@ class CreateLawyersTable extends Migration
             $table->string('twitter')->nullable();
             $table->string('googleplus')->nullable();
             $table->string('youtube')->nullable();
+            $table->string('linkedin')->nullable();
+            $table->string('other_link')->nullable();
             $table->string('image')->nullable();
             $table->string('banner')->nullable();
             $table->string('slug')->nullable();

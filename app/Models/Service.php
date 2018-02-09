@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Spatie\MediaLibrary\HasMedia\HasMediaTrait;
 use Spatie\MediaLibrary\HasMedia\Interfaces\HasMediaConversions;
 
+
 /**
  * Class Service
  * @package App\Models
@@ -15,7 +16,7 @@ use Spatie\MediaLibrary\HasMedia\Interfaces\HasMediaConversions;
 class Service extends Model
 {
     use SoftDeletes;
-     use HasMediaTrait;
+    use HasMediaTrait;
 
     public $table = 'services';
 
@@ -32,7 +33,8 @@ class Service extends Model
         'banner',
         'slug',
         'lang',
-        'icon_class'
+        'icon_class',
+        'is_published'
     ];
 
     /**
@@ -49,7 +51,8 @@ class Service extends Model
         'banner' => 'string',
         'slug' => 'string',
         'lang' => 'string',
-        'icon_class' => 'string'
+        'icon_class' => 'string',
+        'is_published' => 'boolean'
     ];
 
     /**
@@ -62,5 +65,14 @@ class Service extends Model
         'intro' => 'required'
     ];
 
+    /**
+     * Get the route key for the model.
+     *
+     * @return string
+     */
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
 
 }

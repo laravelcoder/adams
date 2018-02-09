@@ -13896,3 +13896,62 @@ div.user-menu-info h4 {
 }
 
 
+.logo_text .playfair {
+    border-bottom-width: 1px;
+    border-color: #fff;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-style: solid;
+    border-top-width: 0;
+}
+
+.logo_text span {
+    font-size: 225%;
+}
+
+.toggle {
+    border: none;
+    border-radius: 0;
+    font-weight: 700;
+    margin: 0;
+    padding: 5px 30px 5px;
+}
+
+.toggle-off.btn {
+    padding-left: 43px;
+}
+
+a.logo .logo_text {
+    display: inline-block;
+    font-size: 20px;
+    margin-left: 6px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+a.logo .logo_text .title {
+    border-bottom-width: 2px;
+    border-color: #fff;
+    font-size: 180%;
+    font-weight: 400;
+    text-transform: none;
+}
+
+a.logo .logo_text .title + span {
+    font-size: 14px;
+    margin-top: 3px;
+}
+
+a.logo .logo_text span {
+    display: block;
+    text-transform: uppercase;
+}
+
+a.logo .title {
+    border-bottom-width: 1px;
+    border-color: #fff;
+}
+
+a.logo.top_logo img {
+    display: none;
+}

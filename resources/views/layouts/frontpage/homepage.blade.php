@@ -4,7 +4,7 @@
 
 @include('layouts.frontpage.about')
 
-@if(!count($services))
+@if(count($services))
 			<section id="services" class="ds section_padding_50 section_services parallax">
 				<div class="container">
 					<div class="row">
@@ -215,161 +215,165 @@
 				</div>
 			</section>
 @endif
-			<section id="team" class="ls ms section_padding_top_50 section_padding_bottom_100">
-				<div class="container">
-					<div class="row">
-						<div class="col-sm-12 text-center">
-							<div class="section_number with_divider grey">
-								<span>03</span>
-							</div>
-							<h2 class="section_header highlight">Our Attorneys</h2>
-							<p>We invite you to learn more about our attorneys, our experience, and the kinds of cases we have handled for our clients.</p>
+
+@include('layouts.frontpage.attorneys')
+
+
+			{{--<section id="team" class="ls ms section_padding_top_50 section_padding_bottom_100">--}}
+				{{--<div class="container">--}}
+					{{--<div class="row">--}}
+						{{--<div class="col-sm-12 text-center">--}}
+							{{--<div class="section_number with_divider grey">--}}
+								{{--<span>03</span>--}}
+							{{--</div>--}}
+							{{--<h2 class="section_header highlight">Our Attorneys</h2>--}}
+							{{--<p>We invite you to learn more about our attorneys, our experience, and the kinds of cases we have handled for our clients.</p>--}}
 						{{-- 	<p>Personal Injury Attorneys Ready To Fight For You. We Provide Extremely Aggressive Representation. Let Us Help!</p> --}}
-							<p>
+							{{--<p>--}}
 
-								<div class="owl-carousel topmargin_60 bottommargin_0" data-nav="true" data-dots="true" data-responsive-lg="3" data-responsive-md="3">
+								{{--<div class="owl-carousel topmargin_60 bottommargin_0" data-nav="true" data-dots="true" data-responsive-lg="3" data-responsive-md="3">--}}
 
-									<div class="vertical-item content-absolute content-hover text-center">
-										<div class="item-media">
-											<img src="{!! asset('images/team_rectangle/DarrenDavis.png') !!}" alt="Salt Lake Trial Attorney" />
-										</div>
-										<div class="item-content ds">
-											<h6 class="muli text-uppercase inline-block rightmargin_5 bottommargin_0">
-												Darren Davis
-											</h6>
-											<span class="highlight">Co Founder</span>
-											<div class="content-body">
+									{{--<div class="vertical-item content-absolute content-hover text-center">--}}
+										{{--<div class="item-media">--}}
+											{{--<img src="{!! asset('images/team_rectangle/DarrenDavis.png') !!}" alt="Salt Lake Trial Attorney" />--}}
+										{{--</div>--}}
+										{{--<div class="item-content ds">--}}
+											{{--<h6 class="muli text-uppercase inline-block rightmargin_5 bottommargin_0">--}}
+												{{--Darren Davis--}}
+											{{--</h6>--}}
+											{{--<span class="highlight">Co Founder</span>--}}
+											{{--<div class="content-body">--}}
 
-												<div class="divider_20">
-													<a class="social-icon theme-color-icon soc-facebook" href="#" title="" data-toggle="tooltip" data-original-title="Facebook"></a>
-													<a class="social-icon theme-color-icon soc-twitter" href="#" title="" data-toggle="tooltip" data-original-title="Twitter"></a>
-													<a class="social-icon theme-color-icon soc-youtube" href="#" title="" data-toggle="tooltip" data-original-title="Youtube"></a>
-													<a class="social-icon theme-color-icon soc-google" href="#" title="" data-toggle="tooltip" data-original-title="Google"></a>
-												</div>
-												<p class="grey">
-													Darren Davis is a co-founder of Adams Davis, P.C. and represents plaintiffs in injury cases.
-												</p>
-												<p class="topmargin_30">
-													<a href="#" class="theme_button color1">Read more</a>
-												</p>
-											</div>
-										</div>
-									</div>
+												{{--<div class="divider_20">--}}
+													{{--<a class="social-icon theme-color-icon soc-facebook" href="#" title="" data-toggle="tooltip" data-original-title="Facebook"></a>--}}
+													{{--<a class="social-icon theme-color-icon soc-twitter" href="#" title="" data-toggle="tooltip" data-original-title="Twitter"></a>--}}
+													{{--<a class="social-icon theme-color-icon soc-youtube" href="#" title="" data-toggle="tooltip" data-original-title="Youtube"></a>--}}
+													{{--<a class="social-icon theme-color-icon soc-google" href="#" title="" data-toggle="tooltip" data-original-title="Google"></a>--}}
+												{{--</div>--}}
+												{{--<p class="grey">--}}
+													{{--Darren Davis is a co-founder of Adams Davis, P.C. and represents plaintiffs in injury cases.--}}
+												{{--</p>--}}
+												{{--<p class="topmargin_30">--}}
+													{{--<a href="#" class="theme_button color1">Read more</a>--}}
+												{{--</p>--}}
+											{{--</div>--}}
+										{{--</div>--}}
+									{{--</div>--}}
 
-									<div class="vertical-item content-absolute content-hover text-center">
-										<div class="item-media">
-											<img src="images/team_rectangle/SamAdams.png" alt="Personal Injury Lawyer" />
-										</div>
-										<div class="item-content ds">
-											<h6 class="muli text-uppercase inline-block rightmargin_5 bottommargin_0">
-												Sam Adams
-											</h6>
-											<span class="highlight">Co Founder</span>
-											<div class="content-body">
+									{{--<div class="vertical-item content-absolute content-hover text-center">--}}
+										{{--<div class="item-media">--}}
+											{{--<img src="images/team_rectangle/SamAdams.png" alt="Personal Injury Lawyer" />--}}
+										{{--</div>--}}
+										{{--<div class="item-content ds">--}}
+											{{--<h6 class="muli text-uppercase inline-block rightmargin_5 bottommargin_0">--}}
+												{{--Sam Adams--}}
+											{{--</h6>--}}
+											{{--<span class="highlight">Co Founder</span>--}}
+											{{--<div class="content-body">--}}
 
-												<div class="divider_20">
-													<a class="social-icon theme-color-icon soc-facebook" href="#" title="" data-toggle="tooltip" data-original-title="Facebook"></a>
-													<a class="social-icon theme-color-icon soc-twitter" href="#" title="" data-toggle="tooltip" data-original-title="Twitter"></a>
-													<a class="social-icon theme-color-icon soc-youtube" href="#" title="" data-toggle="tooltip" data-original-title="Youtube"></a>
-													<a class="social-icon theme-color-icon soc-google" href="#" title="" data-toggle="tooltip" data-original-title="Google"></a>
-												</div>
-												<p class="grey">
-													Sam Adams is a co-founder of Adams Davis, P.C. and represents plaintiffs in injury cases.
-												</p>
-												<p class="topmargin_30">
-													<a href="#" class="theme_button color1">Read more</a>
-												</p>
-											</div>
-										</div>
-									</div>
+												{{--<div class="divider_20">--}}
+													{{--<a class="social-icon theme-color-icon soc-facebook" href="#" title="" data-toggle="tooltip" data-original-title="Facebook"></a>--}}
+													{{--<a class="social-icon theme-color-icon soc-twitter" href="#" title="" data-toggle="tooltip" data-original-title="Twitter"></a>--}}
+													{{--<a class="social-icon theme-color-icon soc-youtube" href="#" title="" data-toggle="tooltip" data-original-title="Youtube"></a>--}}
+													{{--<a class="social-icon theme-color-icon soc-google" href="#" title="" data-toggle="tooltip" data-original-title="Google"></a>--}}
+												{{--</div>--}}
+												{{--<p class="grey">--}}
+													{{--Sam Adams is a co-founder of Adams Davis, P.C. and represents plaintiffs in injury cases.--}}
+												{{--</p>--}}
+												{{--<p class="topmargin_30">--}}
+													{{--<a href="#" class="theme_button color1">Read more</a>--}}
+												{{--</p>--}}
+											{{--</div>--}}
+										{{--</div>--}}
+									{{--</div>--}}
 
-									<div class="vertical-item content-absolute content-hover text-center">
-										<div class="item-media">
-											<img src="images/team_rectangle/BrettBlood.png" alt="Utah Personal Injury Attorney At Law" />
-										</div>
-										<div class="item-content ds">
-											<h6 class="muli text-uppercase inline-block rightmargin_5 bottommargin_0">
-												Brett Blood
-											</h6>
-											<span class="highlight">Associate Attorney</span>
-											<div class="content-body">
+									{{--<div class="vertical-item content-absolute content-hover text-center">--}}
+										{{--<div class="item-media">--}}
+											{{--<img src="images/team_rectangle/BrettBlood.png" alt="Utah Personal Injury Attorney At Law" />--}}
+										{{--</div>--}}
+										{{--<div class="item-content ds">--}}
+											{{--<h6 class="muli text-uppercase inline-block rightmargin_5 bottommargin_0">--}}
+												{{--Brett Blood--}}
+											{{--</h6>--}}
+											{{--<span class="highlight">Associate Attorney</span>--}}
+											{{--<div class="content-body">--}}
 
-												<div class="divider_20">
-													<a class="social-icon theme-color-icon soc-facebook" href="#" title="" data-toggle="tooltip" data-original-title="Facebook"></a>
-													<a class="social-icon theme-color-icon soc-twitter" href="#" title="" data-toggle="tooltip" data-original-title="Twitter"></a>
-													<a class="social-icon theme-color-icon soc-youtube" href="#" title="" data-toggle="tooltip" data-original-title="Youtube"></a>
-													<a class="social-icon theme-color-icon soc-google" href="#" title="" data-toggle="tooltip" data-original-title="Google"></a>
-												</div>
-												<p class="grey">
-													Brett began his personal injury practice in late 2006 at Keith Barton & Associates.
-												</p>
-												<p class="topmargin_30">
-													<a href="#" class="theme_button color1">Read more</a>
-												</p>
-											</div>
-										</div>
-									</div>
+												{{--<div class="divider_20">--}}
+													{{--<a class="social-icon theme-color-icon soc-facebook" href="#" title="" data-toggle="tooltip" data-original-title="Facebook"></a>--}}
+													{{--<a class="social-icon theme-color-icon soc-twitter" href="#" title="" data-toggle="tooltip" data-original-title="Twitter"></a>--}}
+													{{--<a class="social-icon theme-color-icon soc-youtube" href="#" title="" data-toggle="tooltip" data-original-title="Youtube"></a>--}}
+													{{--<a class="social-icon theme-color-icon soc-google" href="#" title="" data-toggle="tooltip" data-original-title="Google"></a>--}}
+												{{--</div>--}}
+												{{--<p class="grey">--}}
+													{{--Brett began his personal injury practice in late 2006 at Keith Barton & Associates.--}}
+												{{--</p>--}}
+												{{--<p class="topmargin_30">--}}
+													{{--<a href="#" class="theme_button color1">Read more</a>--}}
+												{{--</p>--}}
+											{{--</div>--}}
+										{{--</div>--}}
+									{{--</div>--}}
 
-									<div class="vertical-item content-absolute content-hover text-center">
-										<div class="item-media">
-											<img src="images/team_rectangle/YorkMajor.png" alt="Personal Injury Attorney for Utah" />
-										</div>
-										<div class="item-content ds">
-											<h6 class="muli text-uppercase inline-block rightmargin_5 bottommargin_0">
-												York Major
-											</h6>
-											<span class="highlight">Associate Attorney</span>
-											<div class="content-body">
+									{{--<div class="vertical-item content-absolute content-hover text-center">--}}
+										{{--<div class="item-media">--}}
+											{{--<img src="images/team_rectangle/YorkMajor.png" alt="Personal Injury Attorney for Utah" />--}}
+										{{--</div>--}}
+										{{--<div class="item-content ds">--}}
+											{{--<h6 class="muli text-uppercase inline-block rightmargin_5 bottommargin_0">--}}
+												{{--York Major--}}
+											{{--</h6>--}}
+											{{--<span class="highlight">Associate Attorney</span>--}}
+											{{--<div class="content-body">--}}
 
-												<div class="divider_20">
-													<a class="social-icon theme-color-icon soc-facebook" href="#" title="" data-toggle="tooltip" data-original-title="Facebook"></a>
-													<a class="social-icon theme-color-icon soc-twitter" href="#" title="" data-toggle="tooltip" data-original-title="Twitter"></a>
-													<a class="social-icon theme-color-icon soc-youtube" href="#" title="" data-toggle="tooltip" data-original-title="Youtube"></a>
-													<a class="social-icon theme-color-icon soc-google" href="#" title="" data-toggle="tooltip" data-original-title="Google"></a>
-												</div>
-												<p class="grey">
-													York Major is a premier injury and complex tort litigation attorney.
-												</p>
-												<p class="topmargin_30">
-													<a href="#" class="theme_button color1">Read more</a>
-												</p>
-											</div>
-										</div>
-									</div>
+												{{--<div class="divider_20">--}}
+													{{--<a class="social-icon theme-color-icon soc-facebook" href="#" title="" data-toggle="tooltip" data-original-title="Facebook"></a>--}}
+													{{--<a class="social-icon theme-color-icon soc-twitter" href="#" title="" data-toggle="tooltip" data-original-title="Twitter"></a>--}}
+													{{--<a class="social-icon theme-color-icon soc-youtube" href="#" title="" data-toggle="tooltip" data-original-title="Youtube"></a>--}}
+													{{--<a class="social-icon theme-color-icon soc-google" href="#" title="" data-toggle="tooltip" data-original-title="Google"></a>--}}
+												{{--</div>--}}
+												{{--<p class="grey">--}}
+													{{--York Major is a premier injury and complex tort litigation attorney.--}}
+												{{--</p>--}}
+												{{--<p class="topmargin_30">--}}
+													{{--<a href="#" class="theme_button color1">Read more</a>--}}
+												{{--</p>--}}
+											{{--</div>--}}
+										{{--</div>--}}
+									{{--</div>--}}
 
-									<div class="vertical-item content-absolute content-hover text-center">
-										<div class="item-media">
-											<img src="images/team_rectangle/ChristianCueva.png" alt="" />
-										</div>
-										<div class="item-content ds">
-											<h6 class="muli text-uppercase inline-block rightmargin_5 bottommargin_0">
-												Christian Cueva
-											</h6>
-											<span class="highlight">Associate Attorney</span>
-											<div class="content-body">
+									{{--<div class="vertical-item content-absolute content-hover text-center">--}}
+										{{--<div class="item-media">--}}
+											{{--<img src="images/team_rectangle/ChristianCueva.png" alt="" />--}}
+										{{--</div>--}}
+										{{--<div class="item-content ds">--}}
+											{{--<h6 class="muli text-uppercase inline-block rightmargin_5 bottommargin_0">--}}
+												{{--Christian Cueva--}}
+											{{--</h6>--}}
+											{{--<span class="highlight">Associate Attorney</span>--}}
+											{{--<div class="content-body">--}}
 
-												<div class="divider_20">
-													<a class="social-icon theme-color-icon soc-facebook" href="#" title="" data-toggle="tooltip" data-original-title="Facebook"></a>
-													<a class="social-icon theme-color-icon soc-twitter" href="#" title="" data-toggle="tooltip" data-original-title="Twitter"></a>
-													<a class="social-icon theme-color-icon soc-youtube" href="#" title="" data-toggle="tooltip" data-original-title="Youtube"></a>
-													<a class="social-icon theme-color-icon soc-google" href="#" title="" data-toggle="tooltip" data-original-title="Google"></a>
-												</div>
-												<p class="grey">
-													 His practice focuses on representing individuals against the faceless machinery of Insurance Companies, Corporations, and the State.
-												</p>
-												<p class="topmargin_30">
-													<a href="#" class="theme_button color1">Read more</a>
-												</p>
-											</div>
-										</div>
-									</div>
+												{{--<div class="divider_20">--}}
+													{{--<a class="social-icon theme-color-icon soc-facebook" href="#" title="" data-toggle="tooltip" data-original-title="Facebook"></a>--}}
+													{{--<a class="social-icon theme-color-icon soc-twitter" href="#" title="" data-toggle="tooltip" data-original-title="Twitter"></a>--}}
+													{{--<a class="social-icon theme-color-icon soc-youtube" href="#" title="" data-toggle="tooltip" data-original-title="Youtube"></a>--}}
+													{{--<a class="social-icon theme-color-icon soc-google" href="#" title="" data-toggle="tooltip" data-original-title="Google"></a>--}}
+												{{--</div>--}}
+												{{--<p class="grey">--}}
+													 {{--His practice focuses on representing individuals against the faceless machinery of Insurance Companies, Corporations, and the State.--}}
+												{{--</p>--}}
+												{{--<p class="topmargin_30">--}}
+													{{--<a href="#" class="theme_button color1">Read more</a>--}}
+												{{--</p>--}}
+											{{--</div>--}}
+										{{--</div>--}}
+									{{--</div>--}}
 
-								</div>
-						</div>
-					</div>
+								{{--</div>--}}
+						{{--</div>--}}
+					{{--</div>--}}
 
-				</div>
-			</section>
+				{{--</div>--}}
+			{{--</section>--}}
 
 			<section class="cs section_padding_100 section_action parallax">
 				<div class="container">

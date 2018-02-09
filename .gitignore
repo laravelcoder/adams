@@ -17,3 +17,5 @@ composer.lock
  /nbproject/private/
 
 func.php
+/.phpintel/
+/.not/

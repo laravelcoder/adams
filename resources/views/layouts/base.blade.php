@@ -93,7 +93,7 @@
 					<div class="row">
 						<div class="col-md-4">
 							<a href="{!! url('/') !!}" class="logo top_logo">
-								<img src="{!! asset('images/logo.png') !!}" alt="">
+								{{-- <img src="{!! asset('images/logo.png') !!}" alt=""> --}}
 								<span class="logo_text">
 									<span class="playfair title">Adams Davis</span>
 									<span class="highlight">ACCIDENT TRIAL ATTORNEYS</span>

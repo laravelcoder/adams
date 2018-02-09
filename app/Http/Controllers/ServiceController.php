@@ -7,12 +7,14 @@ use App\Http\Requests\UpdateServiceRequest;
 use App\Repositories\ServiceRepository;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
+use App\Models\Service;
 use Flash;
 use Prettus\Repository\Criteria\RequestCriteria;
 use Response;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Str;
+use View;
 
 class ServiceController extends AppBaseController {
 
@@ -21,6 +23,7 @@ class ServiceController extends AppBaseController {
 
     public function __construct(ServiceRepository $serviceRepo) {
         $this->serviceRepository = $serviceRepo;
+        view()->share('type', 'service');
     }
 
     /**
@@ -33,7 +36,28 @@ class ServiceController extends AppBaseController {
         $this->serviceRepository->pushCriteria(new RequestCriteria($request));
         $services = $this->serviceRepository->paginate(20);
 
-        return view('services.index')->with('services', $services);
+        return view('services.index', compact('services'));
+    }
+
+    public function service(Service $service)
+    {
+        //GoogleTagManager::set('pageType', 'BlogPost');
+
+        if ($service == null) {
+            return Response::view('errors.missing', [], 404);
+        }
+
+        return view('services.service', compact('service'));
+    }
+
+    public function services(Request $request)
+    {
+        $this->serviceRepository->pushCriteria(new RequestCriteria($request));
+        $services = $this->serviceRepository->paginate(20);
+
+        //GoogleTagManager::set('pageType', 'BlogPost');
+
+        return view('services.services', compact('services'));
     }
 
     /**
@@ -58,12 +82,19 @@ class ServiceController extends AppBaseController {
 
         $input = $request->all();
 
-        // $service->slug = Str::slug($request->service);
-        // $service->addMediaFromRequest($request->file('image'))->toMediaCollection('images');
+        $name = $input['service'];
+        $input['slug'] = Str::slug($name, '-');
 
         if ($request->banner) {
-            $photoName = time() . '.' . $request->banner->getClientOriginalExtension();
-            $request->banner->move(public_path('images\\services'), $photoName);
+            $destination = 'images/services/' . $input->service;
+            //$photoName = time() . '.' . $request->banner->getClientOriginalExtension();
+
+//            $destination = public_path('images/services/');
+            File::exists($destination) or File::makeDirectory($destination);
+
+            $photoName = $request->banner->getClientOriginalName();
+
+            $request->banner->move(public_path('images/services'), $photoName);
 
             $input['banner'] = $photoName;
         }
@@ -88,14 +119,14 @@ class ServiceController extends AppBaseController {
      *
      * @return Response
      */
-    public function show($id, $slug) {
+    public function show($id) {
         $service = $this->serviceRepository->findWithoutFail($id);
-        $service = Service::where('slug', $slug)->firstOrFail();
+
 
         if (empty($service)) {
             Flash::error('Service not found');
 
-            return redirect(route('services.index'));
+            return redirect(route('services.service'));
         }
 
         return view('services.show')->with('service', $service);
@@ -131,21 +162,32 @@ class ServiceController extends AppBaseController {
     public function update($id, UpdateServiceRequest $request) {
         $service = $this->serviceRepository->findWithoutFail($id);
 
-
-
         if (empty($service)) {
             Flash::error('Service not found');
 
             return redirect(route('services.index'));
         }
+
         $data = $request->all();
+        if (empty($service->slug)){
+            $name = $data['service'];
+            $data['slug'] = Str::slug($name, '-');
+        }
+
         if ($request->banner) {
-            $photoName = time() . '.' . $request->banner->getClientOriginalExtension();
-            $request->banner->move(public_path('images\\services'), $photoName);
+            $newdir = $request->slug;
+            $destination = 'images/services/' . $newdir;
+            File::exists($destination) or File::makeDirectory($destination);
+
+            $photoName = $request->banner->getClientOriginalName();
+            $request->banner->move($destination, $photoName);
 
             $data['banner'] = $photoName;
+
+
         } else
             unset($data['banner']);
+
         $service = $this->serviceRepository->update($data, $id);
 
         $service->update(['slug' => Str::slug($service->service)]);

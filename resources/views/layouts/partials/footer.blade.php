@@ -6,10 +6,10 @@
 						<div class="col-md-4 col-sm-6">
 
 							<a href="{!! url('/') !!}" class="logo bottommargin_10">
-								<img src="{!! asset('images/logo.png') !!}" alt="">
+								{{-- <img src="{!! asset('images/logo.png') !!}" alt=""> --}}
 								<span class="logo_text">
-									<span class="playfair title">Adams Davis</span>
-									<span class="highlight">Accident Trial Attorneys</span>
+									<span class="playfair title">Adams Davis P.C.</span>
+									<span class="highlight">--- Accident Trial Attorneys ---</span>
 								</span>
 							</a>
 

@@ -8,10 +8,16 @@ use App\Repositories\LawyerRepository;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
 use Flash;
-use File;
+use Response;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Str;
+use View;
+use App\Models\Lawyer;
+use Intervention\Image\ImageManagerStatic as Image;
 use Illuminate\Http\UploadedFile;
 use Prettus\Repository\Criteria\RequestCriteria;
-use Response;
+
 
 class LawyerController extends AppBaseController {
 
@@ -54,10 +60,19 @@ class LawyerController extends AppBaseController {
      */
     public function store(CreateLawyerRequest $request) {
         $input = $request->all();
+        $name = $input['name'];
+        $input['slug'] = Str::slug($name, '-');
 
         if ($request->image) {
-            $photoName = time() . '.' . $request->image->getClientOriginalExtension();
+
+            $destination = public_path('images/lawyers/');
+            File::exists($destination) or File::makeDirectory($destination);
+
+            $photoName = $request->image->getClientOriginalName();
+            $photoName = strtolower($photoName);
             $request->image->move(public_path('images/lawyers'), $photoName);
+
+
 
             $input['image'] = $photoName;
         }
@@ -111,9 +126,17 @@ class LawyerController extends AppBaseController {
             return redirect(route('lawyers.index'));
         }
 
+        $lawyer_image = '';
+        $config = '';
 
+       // foreach (($lawyer['image']) as $di):
+            $lawyer_image.='"' . url('images/lawyers/' . $lawyer['image']) . '",';
+            $config.='{"caption":"' . url('images/lawyers/' . $lawyer['image']) . '","url":"delete_image/' . $lawyer['image'] . '?_token=' . csrf_token() . '"},';
+      //  endforeach;
+        $image = '[' . rtrim($lawyer_image, ',') . ']';
+        $image_config = '[' . rtrim($config, ',') . ']';
 
-        return view('lawyers.edit')->with('lawyer', $lawyer);
+        return view('lawyers.edit', compact('lawyer','image', 'image_config'));
     }
 
     /**
@@ -135,10 +158,19 @@ class LawyerController extends AppBaseController {
         }
 
         $data = $request->all();
+        $name = $data['name'];
+        $data['slug'] = Str::slug($name, '-');
+
+
+
         // $lawyer
         if ($request->image) {
-            $photoName = time() . '.' . $request->image->getClientOriginalExtension();
-            $request->image->move(public_path('images/lawyers'), $photoName);
+
+            File::delete(public_path() . 'images/lawyers/' . $request->image);
+            $photoName = $request->file('image')->getClientOriginalName();
+            $photoName = strtolower($photoName);
+            //$photoName = time() . '.' . $request->image->getClientOriginalExtension();
+            $request->image->move('images/lawyers', $photoName);
 
             $data['image'] = $photoName;
 
@@ -158,7 +190,7 @@ class LawyerController extends AppBaseController {
 
 
 
-//        /dd($request->all());
+        //dd($request->all());
 
         Flash::success('Lawyer updated successfully.');
 
@@ -178,6 +210,15 @@ class LawyerController extends AppBaseController {
         if (empty($lawyer)) {
             Flash::error('Lawyer not found');
 
+            foreach ($lawyer->image as $image):
+                File::delete(public_path() . '/images/lawyers/' . $image);
+               // File::delete(public_path() . '/images/banners/' . $image);
+            endforeach;
+            foreach ($lawyer->banner as $banner):
+              //  File::delete(public_path() . '/images/lawyers/' . $image);
+                File::delete(public_path() . '/images/banners/' . $banner);
+            endforeach;
+
             return redirect(route('lawyers.index'));
         }
 
@@ -188,4 +229,20 @@ class LawyerController extends AppBaseController {
         return redirect(route('lawyers.index'));
     }
 
+
+    public function delete_image($id, $image) {
+        $lawyer = $this->lawyerRepository->findWithoutFail($id);
+        $old_image = $lawyer->image;
+        if (array_search($image, $old_image) !== false) {
+            File::delete(public_path() . '/images/lawyers/' . $image);
+            unset($old_image[array_search($image, $old_image)]);
+        }
+        $data['image'] = serialize($old_image);
+        $lawyer = $this->lawyerRepository->update($data, $id);
+        return json_encode(1);
+    }
+
+    public function uploadimage() {
+        return "{}";
+    }
 }

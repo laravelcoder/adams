@@ -4,6 +4,11 @@ namespace App\Repositories;
 
 use App\Models\Service;
 use InfyOm\Generator\Common\BaseRepository;
+use Response;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Str;
+use View;
 
 class ServiceRepository extends BaseRepository
 {
@@ -19,7 +24,8 @@ class ServiceRepository extends BaseRepository
         'banner',
         'slug',
         'lang',
-        'icon_class'
+        'icon_class',
+        'is_published'
     ];
 
     /**
@@ -30,5 +36,13 @@ class ServiceRepository extends BaseRepository
         return Service::class;
     }
 
-
+    /**
+     * @param $slug
+     *
+     * @return mixed
+     */
+    public function getBySlug($slug)
+    {
+        return $this->service->where('slug', $slug)->first();
+    }
 }

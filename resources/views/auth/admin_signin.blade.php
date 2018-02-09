@@ -30,7 +30,8 @@
 	<![endif]-->
 
 <style type="text/css">
-	a.logo img + .logo_text {display: inline-block; vertical-align: middle; text-align: center; margin-left: 0!important; font-size: 20px; }
+	  .login-logo { text-align: center!important; padding:10px;}
+	a.logo img + .logo_text {display: inline-block!important; vertical-align: middle!important;  margin-left: 0!important; font-size: 20px!important; }
 </style>
 </head>
 
@@ -50,14 +51,14 @@
 				<i class="rt-icon2-cross2"></i>
 			</span>
 		</button>
-		<div class="widget widget_search">
+		{{-- <div class="widget widget_search">
 			<form method="get" class="searchform search-form form-inline" action="./">
 				<div class="form-group">
 					<input type="text" value="" name="search" class="form-control" placeholder="Search keyword" id="modal-search-input">
 				</div>
 				<button type="submit" class="theme_button">Search</button>
 			</form>
-		</div>
+		</div> --}}
 	</div>
 
 	<!-- Unyson messages modal -->

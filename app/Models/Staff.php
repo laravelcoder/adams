@@ -15,7 +15,7 @@ class Staff extends Model
     use SoftDeletes;
 
     public $table = 'staff';
-    
+
 
     protected $dates = ['deleted_at'];
 
@@ -37,7 +37,8 @@ class Staff extends Model
         'googleplus',
         'youtube',
         'slug',
-        'lang'
+        'lang',
+        'is_published'
     ];
 
     /**
@@ -62,7 +63,8 @@ class Staff extends Model
         'googleplus' => 'string',
         'youtube' => 'string',
         'slug' => 'string',
-        'lang' => 'string'
+        'lang' => 'string',
+        'is_published' => 'boolean'
     ];
 
     /**
@@ -77,5 +79,5 @@ class Staff extends Model
         'email' => 'required'
     ];
 
-    
+
 }

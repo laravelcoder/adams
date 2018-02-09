@@ -3,6 +3,11 @@
     {!! Form::label('staff_type', 'Staff Type:') !!}
     {!! Form::select('staff_type', ['Paralegal' => 'Paralegal', ' Assistant Paralegal' => ' Assistant Paralegal', ' Investigator' => ' Investigator', ' Clerk' => ' Clerk', ' Office Personel' => ' Office Personel'], null, ['class' => 'form-control']) !!}
 </div>
+<!-- Title Field -->
+<div class="form-group col-sm-6">
+    {!! Form::label('name', 'Name:') !!}
+    {!! Form::text('name', null, ['class' => 'form-control']) !!}
+</div>
 
 <!-- Title Field -->
 <div class="form-group col-sm-6">
@@ -88,6 +93,19 @@
 <div class="form-group col-sm-6">
     {!! Form::label('youtube', 'Youtube:') !!}
     {!! Form::text('youtube', null, ['class' => 'form-control']) !!}
+</div>
+
+
+<!-- linkedin Field -->
+<div class="form-group col-sm-6">
+    {!! Form::label('linkedin', 'Linkedin:') !!}
+    {!! Form::text('linkedin', null, ['class' => 'form-control']) !!}
+</div>
+
+<!-- other_link Field -->
+<div class="form-group col-sm-6">
+    {!! Form::label('other_link', 'Other Link:') !!}
+    {!! Form::text('other_link', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Slug Field -->

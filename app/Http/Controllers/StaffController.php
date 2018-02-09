@@ -10,6 +10,10 @@ use Illuminate\Http\Request;
 use Flash;
 use Prettus\Repository\Criteria\RequestCriteria;
 use Response;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Str;
+use View;
 
 class StaffController extends AppBaseController
 {
@@ -19,6 +23,7 @@ class StaffController extends AppBaseController
     public function __construct(StaffRepository $staffRepo)
     {
         $this->staffRepository = $staffRepo;
+        view()->share('type', 'staff');
     }
 
     /**
@@ -56,6 +61,10 @@ class StaffController extends AppBaseController
     public function store(CreateStaffRequest $request)
     {
         $input = $request->all();
+
+        // $name = $input['name'];
+        // $input['slug'] = Str::slug($name, '-');
+
         if ($request->image) {
             $photoName = time() . '.' . $request->image->getClientOriginalExtension();
             $request->image->move(public_path('images\\staff'), $photoName);

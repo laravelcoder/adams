@@ -34,6 +34,18 @@ class LawyerRepository extends BaseRepository
         'video3'
     ];
 
+
+    /**
+     * Get the route key for the model.
+     *
+     * @return string
+     */
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
+
+
     /**
      * Configure the Model
      **/

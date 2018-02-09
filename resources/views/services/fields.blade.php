@@ -1,3 +1,15 @@
+ <div class="col-md-12">
+        <!-- Is Published Field -->
+        <div class="form-group col-sm-2 pull-right">
+            {!! Form::label('is_published', 'Is Published:') !!}
+            <label class="checkbox ">
+                {!! Form::checkbox('is_published', 1, null,['data-toggle' => 'toggle', 'data-on' => 'Published', 'data-off'=>'NotPublished','data-onstyle' => 'success', 'data-offstyle' => 'danger', 'value'=>Request::old('is_published') ]) !!}
+            </label>
+        </div>
+</div>
+
+
+
 <!-- Service Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('service', 'Service:') !!}

@@ -63,52 +63,24 @@
     {!! Form::textarea('lower_content', null, ['class' => 'form-control']) !!}
 </div>
  <hr />
-<!-- Image Field -->
-{{-- <div class="form-group col-sm-6">
-    {!! Form::label('image', 'Image:') !!}
 
-</div>
- --}}
-
-<style type="text/css">
-
-</style>
 
 <div class="col-md-6">
-
-  <div class="imageupload panel panel-default">
-    <div class="panel-heading clearfix">
-        <h3 class="panel-title pull-left">Upload Image</h3>
-        <div class="btn-group pull-right">
-            <button type="button" class="btn btn-default active">File</button>
-            <button type="button" class="btn btn-default">URL</button>
-        </div>
-    </div>
-    <div class="file-tab panel-body">
-        <label class="btn btn-default btn-file">
-            <span>Browse</span>
-            <!-- The file is stored here. -->
-            <input type="file" name="image">
-        </label>
-        <button type="button" class="btn btn-default">Remove</button>
-    </div>
-    <div class="url-tab panel-body">
-        <div class="input-group">
-            <input type="text" class="form-control" name="image" placeholder="Image URL">
-            <div class="input-group-btn">
-                <button type="button" class="btn btn-default">Submit</button>
-            </div>
-        </div>
-        <button type="button" class="btn btn-default">Remove</button>
-        <!-- The URL is stored here. -->
-        <input type="hidden" name="image-url">
+    {{--@if ($lawyer->image)--}}
+        {{--<img src="/images/lawyers/{{ $lawyer->image }}">--}}
+    {{--@else--}}
+        {{--<p>No image found</p>--}}
+    {{--@endif--}}
+    {{--{!! Form::file('image',['id' => 'input-image', 'class' => 'file', 'accept' => 'image/*']) !!}--}}
+    <div class="file-loading">
+        {{--<input id="input-image" name="image" type="file" accept="image/*" class="file">--}}
+        <input id="input-image" type="file" name="image" class="file" data-overwrite-initial="false" data-src='{!!@$image!!}' data-config='{!!@$image_config!!}' data-upload="{!! url('lawyers/uploadimage?_token=' . csrf_token()) !!}">
     </div>
 </div>
-
-</div>
-
-
-
+{{-- image here
+{!!@$image!!}
+image config here
+{!!@$image_config!!} --}}
 <div class="form-group col-sm-6">
 
     <!-- Facebook Field -->
@@ -138,6 +110,17 @@
 </div>
 
 
+<!-- linkedin Field -->
+<div class="form-group col-sm-6">
+    {!! Form::label('linkedin', 'Linkedin:') !!}
+    {!! Form::text('linkedin', null, ['class' => 'form-control']) !!}
+</div>
+
+<!-- other_link Field -->
+<div class="form-group col-sm-6">
+    {!! Form::label('other_link', 'Other Link:') !!}
+    {!! Form::text('other_link', null, ['class' => 'form-control']) !!}
+</div>
 
 <hr />
 <!-- Meta Description Field -->
@@ -187,7 +170,7 @@
 <!-- Banner Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('banner', 'Banner:') !!}
-    {!! Form::file('banner') !!}
+    {!! Form::file('banner',['id' => 'input-banner', 'class' => 'file']) !!}
 </div>
 <div class="clearfix"></div>
 <hr />

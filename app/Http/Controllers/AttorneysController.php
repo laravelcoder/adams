@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Attorney;
 use App\Models\Lawyer;
 use App\Http\Requests\CreateLawyerRequest;
 use App\Http\Requests\UpdateLawyerRequest;
@@ -11,6 +11,9 @@ use Illuminate\Http\Request;
 use Flash;
 use Prettus\Repository\Criteria\RequestCriteria;
 use Response;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Str;
 use View;
 
 
@@ -33,16 +36,16 @@ class AttorneysController extends Controller
         return view('attorneys.index', compact('lawyers'));
     }
 
-    public function show($id, Lawyer $lawyer)
+    public function show($slug, Lawyer $lawyer)
     {
-        $lawyer = $this->lawyerRepository->findWithoutFail($id);
+        $lawyer = Lawyer::first();
 
         if (empty($lawyer)) {
             Flash::error('Lawyer not found');
 
-            return redirect(route('lawyers.index'));
+            return redirect(route('attorneys'));
         }
 
-        return view('attorneys.show')->with('lawyer', $lawyer);
+        return view('attorneys.show', compact('lawyer'));
     }
 }

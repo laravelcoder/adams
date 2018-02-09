@@ -191,6 +191,8 @@ return [
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
         Lavary\Menu\ServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
+        Riverskies\Laravel\MobileDetect\MobileDetectServiceProvider::class,
+        Thomaswelton\LaravelGravatar\LaravelGravatarServiceProvider::class,
 
 
     ],
@@ -249,6 +251,8 @@ return [
         'Menu'       => Lavary\Menu\Facade::class,
         'Str' => Illuminate\Support\Str::class,
         'Image' => Intervention\Image\Facades\Image::class,
+        'MobileDetect' => Riverskies\Laravel\MobileDetect\Facades\MobileDetect::class,
+        'Gravatar' => Thomaswelton\LaravelGravatar\Facades\Gravatar::class,
 
 
 

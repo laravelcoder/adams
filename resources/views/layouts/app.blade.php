@@ -21,9 +21,12 @@
     <link rel="stylesheet" href="{!! asset('css/animations.css') !!}">
     <link rel="stylesheet" href="{!! asset('css/fonts.css') !!}">
     <link rel="stylesheet" href="{!! asset('css/main.css') !!}" id="color-switcher-link">
-    <link rel="stylesheet" href="{!! asset('css/bootstrap-imageupload.css') !!}">
+    <link rel="stylesheet" href="{!! asset('css/fileinput.css') !!}">
+
+    <link rel="stylesheet" href="{!! asset('css/bootstrap-toggle.min.css') !!}">
     <script src="{!! asset('js/vendor/modernizr-2.6.2.min.js') !!}"></script>
 
+<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
 
 
     <!--[if lt IE 9]>
@@ -171,7 +174,7 @@
 @yield('content')
 
 
-            <section class="ls">
+            <section class="footer ls">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-12">
@@ -183,6 +186,12 @@
         </div>
         <!-- eof #box_wrapper -->
     </div>
+
+    <script>
+  $(function() {
+    // $('#is_published').bootstrapToggle();
+  })
+</script>
     <!-- eof #canvas -->
     <script src="{!! asset('ckeditor/ckeditor.js') !!}"></script>
 
@@ -190,7 +199,14 @@
     <script src="{!! asset('js/vendor/Chart.bundle.min.js') !!}"></script>
     <script src="{!! asset('js/main.js') !!}"></script>
     <script src="{!! asset('js/admin-charts.js') !!}"></script>
-<script src="{!! asset('js/bootstrap-imageupload.js') !!}"></script>
+<script src="{!! asset('js/fileinput.js') !!}"></script>
+{{-- <script src="{!! asset('js/bootstrap-toggle.min.js') !!}"></script> --}}
+
+<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+
+@yield('bottom-scripts')
+
+
 </body>
 
 </html>

@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Eloquent as Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Cviebrock\EloquentSluggable\Sluggable;
+
 
 /**
  * Class Lawyer
@@ -14,8 +16,9 @@ class Lawyer extends Model
 {
     use SoftDeletes;
 
+
     public $table = 'lawyers';
-    
+
 
     protected $dates = ['deleted_at'];
 
@@ -41,7 +44,8 @@ class Lawyer extends Model
         'lang',
         'video',
         'video2',
-        'video3'
+        'video3',
+        'is_published'
     ];
 
     /**
@@ -70,7 +74,8 @@ class Lawyer extends Model
         'lang' => 'string',
         'video' => 'string',
         'video2' => 'string',
-        'video3' => 'string'
+        'video3' => 'string',
+        'is_published' => 'boolean'
     ];
 
     /**
@@ -86,5 +91,15 @@ class Lawyer extends Model
         'email' => 'required'
     ];
 
-    
+
+
+    /**
+     * Get the route key for the model.
+     *
+     * @return string
+     */
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
 }

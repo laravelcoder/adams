@@ -57,52 +57,49 @@ Route::middleware('auth')->group(function ()
         Route::get('tasks/{task}', ['as' => 'tasks.show', 'uses' => 'TasksController@show']);
 
         Route::resource('posts', 'PostController');
-
-        Route::resource('services', 'ServiceController', ['except' => ['show'], 'names' => [
+        Route::resource('services', 'ServiceController', [
+          //  'except' => ['show'],
+            'names' => [
             'create' => 'services.create'
         ]]);
 
         Route::resource('pages', 'PageController');
-
         Route::resource('lawyers', 'LawyerController');
-
         Route::resource('staff', 'StaffController');
-
         Route::resource('overviews', 'OverviewController');
-
         Route::resource('courthouses', 'CourthouseController');
-
         Route::resource('courtdates', 'CourtdateController');
-
         Route::resource('categories', 'CategoryController');
-
         Route::resource('timelines', 'TimelineController');
-
         Route::resource('users', 'UserController');
 
     });
 });
 
-/* live site areas  */
 
+    Auth::routes();
 
-Auth::routes();
-Route::get('/', ['as' => 'homepage', 'uses' => 'SiteController@homepage']);
+    Route::get('/', ['as' => 'homepage', 'uses' => 'SiteController@homepage']);
 
-Route::get('services/{service}', ['as' => 'service', 'uses' => 'ServiceController@show']);
+    Route::get('services/{service}', ['as' => 'service', 'uses' => 'ServiceController@show']);
 
-Route::get('blog', ['as' => 'blog', 'uses' => 'BlogController@index']);
-Route::get('blog/{post}', ['as' => 'post', 'uses' => 'BlogController@show']);
+    Route::get('blog', ['as' => 'blog', 'uses' => 'BlogController@index']);
+    Route::get('blog/{post}', ['as' => 'post', 'uses' => 'BlogController@show']);
 
-Route::get('attorneys', ['as' => 'attorneys', 'uses' => 'AttorneysController@index']);
-Route::get('attorneys/{attorney}', ['as' => 'attorney', 'uses' => 'AttorneysController@show']);
+    Route::get('attorneys', ['as' => 'attorneys', 'uses' => 'AttorneysController@index']);
+    Route::get('attorneys/{attorney}', ['as' => 'attorney', 'uses' => 'AttorneysController@show']);
 
-Route::get('team', ['as' => 'team', 'uses' => 'TeamController@index']);
-Route::get('team/{staff}', ['as' => 'associate', 'uses' => 'TeamController@show']);
+    Route::get('team', ['as' => 'team', 'uses' => 'TeamController@index']);
+    Route::get('team/{staff}', ['as' => 'associate', 'uses' => 'TeamController@show']);
 
-Route::get('contact', ['as' => 'contact', 'uses' => 'ContactController@index']);
-Route::post('contact/sendrequest', ['as' => 'contact.sendreuest', 'uses' => 'ContactController@sendrequest']);
+    Route::get('contact', ['as' => 'contact', 'uses' => 'ContactController@index']);
+    Route::post('contact/sendrequest', ['as' => 'contact.sendreuest', 'uses' => 'ContactController@sendrequest']);
 
+    Route::get('services/{service}', ['as' => 'service', 'uses' => 'ServiceController@service']);
+    Route::get('services', ['as' => 'services', 'uses' => 'ServiceController@services']);
 
-
+    Route::post('lawyers/uploadimage', ['as'=> 'lawyer.uploadimage', 'uses' => 'LawyerController@uploadimage']);
+    //   Route::post('posts/{post}/delete_image/{image}', ['as'=> 'post.delete_image', 'uses' => 'PostController@delete_image']);
+    //   Route::post('posts/{post}/delete_banner/{image}', ['as'=> 'post.delete_banner', 'uses' => 'PostController@delete_banner']);
+    Route::post('lawyers/{lawyer}/delete_image/{image}', ['as'=> 'design.delete_image', 'uses' => 'DesignController@delete_image']);
 
